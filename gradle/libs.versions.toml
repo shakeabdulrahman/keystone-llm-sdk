@@ -12,7 +12,7 @@ dokka = "2.0.0"
 binary-compatibility-validator = "0.17.0"
 
 # Sample app only (not a dependency of the library).
-compose-bom = "2025.06.00"
+compose-bom = "2026.11.01"
 activity-compose = "1.10.1"
 lifecycle = "2.9.1"
 core-ktx = "1.16.0"
