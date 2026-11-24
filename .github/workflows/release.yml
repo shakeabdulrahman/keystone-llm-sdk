@@ -41,7 +41,7 @@ jobs:
       - name: Build API docs
         run: ./gradlew dokkaGenerate -PVERSION_NAME=$VERSION
 
-      - uses: actions/upload-pages-artifact@v3
+      - uses: actions/upload-pages-artifact@v5
         with:
           path: build/dokka/html
 
