@@ -1,15 +1,15 @@
 [versions]
 # Library toolchain. Upgrade one at a time and run the full CI matrix.
-kotlin = "2.1.21"
+kotlin = "2.4.21"
 agp = "8.10.1"
-coroutines = "1.10.2"
-serialization = "1.8.1"
+coroutines = "1.11.0"
+serialization = "1.13.0"
 ktor = "3.1.3"
 
 # Build tooling for publishing and API checks. Dependabot proposes updates.
 maven-publish = "0.30.0"
 dokka = "2.0.0"
-binary-compatibility-validator = "0.17.0"
+binary-compatibility-validator = "0.18.2"
 
 # Sample app only (not a dependency of the library).
 compose-bom = "2025.06.00"
