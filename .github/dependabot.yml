@@ -4,9 +4,23 @@ updates:
     directory: /
     schedule:
       interval: weekly
+    # Toolchain jumps (Kotlin minor, AGP major, Ktor major, publish plugin 0.x minor) change
+    # build behaviour and are done by hand, in one PR with the fixes they need.
+    # Dependabot only proposes the safe patch-level updates for them.
+    ignore:
+      - dependency-name: "org.jetbrains.kotlin*"
+        update-types: ["version-update:semver-major", "version-update:semver-minor"]
+      - dependency-name: "com.android.*"
+        update-types: ["version-update:semver-major"]
+      - dependency-name: "io.ktor*"
+        update-types: ["version-update:semver-major"]
+      - dependency-name: "com.vanniktech.maven.publish"
+        update-types: ["version-update:semver-major", "version-update:semver-minor"]
+      - dependency-name: "org.jetbrains.dokka*"
+        update-types: ["version-update:semver-major"]
     groups:
       kotlin:
-        patterns: ["org.jetbrains.kotlin*", "com.google.devtools.ksp*"]
+        patterns: ["org.jetbrains.kotlin*"]
       ktor:
         patterns: ["io.ktor*"]
   - package-ecosystem: github-actions
