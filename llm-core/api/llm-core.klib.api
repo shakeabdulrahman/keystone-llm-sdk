@@ -1,0 +1,1281 @@
+// Klib ABI Dump
+// Targets: [iosArm64, iosSimulatorArm64]
+// Rendering settings:
+// - Signature version: 2
+// - Show manifest properties: true
+// - Show declarations: true
+
+// Library unique name: <io.github.shakeabdulrahman:llm-core>
+open annotation class io.github.shakeabdulrahman.keystone.llm/InternalKeystoneLlmApi : kotlin/Annotation { // io.github.shakeabdulrahman.keystone.llm/InternalKeystoneLlmApi|null[0]
+    constructor <init>() // io.github.shakeabdulrahman.keystone.llm/InternalKeystoneLlmApi.<init>|<init>(){}[0]
+}
+
+final enum class io.github.shakeabdulrahman.keystone.llm/LlmErrorKind : kotlin/Enum<io.github.shakeabdulrahman.keystone.llm/LlmErrorKind> { // io.github.shakeabdulrahman.keystone.llm/LlmErrorKind|null[0]
+    enum entry Authentication // io.github.shakeabdulrahman.keystone.llm/LlmErrorKind.Authentication|null[0]
+    enum entry ContentFiltered // io.github.shakeabdulrahman.keystone.llm/LlmErrorKind.ContentFiltered|null[0]
+    enum entry InvalidRequest // io.github.shakeabdulrahman.keystone.llm/LlmErrorKind.InvalidRequest|null[0]
+    enum entry MalformedResponse // io.github.shakeabdulrahman.keystone.llm/LlmErrorKind.MalformedResponse|null[0]
+    enum entry Network // io.github.shakeabdulrahman.keystone.llm/LlmErrorKind.Network|null[0]
+    enum entry NotFound // io.github.shakeabdulrahman.keystone.llm/LlmErrorKind.NotFound|null[0]
+    enum entry PermissionDenied // io.github.shakeabdulrahman.keystone.llm/LlmErrorKind.PermissionDenied|null[0]
+    enum entry QuotaExceeded // io.github.shakeabdulrahman.keystone.llm/LlmErrorKind.QuotaExceeded|null[0]
+    enum entry RateLimited // io.github.shakeabdulrahman.keystone.llm/LlmErrorKind.RateLimited|null[0]
+    enum entry ServerError // io.github.shakeabdulrahman.keystone.llm/LlmErrorKind.ServerError|null[0]
+    enum entry StructuredOutput // io.github.shakeabdulrahman.keystone.llm/LlmErrorKind.StructuredOutput|null[0]
+    enum entry Timeout // io.github.shakeabdulrahman.keystone.llm/LlmErrorKind.Timeout|null[0]
+    enum entry Unknown // io.github.shakeabdulrahman.keystone.llm/LlmErrorKind.Unknown|null[0]
+    enum entry Unsupported // io.github.shakeabdulrahman.keystone.llm/LlmErrorKind.Unsupported|null[0]
+
+    final val entries // io.github.shakeabdulrahman.keystone.llm/LlmErrorKind.entries|#static{}entries[0]
+        final fun <get-entries>(): kotlin.enums/EnumEntries<io.github.shakeabdulrahman.keystone.llm/LlmErrorKind> // io.github.shakeabdulrahman.keystone.llm/LlmErrorKind.entries.<get-entries>|<get-entries>#static(){}[0]
+    final val isTransient // io.github.shakeabdulrahman.keystone.llm/LlmErrorKind.isTransient|{}isTransient[0]
+        final fun <get-isTransient>(): kotlin/Boolean // io.github.shakeabdulrahman.keystone.llm/LlmErrorKind.isTransient.<get-isTransient>|<get-isTransient>(){}[0]
+
+    final fun valueOf(kotlin/String): io.github.shakeabdulrahman.keystone.llm/LlmErrorKind // io.github.shakeabdulrahman.keystone.llm/LlmErrorKind.valueOf|valueOf#static(kotlin.String){}[0]
+    final fun values(): kotlin/Array<io.github.shakeabdulrahman.keystone.llm/LlmErrorKind> // io.github.shakeabdulrahman.keystone.llm/LlmErrorKind.values|values#static(){}[0]
+}
+
+final enum class io.github.shakeabdulrahman.keystone.llm/StreamRestartPolicy : kotlin/Enum<io.github.shakeabdulrahman.keystone.llm/StreamRestartPolicy> { // io.github.shakeabdulrahman.keystone.llm/StreamRestartPolicy|null[0]
+    enum entry EmitRestarted // io.github.shakeabdulrahman.keystone.llm/StreamRestartPolicy.EmitRestarted|null[0]
+    enum entry Never // io.github.shakeabdulrahman.keystone.llm/StreamRestartPolicy.Never|null[0]
+
+    final val entries // io.github.shakeabdulrahman.keystone.llm/StreamRestartPolicy.entries|#static{}entries[0]
+        final fun <get-entries>(): kotlin.enums/EnumEntries<io.github.shakeabdulrahman.keystone.llm/StreamRestartPolicy> // io.github.shakeabdulrahman.keystone.llm/StreamRestartPolicy.entries.<get-entries>|<get-entries>#static(){}[0]
+
+    final fun valueOf(kotlin/String): io.github.shakeabdulrahman.keystone.llm/StreamRestartPolicy // io.github.shakeabdulrahman.keystone.llm/StreamRestartPolicy.valueOf|valueOf#static(kotlin.String){}[0]
+    final fun values(): kotlin/Array<io.github.shakeabdulrahman.keystone.llm/StreamRestartPolicy> // io.github.shakeabdulrahman.keystone.llm/StreamRestartPolicy.values|values#static(){}[0]
+}
+
+final enum class io.github.shakeabdulrahman.keystone.llm/StructuredEnforcement : kotlin/Enum<io.github.shakeabdulrahman.keystone.llm/StructuredEnforcement> { // io.github.shakeabdulrahman.keystone.llm/StructuredEnforcement|null[0]
+    enum entry PromptOnly // io.github.shakeabdulrahman.keystone.llm/StructuredEnforcement.PromptOnly|null[0]
+    enum entry ProviderJsonMode // io.github.shakeabdulrahman.keystone.llm/StructuredEnforcement.ProviderJsonMode|null[0]
+    enum entry ProviderSchema // io.github.shakeabdulrahman.keystone.llm/StructuredEnforcement.ProviderSchema|null[0]
+
+    final val entries // io.github.shakeabdulrahman.keystone.llm/StructuredEnforcement.entries|#static{}entries[0]
+        final fun <get-entries>(): kotlin.enums/EnumEntries<io.github.shakeabdulrahman.keystone.llm/StructuredEnforcement> // io.github.shakeabdulrahman.keystone.llm/StructuredEnforcement.entries.<get-entries>|<get-entries>#static(){}[0]
+
+    final fun valueOf(kotlin/String): io.github.shakeabdulrahman.keystone.llm/StructuredEnforcement // io.github.shakeabdulrahman.keystone.llm/StructuredEnforcement.valueOf|valueOf#static(kotlin.String){}[0]
+    final fun values(): kotlin/Array<io.github.shakeabdulrahman.keystone.llm/StructuredEnforcement> // io.github.shakeabdulrahman.keystone.llm/StructuredEnforcement.values|values#static(){}[0]
+}
+
+final enum class io.github.shakeabdulrahman.keystone.llm/StructuredOutputSupport : kotlin/Enum<io.github.shakeabdulrahman.keystone.llm/StructuredOutputSupport> { // io.github.shakeabdulrahman.keystone.llm/StructuredOutputSupport|null[0]
+    enum entry JsonMode // io.github.shakeabdulrahman.keystone.llm/StructuredOutputSupport.JsonMode|null[0]
+    enum entry JsonSchema // io.github.shakeabdulrahman.keystone.llm/StructuredOutputSupport.JsonSchema|null[0]
+    enum entry None // io.github.shakeabdulrahman.keystone.llm/StructuredOutputSupport.None|null[0]
+
+    final val entries // io.github.shakeabdulrahman.keystone.llm/StructuredOutputSupport.entries|#static{}entries[0]
+        final fun <get-entries>(): kotlin.enums/EnumEntries<io.github.shakeabdulrahman.keystone.llm/StructuredOutputSupport> // io.github.shakeabdulrahman.keystone.llm/StructuredOutputSupport.entries.<get-entries>|<get-entries>#static(){}[0]
+
+    final fun valueOf(kotlin/String): io.github.shakeabdulrahman.keystone.llm/StructuredOutputSupport // io.github.shakeabdulrahman.keystone.llm/StructuredOutputSupport.valueOf|valueOf#static(kotlin.String){}[0]
+    final fun values(): kotlin/Array<io.github.shakeabdulrahman.keystone.llm/StructuredOutputSupport> // io.github.shakeabdulrahman.keystone.llm/StructuredOutputSupport.values|values#static(){}[0]
+}
+
+final enum class io.github.shakeabdulrahman.keystone.llm/Support : kotlin/Enum<io.github.shakeabdulrahman.keystone.llm/Support> { // io.github.shakeabdulrahman.keystone.llm/Support|null[0]
+    enum entry Native // io.github.shakeabdulrahman.keystone.llm/Support.Native|null[0]
+    enum entry Unsupported // io.github.shakeabdulrahman.keystone.llm/Support.Unsupported|null[0]
+
+    final val entries // io.github.shakeabdulrahman.keystone.llm/Support.entries|#static{}entries[0]
+        final fun <get-entries>(): kotlin.enums/EnumEntries<io.github.shakeabdulrahman.keystone.llm/Support> // io.github.shakeabdulrahman.keystone.llm/Support.entries.<get-entries>|<get-entries>#static(){}[0]
+
+    final fun valueOf(kotlin/String): io.github.shakeabdulrahman.keystone.llm/Support // io.github.shakeabdulrahman.keystone.llm/Support.valueOf|valueOf#static(kotlin.String){}[0]
+    final fun values(): kotlin/Array<io.github.shakeabdulrahman.keystone.llm/Support> // io.github.shakeabdulrahman.keystone.llm/Support.values|values#static(){}[0]
+}
+
+final enum class io.github.shakeabdulrahman.keystone.llm/UsageSource : kotlin/Enum<io.github.shakeabdulrahman.keystone.llm/UsageSource> { // io.github.shakeabdulrahman.keystone.llm/UsageSource|null[0]
+    enum entry Estimated // io.github.shakeabdulrahman.keystone.llm/UsageSource.Estimated|null[0]
+    enum entry Reported // io.github.shakeabdulrahman.keystone.llm/UsageSource.Reported|null[0]
+    enum entry Unknown // io.github.shakeabdulrahman.keystone.llm/UsageSource.Unknown|null[0]
+
+    final val entries // io.github.shakeabdulrahman.keystone.llm/UsageSource.entries|#static{}entries[0]
+        final fun <get-entries>(): kotlin.enums/EnumEntries<io.github.shakeabdulrahman.keystone.llm/UsageSource> // io.github.shakeabdulrahman.keystone.llm/UsageSource.entries.<get-entries>|<get-entries>#static(){}[0]
+
+    final fun valueOf(kotlin/String): io.github.shakeabdulrahman.keystone.llm/UsageSource // io.github.shakeabdulrahman.keystone.llm/UsageSource.valueOf|valueOf#static(kotlin.String){}[0]
+    final fun values(): kotlin/Array<io.github.shakeabdulrahman.keystone.llm/UsageSource> // io.github.shakeabdulrahman.keystone.llm/UsageSource.values|values#static(){}[0]
+}
+
+abstract fun interface io.github.shakeabdulrahman.keystone.llm/TokenEstimator { // io.github.shakeabdulrahman.keystone.llm/TokenEstimator|null[0]
+    abstract fun estimate(kotlin/String): kotlin/Long // io.github.shakeabdulrahman.keystone.llm/TokenEstimator.estimate|estimate(kotlin.String){}[0]
+
+    final object Companion { // io.github.shakeabdulrahman.keystone.llm/TokenEstimator.Companion|null[0]
+        final fun charsPerToken(kotlin/Double = ...): io.github.shakeabdulrahman.keystone.llm/TokenEstimator // io.github.shakeabdulrahman.keystone.llm/TokenEstimator.Companion.charsPerToken|charsPerToken(kotlin.Double){}[0]
+    }
+}
+
+abstract interface io.github.shakeabdulrahman.keystone.llm.http/HttpResponse { // io.github.shakeabdulrahman.keystone.llm.http/HttpResponse|null[0]
+    abstract val status // io.github.shakeabdulrahman.keystone.llm.http/HttpResponse.status|{}status[0]
+        abstract fun <get-status>(): kotlin/Int // io.github.shakeabdulrahman.keystone.llm.http/HttpResponse.status.<get-status>|<get-status>(){}[0]
+
+    abstract fun header(kotlin/String): kotlin/String? // io.github.shakeabdulrahman.keystone.llm.http/HttpResponse.header|header(kotlin.String){}[0]
+    abstract suspend fun readChunk(): kotlin/ByteArray? // io.github.shakeabdulrahman.keystone.llm.http/HttpResponse.readChunk|readChunk(){}[0]
+}
+
+abstract interface io.github.shakeabdulrahman.keystone.llm.http/HttpTransport : kotlin/AutoCloseable { // io.github.shakeabdulrahman.keystone.llm.http/HttpTransport|null[0]
+    abstract suspend fun <#A1: kotlin/Any?> execute(io.github.shakeabdulrahman.keystone.llm.http/HttpRequest, kotlin.coroutines/SuspendFunction1<io.github.shakeabdulrahman.keystone.llm.http/HttpResponse, #A1>): #A1 // io.github.shakeabdulrahman.keystone.llm.http/HttpTransport.execute|execute(io.github.shakeabdulrahman.keystone.llm.http.HttpRequest;kotlin.coroutines.SuspendFunction1<io.github.shakeabdulrahman.keystone.llm.http.HttpResponse,0:0>){0§<kotlin.Any?>}[0]
+    open fun close() // io.github.shakeabdulrahman.keystone.llm.http/HttpTransport.close|close(){}[0]
+}
+
+abstract interface io.github.shakeabdulrahman.keystone.llm/LlmListener { // io.github.shakeabdulrahman.keystone.llm/LlmListener|null[0]
+    open fun onAttemptFailed(io.github.shakeabdulrahman.keystone.llm/Attempt, io.github.shakeabdulrahman.keystone.llm/LlmException, io.github.shakeabdulrahman.keystone.llm/LlmListener.NextStep) // io.github.shakeabdulrahman.keystone.llm/LlmListener.onAttemptFailed|onAttemptFailed(io.github.shakeabdulrahman.keystone.llm.Attempt;io.github.shakeabdulrahman.keystone.llm.LlmException;io.github.shakeabdulrahman.keystone.llm.LlmListener.NextStep){}[0]
+    open fun onAttemptStarted(io.github.shakeabdulrahman.keystone.llm/ModelRef, kotlin/Int) // io.github.shakeabdulrahman.keystone.llm/LlmListener.onAttemptStarted|onAttemptStarted(io.github.shakeabdulrahman.keystone.llm.ModelRef;kotlin.Int){}[0]
+    open fun onSucceeded(io.github.shakeabdulrahman.keystone.llm/Attempt) // io.github.shakeabdulrahman.keystone.llm/LlmListener.onSucceeded|onSucceeded(io.github.shakeabdulrahman.keystone.llm.Attempt){}[0]
+
+    sealed interface NextStep { // io.github.shakeabdulrahman.keystone.llm/LlmListener.NextStep|null[0]
+        final class Failover : io.github.shakeabdulrahman.keystone.llm/LlmListener.NextStep { // io.github.shakeabdulrahman.keystone.llm/LlmListener.NextStep.Failover|null[0]
+            constructor <init>(io.github.shakeabdulrahman.keystone.llm/ModelRef) // io.github.shakeabdulrahman.keystone.llm/LlmListener.NextStep.Failover.<init>|<init>(io.github.shakeabdulrahman.keystone.llm.ModelRef){}[0]
+
+            final val to // io.github.shakeabdulrahman.keystone.llm/LlmListener.NextStep.Failover.to|{}to[0]
+                final fun <get-to>(): io.github.shakeabdulrahman.keystone.llm/ModelRef // io.github.shakeabdulrahman.keystone.llm/LlmListener.NextStep.Failover.to.<get-to>|<get-to>(){}[0]
+
+            final fun component1(): io.github.shakeabdulrahman.keystone.llm/ModelRef // io.github.shakeabdulrahman.keystone.llm/LlmListener.NextStep.Failover.component1|component1(){}[0]
+            final fun copy(io.github.shakeabdulrahman.keystone.llm/ModelRef = ...): io.github.shakeabdulrahman.keystone.llm/LlmListener.NextStep.Failover // io.github.shakeabdulrahman.keystone.llm/LlmListener.NextStep.Failover.copy|copy(io.github.shakeabdulrahman.keystone.llm.ModelRef){}[0]
+            final fun equals(kotlin/Any?): kotlin/Boolean // io.github.shakeabdulrahman.keystone.llm/LlmListener.NextStep.Failover.equals|equals(kotlin.Any?){}[0]
+            final fun hashCode(): kotlin/Int // io.github.shakeabdulrahman.keystone.llm/LlmListener.NextStep.Failover.hashCode|hashCode(){}[0]
+            final fun toString(): kotlin/String // io.github.shakeabdulrahman.keystone.llm/LlmListener.NextStep.Failover.toString|toString(){}[0]
+        }
+
+        final class Retry : io.github.shakeabdulrahman.keystone.llm/LlmListener.NextStep { // io.github.shakeabdulrahman.keystone.llm/LlmListener.NextStep.Retry|null[0]
+            constructor <init>(kotlin.time/Duration) // io.github.shakeabdulrahman.keystone.llm/LlmListener.NextStep.Retry.<init>|<init>(kotlin.time.Duration){}[0]
+
+            final val delay // io.github.shakeabdulrahman.keystone.llm/LlmListener.NextStep.Retry.delay|{}delay[0]
+                final fun <get-delay>(): kotlin.time/Duration // io.github.shakeabdulrahman.keystone.llm/LlmListener.NextStep.Retry.delay.<get-delay>|<get-delay>(){}[0]
+
+            final fun component1(): kotlin.time/Duration // io.github.shakeabdulrahman.keystone.llm/LlmListener.NextStep.Retry.component1|component1(){}[0]
+            final fun copy(kotlin.time/Duration = ...): io.github.shakeabdulrahman.keystone.llm/LlmListener.NextStep.Retry // io.github.shakeabdulrahman.keystone.llm/LlmListener.NextStep.Retry.copy|copy(kotlin.time.Duration){}[0]
+            final fun equals(kotlin/Any?): kotlin/Boolean // io.github.shakeabdulrahman.keystone.llm/LlmListener.NextStep.Retry.equals|equals(kotlin.Any?){}[0]
+            final fun hashCode(): kotlin/Int // io.github.shakeabdulrahman.keystone.llm/LlmListener.NextStep.Retry.hashCode|hashCode(){}[0]
+            final fun toString(): kotlin/String // io.github.shakeabdulrahman.keystone.llm/LlmListener.NextStep.Retry.toString|toString(){}[0]
+        }
+
+        final object GiveUp : io.github.shakeabdulrahman.keystone.llm/LlmListener.NextStep { // io.github.shakeabdulrahman.keystone.llm/LlmListener.NextStep.GiveUp|null[0]
+            final fun equals(kotlin/Any?): kotlin/Boolean // io.github.shakeabdulrahman.keystone.llm/LlmListener.NextStep.GiveUp.equals|equals(kotlin.Any?){}[0]
+            final fun hashCode(): kotlin/Int // io.github.shakeabdulrahman.keystone.llm/LlmListener.NextStep.GiveUp.hashCode|hashCode(){}[0]
+            final fun toString(): kotlin/String // io.github.shakeabdulrahman.keystone.llm/LlmListener.NextStep.GiveUp.toString|toString(){}[0]
+        }
+    }
+}
+
+abstract interface io.github.shakeabdulrahman.keystone.llm/LlmProvider : kotlin/AutoCloseable { // io.github.shakeabdulrahman.keystone.llm/LlmProvider|null[0]
+    abstract val id // io.github.shakeabdulrahman.keystone.llm/LlmProvider.id|{}id[0]
+        abstract fun <get-id>(): kotlin/String // io.github.shakeabdulrahman.keystone.llm/LlmProvider.id.<get-id>|<get-id>(){}[0]
+
+    abstract fun capabilities(kotlin/String): io.github.shakeabdulrahman.keystone.llm/ProviderCapabilities // io.github.shakeabdulrahman.keystone.llm/LlmProvider.capabilities|capabilities(kotlin.String){}[0]
+    abstract fun stream(io.github.shakeabdulrahman.keystone.llm/ProviderRequest): kotlinx.coroutines.flow/Flow<io.github.shakeabdulrahman.keystone.llm/ProviderEvent> // io.github.shakeabdulrahman.keystone.llm/LlmProvider.stream|stream(io.github.shakeabdulrahman.keystone.llm.ProviderRequest){}[0]
+    open fun close() // io.github.shakeabdulrahman.keystone.llm/LlmProvider.close|close(){}[0]
+}
+
+sealed interface io.github.shakeabdulrahman.keystone.llm/Auth { // io.github.shakeabdulrahman.keystone.llm/Auth|null[0]
+    final class ApiKey : io.github.shakeabdulrahman.keystone.llm/Auth { // io.github.shakeabdulrahman.keystone.llm/Auth.ApiKey|null[0]
+        constructor <init>(kotlin/String) // io.github.shakeabdulrahman.keystone.llm/Auth.ApiKey.<init>|<init>(kotlin.String){}[0]
+
+        final val value // io.github.shakeabdulrahman.keystone.llm/Auth.ApiKey.value|{}value[0]
+            final fun <get-value>(): kotlin/String // io.github.shakeabdulrahman.keystone.llm/Auth.ApiKey.value.<get-value>|<get-value>(){}[0]
+
+        final fun toString(): kotlin/String // io.github.shakeabdulrahman.keystone.llm/Auth.ApiKey.toString|toString(){}[0]
+    }
+
+    final class Headers : io.github.shakeabdulrahman.keystone.llm/Auth { // io.github.shakeabdulrahman.keystone.llm/Auth.Headers|null[0]
+        constructor <init>(kotlin.coroutines/SuspendFunction0<kotlin.collections/Map<kotlin/String, kotlin/String>>) // io.github.shakeabdulrahman.keystone.llm/Auth.Headers.<init>|<init>(kotlin.coroutines.SuspendFunction0<kotlin.collections.Map<kotlin.String,kotlin.String>>){}[0]
+
+        final val provide // io.github.shakeabdulrahman.keystone.llm/Auth.Headers.provide|{}provide[0]
+            final fun <get-provide>(): kotlin.coroutines/SuspendFunction0<kotlin.collections/Map<kotlin/String, kotlin/String>> // io.github.shakeabdulrahman.keystone.llm/Auth.Headers.provide.<get-provide>|<get-provide>(){}[0]
+
+        final fun toString(): kotlin/String // io.github.shakeabdulrahman.keystone.llm/Auth.Headers.toString|toString(){}[0]
+    }
+
+    final object None : io.github.shakeabdulrahman.keystone.llm/Auth { // io.github.shakeabdulrahman.keystone.llm/Auth.None|null[0]
+        final fun equals(kotlin/Any?): kotlin/Boolean // io.github.shakeabdulrahman.keystone.llm/Auth.None.equals|equals(kotlin.Any?){}[0]
+        final fun hashCode(): kotlin/Int // io.github.shakeabdulrahman.keystone.llm/Auth.None.hashCode|hashCode(){}[0]
+        final fun toString(): kotlin/String // io.github.shakeabdulrahman.keystone.llm/Auth.None.toString|toString(){}[0]
+    }
+}
+
+sealed interface io.github.shakeabdulrahman.keystone.llm/CostReport { // io.github.shakeabdulrahman.keystone.llm/CostReport|null[0]
+    final class Priced : io.github.shakeabdulrahman.keystone.llm/CostReport { // io.github.shakeabdulrahman.keystone.llm/CostReport.Priced|null[0]
+        constructor <init>(io.github.shakeabdulrahman.keystone.llm/Money, io.github.shakeabdulrahman.keystone.llm/Money, io.github.shakeabdulrahman.keystone.llm/Money, kotlin/Boolean, kotlin/String) // io.github.shakeabdulrahman.keystone.llm/CostReport.Priced.<init>|<init>(io.github.shakeabdulrahman.keystone.llm.Money;io.github.shakeabdulrahman.keystone.llm.Money;io.github.shakeabdulrahman.keystone.llm.Money;kotlin.Boolean;kotlin.String){}[0]
+
+        final val estimated // io.github.shakeabdulrahman.keystone.llm/CostReport.Priced.estimated|{}estimated[0]
+            final fun <get-estimated>(): kotlin/Boolean // io.github.shakeabdulrahman.keystone.llm/CostReport.Priced.estimated.<get-estimated>|<get-estimated>(){}[0]
+        final val input // io.github.shakeabdulrahman.keystone.llm/CostReport.Priced.input|{}input[0]
+            final fun <get-input>(): io.github.shakeabdulrahman.keystone.llm/Money // io.github.shakeabdulrahman.keystone.llm/CostReport.Priced.input.<get-input>|<get-input>(){}[0]
+        final val output // io.github.shakeabdulrahman.keystone.llm/CostReport.Priced.output|{}output[0]
+            final fun <get-output>(): io.github.shakeabdulrahman.keystone.llm/Money // io.github.shakeabdulrahman.keystone.llm/CostReport.Priced.output.<get-output>|<get-output>(){}[0]
+        final val priceTableVersion // io.github.shakeabdulrahman.keystone.llm/CostReport.Priced.priceTableVersion|{}priceTableVersion[0]
+            final fun <get-priceTableVersion>(): kotlin/String // io.github.shakeabdulrahman.keystone.llm/CostReport.Priced.priceTableVersion.<get-priceTableVersion>|<get-priceTableVersion>(){}[0]
+        final val total // io.github.shakeabdulrahman.keystone.llm/CostReport.Priced.total|{}total[0]
+            final fun <get-total>(): io.github.shakeabdulrahman.keystone.llm/Money // io.github.shakeabdulrahman.keystone.llm/CostReport.Priced.total.<get-total>|<get-total>(){}[0]
+
+        final fun component1(): io.github.shakeabdulrahman.keystone.llm/Money // io.github.shakeabdulrahman.keystone.llm/CostReport.Priced.component1|component1(){}[0]
+        final fun component2(): io.github.shakeabdulrahman.keystone.llm/Money // io.github.shakeabdulrahman.keystone.llm/CostReport.Priced.component2|component2(){}[0]
+        final fun component3(): io.github.shakeabdulrahman.keystone.llm/Money // io.github.shakeabdulrahman.keystone.llm/CostReport.Priced.component3|component3(){}[0]
+        final fun component4(): kotlin/Boolean // io.github.shakeabdulrahman.keystone.llm/CostReport.Priced.component4|component4(){}[0]
+        final fun component5(): kotlin/String // io.github.shakeabdulrahman.keystone.llm/CostReport.Priced.component5|component5(){}[0]
+        final fun copy(io.github.shakeabdulrahman.keystone.llm/Money = ..., io.github.shakeabdulrahman.keystone.llm/Money = ..., io.github.shakeabdulrahman.keystone.llm/Money = ..., kotlin/Boolean = ..., kotlin/String = ...): io.github.shakeabdulrahman.keystone.llm/CostReport.Priced // io.github.shakeabdulrahman.keystone.llm/CostReport.Priced.copy|copy(io.github.shakeabdulrahman.keystone.llm.Money;io.github.shakeabdulrahman.keystone.llm.Money;io.github.shakeabdulrahman.keystone.llm.Money;kotlin.Boolean;kotlin.String){}[0]
+        final fun equals(kotlin/Any?): kotlin/Boolean // io.github.shakeabdulrahman.keystone.llm/CostReport.Priced.equals|equals(kotlin.Any?){}[0]
+        final fun hashCode(): kotlin/Int // io.github.shakeabdulrahman.keystone.llm/CostReport.Priced.hashCode|hashCode(){}[0]
+        final fun toString(): kotlin/String // io.github.shakeabdulrahman.keystone.llm/CostReport.Priced.toString|toString(){}[0]
+    }
+
+    final class Unavailable : io.github.shakeabdulrahman.keystone.llm/CostReport { // io.github.shakeabdulrahman.keystone.llm/CostReport.Unavailable|null[0]
+        constructor <init>(io.github.shakeabdulrahman.keystone.llm/CostReport.Unavailable.Reason, kotlin/String) // io.github.shakeabdulrahman.keystone.llm/CostReport.Unavailable.<init>|<init>(io.github.shakeabdulrahman.keystone.llm.CostReport.Unavailable.Reason;kotlin.String){}[0]
+
+        final val priceTableVersion // io.github.shakeabdulrahman.keystone.llm/CostReport.Unavailable.priceTableVersion|{}priceTableVersion[0]
+            final fun <get-priceTableVersion>(): kotlin/String // io.github.shakeabdulrahman.keystone.llm/CostReport.Unavailable.priceTableVersion.<get-priceTableVersion>|<get-priceTableVersion>(){}[0]
+        final val reason // io.github.shakeabdulrahman.keystone.llm/CostReport.Unavailable.reason|{}reason[0]
+            final fun <get-reason>(): io.github.shakeabdulrahman.keystone.llm/CostReport.Unavailable.Reason // io.github.shakeabdulrahman.keystone.llm/CostReport.Unavailable.reason.<get-reason>|<get-reason>(){}[0]
+
+        final fun component1(): io.github.shakeabdulrahman.keystone.llm/CostReport.Unavailable.Reason // io.github.shakeabdulrahman.keystone.llm/CostReport.Unavailable.component1|component1(){}[0]
+        final fun component2(): kotlin/String // io.github.shakeabdulrahman.keystone.llm/CostReport.Unavailable.component2|component2(){}[0]
+        final fun copy(io.github.shakeabdulrahman.keystone.llm/CostReport.Unavailable.Reason = ..., kotlin/String = ...): io.github.shakeabdulrahman.keystone.llm/CostReport.Unavailable // io.github.shakeabdulrahman.keystone.llm/CostReport.Unavailable.copy|copy(io.github.shakeabdulrahman.keystone.llm.CostReport.Unavailable.Reason;kotlin.String){}[0]
+        final fun equals(kotlin/Any?): kotlin/Boolean // io.github.shakeabdulrahman.keystone.llm/CostReport.Unavailable.equals|equals(kotlin.Any?){}[0]
+        final fun hashCode(): kotlin/Int // io.github.shakeabdulrahman.keystone.llm/CostReport.Unavailable.hashCode|hashCode(){}[0]
+        final fun toString(): kotlin/String // io.github.shakeabdulrahman.keystone.llm/CostReport.Unavailable.toString|toString(){}[0]
+
+        final enum class Reason : kotlin/Enum<io.github.shakeabdulrahman.keystone.llm/CostReport.Unavailable.Reason> { // io.github.shakeabdulrahman.keystone.llm/CostReport.Unavailable.Reason|null[0]
+            enum entry NoPriceForModel // io.github.shakeabdulrahman.keystone.llm/CostReport.Unavailable.Reason.NoPriceForModel|null[0]
+            enum entry UsageUnknown // io.github.shakeabdulrahman.keystone.llm/CostReport.Unavailable.Reason.UsageUnknown|null[0]
+
+            final val entries // io.github.shakeabdulrahman.keystone.llm/CostReport.Unavailable.Reason.entries|#static{}entries[0]
+                final fun <get-entries>(): kotlin.enums/EnumEntries<io.github.shakeabdulrahman.keystone.llm/CostReport.Unavailable.Reason> // io.github.shakeabdulrahman.keystone.llm/CostReport.Unavailable.Reason.entries.<get-entries>|<get-entries>#static(){}[0]
+
+            final fun valueOf(kotlin/String): io.github.shakeabdulrahman.keystone.llm/CostReport.Unavailable.Reason // io.github.shakeabdulrahman.keystone.llm/CostReport.Unavailable.Reason.valueOf|valueOf#static(kotlin.String){}[0]
+            final fun values(): kotlin/Array<io.github.shakeabdulrahman.keystone.llm/CostReport.Unavailable.Reason> // io.github.shakeabdulrahman.keystone.llm/CostReport.Unavailable.Reason.values|values#static(){}[0]
+        }
+    }
+
+    final object Companion { // io.github.shakeabdulrahman.keystone.llm/CostReport.Companion|null[0]
+        final fun calculate(io.github.shakeabdulrahman.keystone.llm/Usage, io.github.shakeabdulrahman.keystone.llm/ModelPrice?, kotlin/String): io.github.shakeabdulrahman.keystone.llm/CostReport // io.github.shakeabdulrahman.keystone.llm/CostReport.Companion.calculate|calculate(io.github.shakeabdulrahman.keystone.llm.Usage;io.github.shakeabdulrahman.keystone.llm.ModelPrice?;kotlin.String){}[0]
+    }
+}
+
+sealed interface io.github.shakeabdulrahman.keystone.llm/FinishReason { // io.github.shakeabdulrahman.keystone.llm/FinishReason|null[0]
+    final class Other : io.github.shakeabdulrahman.keystone.llm/FinishReason { // io.github.shakeabdulrahman.keystone.llm/FinishReason.Other|null[0]
+        constructor <init>(kotlin/String) // io.github.shakeabdulrahman.keystone.llm/FinishReason.Other.<init>|<init>(kotlin.String){}[0]
+
+        final val raw // io.github.shakeabdulrahman.keystone.llm/FinishReason.Other.raw|{}raw[0]
+            final fun <get-raw>(): kotlin/String // io.github.shakeabdulrahman.keystone.llm/FinishReason.Other.raw.<get-raw>|<get-raw>(){}[0]
+
+        final fun component1(): kotlin/String // io.github.shakeabdulrahman.keystone.llm/FinishReason.Other.component1|component1(){}[0]
+        final fun copy(kotlin/String = ...): io.github.shakeabdulrahman.keystone.llm/FinishReason.Other // io.github.shakeabdulrahman.keystone.llm/FinishReason.Other.copy|copy(kotlin.String){}[0]
+        final fun equals(kotlin/Any?): kotlin/Boolean // io.github.shakeabdulrahman.keystone.llm/FinishReason.Other.equals|equals(kotlin.Any?){}[0]
+        final fun hashCode(): kotlin/Int // io.github.shakeabdulrahman.keystone.llm/FinishReason.Other.hashCode|hashCode(){}[0]
+        final fun toString(): kotlin/String // io.github.shakeabdulrahman.keystone.llm/FinishReason.Other.toString|toString(){}[0]
+    }
+
+    final object ContentFilter : io.github.shakeabdulrahman.keystone.llm/FinishReason { // io.github.shakeabdulrahman.keystone.llm/FinishReason.ContentFilter|null[0]
+        final fun equals(kotlin/Any?): kotlin/Boolean // io.github.shakeabdulrahman.keystone.llm/FinishReason.ContentFilter.equals|equals(kotlin.Any?){}[0]
+        final fun hashCode(): kotlin/Int // io.github.shakeabdulrahman.keystone.llm/FinishReason.ContentFilter.hashCode|hashCode(){}[0]
+        final fun toString(): kotlin/String // io.github.shakeabdulrahman.keystone.llm/FinishReason.ContentFilter.toString|toString(){}[0]
+    }
+
+    final object Length : io.github.shakeabdulrahman.keystone.llm/FinishReason { // io.github.shakeabdulrahman.keystone.llm/FinishReason.Length|null[0]
+        final fun equals(kotlin/Any?): kotlin/Boolean // io.github.shakeabdulrahman.keystone.llm/FinishReason.Length.equals|equals(kotlin.Any?){}[0]
+        final fun hashCode(): kotlin/Int // io.github.shakeabdulrahman.keystone.llm/FinishReason.Length.hashCode|hashCode(){}[0]
+        final fun toString(): kotlin/String // io.github.shakeabdulrahman.keystone.llm/FinishReason.Length.toString|toString(){}[0]
+    }
+
+    final object Stop : io.github.shakeabdulrahman.keystone.llm/FinishReason { // io.github.shakeabdulrahman.keystone.llm/FinishReason.Stop|null[0]
+        final fun equals(kotlin/Any?): kotlin/Boolean // io.github.shakeabdulrahman.keystone.llm/FinishReason.Stop.equals|equals(kotlin.Any?){}[0]
+        final fun hashCode(): kotlin/Int // io.github.shakeabdulrahman.keystone.llm/FinishReason.Stop.hashCode|hashCode(){}[0]
+        final fun toString(): kotlin/String // io.github.shakeabdulrahman.keystone.llm/FinishReason.Stop.toString|toString(){}[0]
+    }
+
+    final object ToolCalls : io.github.shakeabdulrahman.keystone.llm/FinishReason { // io.github.shakeabdulrahman.keystone.llm/FinishReason.ToolCalls|null[0]
+        final fun equals(kotlin/Any?): kotlin/Boolean // io.github.shakeabdulrahman.keystone.llm/FinishReason.ToolCalls.equals|equals(kotlin.Any?){}[0]
+        final fun hashCode(): kotlin/Int // io.github.shakeabdulrahman.keystone.llm/FinishReason.ToolCalls.hashCode|hashCode(){}[0]
+        final fun toString(): kotlin/String // io.github.shakeabdulrahman.keystone.llm/FinishReason.ToolCalls.toString|toString(){}[0]
+    }
+
+    final object Unknown : io.github.shakeabdulrahman.keystone.llm/FinishReason { // io.github.shakeabdulrahman.keystone.llm/FinishReason.Unknown|null[0]
+        final fun equals(kotlin/Any?): kotlin/Boolean // io.github.shakeabdulrahman.keystone.llm/FinishReason.Unknown.equals|equals(kotlin.Any?){}[0]
+        final fun hashCode(): kotlin/Int // io.github.shakeabdulrahman.keystone.llm/FinishReason.Unknown.hashCode|hashCode(){}[0]
+        final fun toString(): kotlin/String // io.github.shakeabdulrahman.keystone.llm/FinishReason.Unknown.toString|toString(){}[0]
+    }
+}
+
+sealed interface io.github.shakeabdulrahman.keystone.llm/Message { // io.github.shakeabdulrahman.keystone.llm/Message|null[0]
+    final class Assistant : io.github.shakeabdulrahman.keystone.llm/Message { // io.github.shakeabdulrahman.keystone.llm/Message.Assistant|null[0]
+        constructor <init>(kotlin/String = ..., kotlin.collections/List<io.github.shakeabdulrahman.keystone.llm/ToolCall> = ...) // io.github.shakeabdulrahman.keystone.llm/Message.Assistant.<init>|<init>(kotlin.String;kotlin.collections.List<io.github.shakeabdulrahman.keystone.llm.ToolCall>){}[0]
+
+        final val text // io.github.shakeabdulrahman.keystone.llm/Message.Assistant.text|{}text[0]
+            final fun <get-text>(): kotlin/String // io.github.shakeabdulrahman.keystone.llm/Message.Assistant.text.<get-text>|<get-text>(){}[0]
+        final val toolCalls // io.github.shakeabdulrahman.keystone.llm/Message.Assistant.toolCalls|{}toolCalls[0]
+            final fun <get-toolCalls>(): kotlin.collections/List<io.github.shakeabdulrahman.keystone.llm/ToolCall> // io.github.shakeabdulrahman.keystone.llm/Message.Assistant.toolCalls.<get-toolCalls>|<get-toolCalls>(){}[0]
+
+        final fun component1(): kotlin/String // io.github.shakeabdulrahman.keystone.llm/Message.Assistant.component1|component1(){}[0]
+        final fun component2(): kotlin.collections/List<io.github.shakeabdulrahman.keystone.llm/ToolCall> // io.github.shakeabdulrahman.keystone.llm/Message.Assistant.component2|component2(){}[0]
+        final fun copy(kotlin/String = ..., kotlin.collections/List<io.github.shakeabdulrahman.keystone.llm/ToolCall> = ...): io.github.shakeabdulrahman.keystone.llm/Message.Assistant // io.github.shakeabdulrahman.keystone.llm/Message.Assistant.copy|copy(kotlin.String;kotlin.collections.List<io.github.shakeabdulrahman.keystone.llm.ToolCall>){}[0]
+        final fun equals(kotlin/Any?): kotlin/Boolean // io.github.shakeabdulrahman.keystone.llm/Message.Assistant.equals|equals(kotlin.Any?){}[0]
+        final fun hashCode(): kotlin/Int // io.github.shakeabdulrahman.keystone.llm/Message.Assistant.hashCode|hashCode(){}[0]
+        final fun toString(): kotlin/String // io.github.shakeabdulrahman.keystone.llm/Message.Assistant.toString|toString(){}[0]
+    }
+
+    final class System : io.github.shakeabdulrahman.keystone.llm/Message { // io.github.shakeabdulrahman.keystone.llm/Message.System|null[0]
+        constructor <init>(kotlin/String) // io.github.shakeabdulrahman.keystone.llm/Message.System.<init>|<init>(kotlin.String){}[0]
+
+        final val text // io.github.shakeabdulrahman.keystone.llm/Message.System.text|{}text[0]
+            final fun <get-text>(): kotlin/String // io.github.shakeabdulrahman.keystone.llm/Message.System.text.<get-text>|<get-text>(){}[0]
+
+        final fun component1(): kotlin/String // io.github.shakeabdulrahman.keystone.llm/Message.System.component1|component1(){}[0]
+        final fun copy(kotlin/String = ...): io.github.shakeabdulrahman.keystone.llm/Message.System // io.github.shakeabdulrahman.keystone.llm/Message.System.copy|copy(kotlin.String){}[0]
+        final fun equals(kotlin/Any?): kotlin/Boolean // io.github.shakeabdulrahman.keystone.llm/Message.System.equals|equals(kotlin.Any?){}[0]
+        final fun hashCode(): kotlin/Int // io.github.shakeabdulrahman.keystone.llm/Message.System.hashCode|hashCode(){}[0]
+        final fun toString(): kotlin/String // io.github.shakeabdulrahman.keystone.llm/Message.System.toString|toString(){}[0]
+    }
+
+    final class ToolResult : io.github.shakeabdulrahman.keystone.llm/Message { // io.github.shakeabdulrahman.keystone.llm/Message.ToolResult|null[0]
+        constructor <init>(kotlin/String, kotlin/String, kotlin/String, kotlin/Boolean = ...) // io.github.shakeabdulrahman.keystone.llm/Message.ToolResult.<init>|<init>(kotlin.String;kotlin.String;kotlin.String;kotlin.Boolean){}[0]
+
+        final val callId // io.github.shakeabdulrahman.keystone.llm/Message.ToolResult.callId|{}callId[0]
+            final fun <get-callId>(): kotlin/String // io.github.shakeabdulrahman.keystone.llm/Message.ToolResult.callId.<get-callId>|<get-callId>(){}[0]
+        final val content // io.github.shakeabdulrahman.keystone.llm/Message.ToolResult.content|{}content[0]
+            final fun <get-content>(): kotlin/String // io.github.shakeabdulrahman.keystone.llm/Message.ToolResult.content.<get-content>|<get-content>(){}[0]
+        final val isError // io.github.shakeabdulrahman.keystone.llm/Message.ToolResult.isError|{}isError[0]
+            final fun <get-isError>(): kotlin/Boolean // io.github.shakeabdulrahman.keystone.llm/Message.ToolResult.isError.<get-isError>|<get-isError>(){}[0]
+        final val toolName // io.github.shakeabdulrahman.keystone.llm/Message.ToolResult.toolName|{}toolName[0]
+            final fun <get-toolName>(): kotlin/String // io.github.shakeabdulrahman.keystone.llm/Message.ToolResult.toolName.<get-toolName>|<get-toolName>(){}[0]
+
+        final fun component1(): kotlin/String // io.github.shakeabdulrahman.keystone.llm/Message.ToolResult.component1|component1(){}[0]
+        final fun component2(): kotlin/String // io.github.shakeabdulrahman.keystone.llm/Message.ToolResult.component2|component2(){}[0]
+        final fun component3(): kotlin/String // io.github.shakeabdulrahman.keystone.llm/Message.ToolResult.component3|component3(){}[0]
+        final fun component4(): kotlin/Boolean // io.github.shakeabdulrahman.keystone.llm/Message.ToolResult.component4|component4(){}[0]
+        final fun copy(kotlin/String = ..., kotlin/String = ..., kotlin/String = ..., kotlin/Boolean = ...): io.github.shakeabdulrahman.keystone.llm/Message.ToolResult // io.github.shakeabdulrahman.keystone.llm/Message.ToolResult.copy|copy(kotlin.String;kotlin.String;kotlin.String;kotlin.Boolean){}[0]
+        final fun equals(kotlin/Any?): kotlin/Boolean // io.github.shakeabdulrahman.keystone.llm/Message.ToolResult.equals|equals(kotlin.Any?){}[0]
+        final fun hashCode(): kotlin/Int // io.github.shakeabdulrahman.keystone.llm/Message.ToolResult.hashCode|hashCode(){}[0]
+        final fun toString(): kotlin/String // io.github.shakeabdulrahman.keystone.llm/Message.ToolResult.toString|toString(){}[0]
+    }
+
+    final class User : io.github.shakeabdulrahman.keystone.llm/Message { // io.github.shakeabdulrahman.keystone.llm/Message.User|null[0]
+        constructor <init>(kotlin/String) // io.github.shakeabdulrahman.keystone.llm/Message.User.<init>|<init>(kotlin.String){}[0]
+
+        final val text // io.github.shakeabdulrahman.keystone.llm/Message.User.text|{}text[0]
+            final fun <get-text>(): kotlin/String // io.github.shakeabdulrahman.keystone.llm/Message.User.text.<get-text>|<get-text>(){}[0]
+
+        final fun component1(): kotlin/String // io.github.shakeabdulrahman.keystone.llm/Message.User.component1|component1(){}[0]
+        final fun copy(kotlin/String = ...): io.github.shakeabdulrahman.keystone.llm/Message.User // io.github.shakeabdulrahman.keystone.llm/Message.User.copy|copy(kotlin.String){}[0]
+        final fun equals(kotlin/Any?): kotlin/Boolean // io.github.shakeabdulrahman.keystone.llm/Message.User.equals|equals(kotlin.Any?){}[0]
+        final fun hashCode(): kotlin/Int // io.github.shakeabdulrahman.keystone.llm/Message.User.hashCode|hashCode(){}[0]
+        final fun toString(): kotlin/String // io.github.shakeabdulrahman.keystone.llm/Message.User.toString|toString(){}[0]
+    }
+
+    final object Companion { // io.github.shakeabdulrahman.keystone.llm/Message.Companion|null[0]
+        final fun assistant(kotlin/String): io.github.shakeabdulrahman.keystone.llm/Message // io.github.shakeabdulrahman.keystone.llm/Message.Companion.assistant|assistant(kotlin.String){}[0]
+        final fun system(kotlin/String): io.github.shakeabdulrahman.keystone.llm/Message // io.github.shakeabdulrahman.keystone.llm/Message.Companion.system|system(kotlin.String){}[0]
+        final fun user(kotlin/String): io.github.shakeabdulrahman.keystone.llm/Message // io.github.shakeabdulrahman.keystone.llm/Message.Companion.user|user(kotlin.String){}[0]
+    }
+}
+
+sealed interface io.github.shakeabdulrahman.keystone.llm/ProviderEvent { // io.github.shakeabdulrahman.keystone.llm/ProviderEvent|null[0]
+    final class Finish : io.github.shakeabdulrahman.keystone.llm/ProviderEvent { // io.github.shakeabdulrahman.keystone.llm/ProviderEvent.Finish|null[0]
+        constructor <init>(io.github.shakeabdulrahman.keystone.llm/FinishReason) // io.github.shakeabdulrahman.keystone.llm/ProviderEvent.Finish.<init>|<init>(io.github.shakeabdulrahman.keystone.llm.FinishReason){}[0]
+
+        final val reason // io.github.shakeabdulrahman.keystone.llm/ProviderEvent.Finish.reason|{}reason[0]
+            final fun <get-reason>(): io.github.shakeabdulrahman.keystone.llm/FinishReason // io.github.shakeabdulrahman.keystone.llm/ProviderEvent.Finish.reason.<get-reason>|<get-reason>(){}[0]
+
+        final fun component1(): io.github.shakeabdulrahman.keystone.llm/FinishReason // io.github.shakeabdulrahman.keystone.llm/ProviderEvent.Finish.component1|component1(){}[0]
+        final fun copy(io.github.shakeabdulrahman.keystone.llm/FinishReason = ...): io.github.shakeabdulrahman.keystone.llm/ProviderEvent.Finish // io.github.shakeabdulrahman.keystone.llm/ProviderEvent.Finish.copy|copy(io.github.shakeabdulrahman.keystone.llm.FinishReason){}[0]
+        final fun equals(kotlin/Any?): kotlin/Boolean // io.github.shakeabdulrahman.keystone.llm/ProviderEvent.Finish.equals|equals(kotlin.Any?){}[0]
+        final fun hashCode(): kotlin/Int // io.github.shakeabdulrahman.keystone.llm/ProviderEvent.Finish.hashCode|hashCode(){}[0]
+        final fun toString(): kotlin/String // io.github.shakeabdulrahman.keystone.llm/ProviderEvent.Finish.toString|toString(){}[0]
+    }
+
+    final class Metadata : io.github.shakeabdulrahman.keystone.llm/ProviderEvent { // io.github.shakeabdulrahman.keystone.llm/ProviderEvent.Metadata|null[0]
+        constructor <init>(kotlin/String? = ..., kotlin/String? = ..., kotlin/String? = ...) // io.github.shakeabdulrahman.keystone.llm/ProviderEvent.Metadata.<init>|<init>(kotlin.String?;kotlin.String?;kotlin.String?){}[0]
+
+        final val model // io.github.shakeabdulrahman.keystone.llm/ProviderEvent.Metadata.model|{}model[0]
+            final fun <get-model>(): kotlin/String? // io.github.shakeabdulrahman.keystone.llm/ProviderEvent.Metadata.model.<get-model>|<get-model>(){}[0]
+        final val requestId // io.github.shakeabdulrahman.keystone.llm/ProviderEvent.Metadata.requestId|{}requestId[0]
+            final fun <get-requestId>(): kotlin/String? // io.github.shakeabdulrahman.keystone.llm/ProviderEvent.Metadata.requestId.<get-requestId>|<get-requestId>(){}[0]
+        final val responseId // io.github.shakeabdulrahman.keystone.llm/ProviderEvent.Metadata.responseId|{}responseId[0]
+            final fun <get-responseId>(): kotlin/String? // io.github.shakeabdulrahman.keystone.llm/ProviderEvent.Metadata.responseId.<get-responseId>|<get-responseId>(){}[0]
+
+        final fun component1(): kotlin/String? // io.github.shakeabdulrahman.keystone.llm/ProviderEvent.Metadata.component1|component1(){}[0]
+        final fun component2(): kotlin/String? // io.github.shakeabdulrahman.keystone.llm/ProviderEvent.Metadata.component2|component2(){}[0]
+        final fun component3(): kotlin/String? // io.github.shakeabdulrahman.keystone.llm/ProviderEvent.Metadata.component3|component3(){}[0]
+        final fun copy(kotlin/String? = ..., kotlin/String? = ..., kotlin/String? = ...): io.github.shakeabdulrahman.keystone.llm/ProviderEvent.Metadata // io.github.shakeabdulrahman.keystone.llm/ProviderEvent.Metadata.copy|copy(kotlin.String?;kotlin.String?;kotlin.String?){}[0]
+        final fun equals(kotlin/Any?): kotlin/Boolean // io.github.shakeabdulrahman.keystone.llm/ProviderEvent.Metadata.equals|equals(kotlin.Any?){}[0]
+        final fun hashCode(): kotlin/Int // io.github.shakeabdulrahman.keystone.llm/ProviderEvent.Metadata.hashCode|hashCode(){}[0]
+        final fun toString(): kotlin/String // io.github.shakeabdulrahman.keystone.llm/ProviderEvent.Metadata.toString|toString(){}[0]
+    }
+
+    final class TextDelta : io.github.shakeabdulrahman.keystone.llm/ProviderEvent { // io.github.shakeabdulrahman.keystone.llm/ProviderEvent.TextDelta|null[0]
+        constructor <init>(kotlin/String) // io.github.shakeabdulrahman.keystone.llm/ProviderEvent.TextDelta.<init>|<init>(kotlin.String){}[0]
+
+        final val text // io.github.shakeabdulrahman.keystone.llm/ProviderEvent.TextDelta.text|{}text[0]
+            final fun <get-text>(): kotlin/String // io.github.shakeabdulrahman.keystone.llm/ProviderEvent.TextDelta.text.<get-text>|<get-text>(){}[0]
+
+        final fun component1(): kotlin/String // io.github.shakeabdulrahman.keystone.llm/ProviderEvent.TextDelta.component1|component1(){}[0]
+        final fun copy(kotlin/String = ...): io.github.shakeabdulrahman.keystone.llm/ProviderEvent.TextDelta // io.github.shakeabdulrahman.keystone.llm/ProviderEvent.TextDelta.copy|copy(kotlin.String){}[0]
+        final fun equals(kotlin/Any?): kotlin/Boolean // io.github.shakeabdulrahman.keystone.llm/ProviderEvent.TextDelta.equals|equals(kotlin.Any?){}[0]
+        final fun hashCode(): kotlin/Int // io.github.shakeabdulrahman.keystone.llm/ProviderEvent.TextDelta.hashCode|hashCode(){}[0]
+        final fun toString(): kotlin/String // io.github.shakeabdulrahman.keystone.llm/ProviderEvent.TextDelta.toString|toString(){}[0]
+    }
+
+    final class ToolCallChunk : io.github.shakeabdulrahman.keystone.llm/ProviderEvent { // io.github.shakeabdulrahman.keystone.llm/ProviderEvent.ToolCallChunk|null[0]
+        constructor <init>(kotlin/Int, kotlin/String? = ..., kotlin/String? = ..., kotlin/String = ..., kotlin.collections/Map<kotlin/String, kotlin/String> = ...) // io.github.shakeabdulrahman.keystone.llm/ProviderEvent.ToolCallChunk.<init>|<init>(kotlin.Int;kotlin.String?;kotlin.String?;kotlin.String;kotlin.collections.Map<kotlin.String,kotlin.String>){}[0]
+
+        final val argumentsDelta // io.github.shakeabdulrahman.keystone.llm/ProviderEvent.ToolCallChunk.argumentsDelta|{}argumentsDelta[0]
+            final fun <get-argumentsDelta>(): kotlin/String // io.github.shakeabdulrahman.keystone.llm/ProviderEvent.ToolCallChunk.argumentsDelta.<get-argumentsDelta>|<get-argumentsDelta>(){}[0]
+        final val id // io.github.shakeabdulrahman.keystone.llm/ProviderEvent.ToolCallChunk.id|{}id[0]
+            final fun <get-id>(): kotlin/String? // io.github.shakeabdulrahman.keystone.llm/ProviderEvent.ToolCallChunk.id.<get-id>|<get-id>(){}[0]
+        final val index // io.github.shakeabdulrahman.keystone.llm/ProviderEvent.ToolCallChunk.index|{}index[0]
+            final fun <get-index>(): kotlin/Int // io.github.shakeabdulrahman.keystone.llm/ProviderEvent.ToolCallChunk.index.<get-index>|<get-index>(){}[0]
+        final val name // io.github.shakeabdulrahman.keystone.llm/ProviderEvent.ToolCallChunk.name|{}name[0]
+            final fun <get-name>(): kotlin/String? // io.github.shakeabdulrahman.keystone.llm/ProviderEvent.ToolCallChunk.name.<get-name>|<get-name>(){}[0]
+        final val providerMetadata // io.github.shakeabdulrahman.keystone.llm/ProviderEvent.ToolCallChunk.providerMetadata|{}providerMetadata[0]
+            final fun <get-providerMetadata>(): kotlin.collections/Map<kotlin/String, kotlin/String> // io.github.shakeabdulrahman.keystone.llm/ProviderEvent.ToolCallChunk.providerMetadata.<get-providerMetadata>|<get-providerMetadata>(){}[0]
+
+        final fun component1(): kotlin/Int // io.github.shakeabdulrahman.keystone.llm/ProviderEvent.ToolCallChunk.component1|component1(){}[0]
+        final fun component2(): kotlin/String? // io.github.shakeabdulrahman.keystone.llm/ProviderEvent.ToolCallChunk.component2|component2(){}[0]
+        final fun component3(): kotlin/String? // io.github.shakeabdulrahman.keystone.llm/ProviderEvent.ToolCallChunk.component3|component3(){}[0]
+        final fun component4(): kotlin/String // io.github.shakeabdulrahman.keystone.llm/ProviderEvent.ToolCallChunk.component4|component4(){}[0]
+        final fun component5(): kotlin.collections/Map<kotlin/String, kotlin/String> // io.github.shakeabdulrahman.keystone.llm/ProviderEvent.ToolCallChunk.component5|component5(){}[0]
+        final fun copy(kotlin/Int = ..., kotlin/String? = ..., kotlin/String? = ..., kotlin/String = ..., kotlin.collections/Map<kotlin/String, kotlin/String> = ...): io.github.shakeabdulrahman.keystone.llm/ProviderEvent.ToolCallChunk // io.github.shakeabdulrahman.keystone.llm/ProviderEvent.ToolCallChunk.copy|copy(kotlin.Int;kotlin.String?;kotlin.String?;kotlin.String;kotlin.collections.Map<kotlin.String,kotlin.String>){}[0]
+        final fun equals(kotlin/Any?): kotlin/Boolean // io.github.shakeabdulrahman.keystone.llm/ProviderEvent.ToolCallChunk.equals|equals(kotlin.Any?){}[0]
+        final fun hashCode(): kotlin/Int // io.github.shakeabdulrahman.keystone.llm/ProviderEvent.ToolCallChunk.hashCode|hashCode(){}[0]
+        final fun toString(): kotlin/String // io.github.shakeabdulrahman.keystone.llm/ProviderEvent.ToolCallChunk.toString|toString(){}[0]
+    }
+
+    final class UsageUpdate : io.github.shakeabdulrahman.keystone.llm/ProviderEvent { // io.github.shakeabdulrahman.keystone.llm/ProviderEvent.UsageUpdate|null[0]
+        constructor <init>(io.github.shakeabdulrahman.keystone.llm/Usage) // io.github.shakeabdulrahman.keystone.llm/ProviderEvent.UsageUpdate.<init>|<init>(io.github.shakeabdulrahman.keystone.llm.Usage){}[0]
+
+        final val usage // io.github.shakeabdulrahman.keystone.llm/ProviderEvent.UsageUpdate.usage|{}usage[0]
+            final fun <get-usage>(): io.github.shakeabdulrahman.keystone.llm/Usage // io.github.shakeabdulrahman.keystone.llm/ProviderEvent.UsageUpdate.usage.<get-usage>|<get-usage>(){}[0]
+
+        final fun component1(): io.github.shakeabdulrahman.keystone.llm/Usage // io.github.shakeabdulrahman.keystone.llm/ProviderEvent.UsageUpdate.component1|component1(){}[0]
+        final fun copy(io.github.shakeabdulrahman.keystone.llm/Usage = ...): io.github.shakeabdulrahman.keystone.llm/ProviderEvent.UsageUpdate // io.github.shakeabdulrahman.keystone.llm/ProviderEvent.UsageUpdate.copy|copy(io.github.shakeabdulrahman.keystone.llm.Usage){}[0]
+        final fun equals(kotlin/Any?): kotlin/Boolean // io.github.shakeabdulrahman.keystone.llm/ProviderEvent.UsageUpdate.equals|equals(kotlin.Any?){}[0]
+        final fun hashCode(): kotlin/Int // io.github.shakeabdulrahman.keystone.llm/ProviderEvent.UsageUpdate.hashCode|hashCode(){}[0]
+        final fun toString(): kotlin/String // io.github.shakeabdulrahman.keystone.llm/ProviderEvent.UsageUpdate.toString|toString(){}[0]
+    }
+}
+
+sealed interface io.github.shakeabdulrahman.keystone.llm/ResponseFormat { // io.github.shakeabdulrahman.keystone.llm/ResponseFormat|null[0]
+    final class JsonSchema : io.github.shakeabdulrahman.keystone.llm/ResponseFormat { // io.github.shakeabdulrahman.keystone.llm/ResponseFormat.JsonSchema|null[0]
+        constructor <init>(kotlin/String, kotlinx.serialization.json/JsonObject, kotlin/Boolean = ..., kotlin/Boolean = ...) // io.github.shakeabdulrahman.keystone.llm/ResponseFormat.JsonSchema.<init>|<init>(kotlin.String;kotlinx.serialization.json.JsonObject;kotlin.Boolean;kotlin.Boolean){}[0]
+
+        final val allowDowngrade // io.github.shakeabdulrahman.keystone.llm/ResponseFormat.JsonSchema.allowDowngrade|{}allowDowngrade[0]
+            final fun <get-allowDowngrade>(): kotlin/Boolean // io.github.shakeabdulrahman.keystone.llm/ResponseFormat.JsonSchema.allowDowngrade.<get-allowDowngrade>|<get-allowDowngrade>(){}[0]
+        final val name // io.github.shakeabdulrahman.keystone.llm/ResponseFormat.JsonSchema.name|{}name[0]
+            final fun <get-name>(): kotlin/String // io.github.shakeabdulrahman.keystone.llm/ResponseFormat.JsonSchema.name.<get-name>|<get-name>(){}[0]
+        final val schema // io.github.shakeabdulrahman.keystone.llm/ResponseFormat.JsonSchema.schema|{}schema[0]
+            final fun <get-schema>(): kotlinx.serialization.json/JsonObject // io.github.shakeabdulrahman.keystone.llm/ResponseFormat.JsonSchema.schema.<get-schema>|<get-schema>(){}[0]
+        final val strict // io.github.shakeabdulrahman.keystone.llm/ResponseFormat.JsonSchema.strict|{}strict[0]
+            final fun <get-strict>(): kotlin/Boolean // io.github.shakeabdulrahman.keystone.llm/ResponseFormat.JsonSchema.strict.<get-strict>|<get-strict>(){}[0]
+
+        final fun component1(): kotlin/String // io.github.shakeabdulrahman.keystone.llm/ResponseFormat.JsonSchema.component1|component1(){}[0]
+        final fun component2(): kotlinx.serialization.json/JsonObject // io.github.shakeabdulrahman.keystone.llm/ResponseFormat.JsonSchema.component2|component2(){}[0]
+        final fun component3(): kotlin/Boolean // io.github.shakeabdulrahman.keystone.llm/ResponseFormat.JsonSchema.component3|component3(){}[0]
+        final fun component4(): kotlin/Boolean // io.github.shakeabdulrahman.keystone.llm/ResponseFormat.JsonSchema.component4|component4(){}[0]
+        final fun copy(kotlin/String = ..., kotlinx.serialization.json/JsonObject = ..., kotlin/Boolean = ..., kotlin/Boolean = ...): io.github.shakeabdulrahman.keystone.llm/ResponseFormat.JsonSchema // io.github.shakeabdulrahman.keystone.llm/ResponseFormat.JsonSchema.copy|copy(kotlin.String;kotlinx.serialization.json.JsonObject;kotlin.Boolean;kotlin.Boolean){}[0]
+        final fun equals(kotlin/Any?): kotlin/Boolean // io.github.shakeabdulrahman.keystone.llm/ResponseFormat.JsonSchema.equals|equals(kotlin.Any?){}[0]
+        final fun hashCode(): kotlin/Int // io.github.shakeabdulrahman.keystone.llm/ResponseFormat.JsonSchema.hashCode|hashCode(){}[0]
+        final fun toString(): kotlin/String // io.github.shakeabdulrahman.keystone.llm/ResponseFormat.JsonSchema.toString|toString(){}[0]
+    }
+
+    final object JsonMode : io.github.shakeabdulrahman.keystone.llm/ResponseFormat { // io.github.shakeabdulrahman.keystone.llm/ResponseFormat.JsonMode|null[0]
+        final fun equals(kotlin/Any?): kotlin/Boolean // io.github.shakeabdulrahman.keystone.llm/ResponseFormat.JsonMode.equals|equals(kotlin.Any?){}[0]
+        final fun hashCode(): kotlin/Int // io.github.shakeabdulrahman.keystone.llm/ResponseFormat.JsonMode.hashCode|hashCode(){}[0]
+        final fun toString(): kotlin/String // io.github.shakeabdulrahman.keystone.llm/ResponseFormat.JsonMode.toString|toString(){}[0]
+    }
+
+    final object Text : io.github.shakeabdulrahman.keystone.llm/ResponseFormat { // io.github.shakeabdulrahman.keystone.llm/ResponseFormat.Text|null[0]
+        final fun equals(kotlin/Any?): kotlin/Boolean // io.github.shakeabdulrahman.keystone.llm/ResponseFormat.Text.equals|equals(kotlin.Any?){}[0]
+        final fun hashCode(): kotlin/Int // io.github.shakeabdulrahman.keystone.llm/ResponseFormat.Text.hashCode|hashCode(){}[0]
+        final fun toString(): kotlin/String // io.github.shakeabdulrahman.keystone.llm/ResponseFormat.Text.toString|toString(){}[0]
+    }
+}
+
+sealed interface io.github.shakeabdulrahman.keystone.llm/StreamEvent { // io.github.shakeabdulrahman.keystone.llm/StreamEvent|null[0]
+    final class Completed : io.github.shakeabdulrahman.keystone.llm/StreamEvent { // io.github.shakeabdulrahman.keystone.llm/StreamEvent.Completed|null[0]
+        constructor <init>(io.github.shakeabdulrahman.keystone.llm/ChatResponse) // io.github.shakeabdulrahman.keystone.llm/StreamEvent.Completed.<init>|<init>(io.github.shakeabdulrahman.keystone.llm.ChatResponse){}[0]
+
+        final val response // io.github.shakeabdulrahman.keystone.llm/StreamEvent.Completed.response|{}response[0]
+            final fun <get-response>(): io.github.shakeabdulrahman.keystone.llm/ChatResponse // io.github.shakeabdulrahman.keystone.llm/StreamEvent.Completed.response.<get-response>|<get-response>(){}[0]
+
+        final fun component1(): io.github.shakeabdulrahman.keystone.llm/ChatResponse // io.github.shakeabdulrahman.keystone.llm/StreamEvent.Completed.component1|component1(){}[0]
+        final fun copy(io.github.shakeabdulrahman.keystone.llm/ChatResponse = ...): io.github.shakeabdulrahman.keystone.llm/StreamEvent.Completed // io.github.shakeabdulrahman.keystone.llm/StreamEvent.Completed.copy|copy(io.github.shakeabdulrahman.keystone.llm.ChatResponse){}[0]
+        final fun equals(kotlin/Any?): kotlin/Boolean // io.github.shakeabdulrahman.keystone.llm/StreamEvent.Completed.equals|equals(kotlin.Any?){}[0]
+        final fun hashCode(): kotlin/Int // io.github.shakeabdulrahman.keystone.llm/StreamEvent.Completed.hashCode|hashCode(){}[0]
+        final fun toString(): kotlin/String // io.github.shakeabdulrahman.keystone.llm/StreamEvent.Completed.toString|toString(){}[0]
+    }
+
+    final class Restarted : io.github.shakeabdulrahman.keystone.llm/StreamEvent { // io.github.shakeabdulrahman.keystone.llm/StreamEvent.Restarted|null[0]
+        constructor <init>(io.github.shakeabdulrahman.keystone.llm/Attempt, io.github.shakeabdulrahman.keystone.llm/ModelRef) // io.github.shakeabdulrahman.keystone.llm/StreamEvent.Restarted.<init>|<init>(io.github.shakeabdulrahman.keystone.llm.Attempt;io.github.shakeabdulrahman.keystone.llm.ModelRef){}[0]
+
+        final val failed // io.github.shakeabdulrahman.keystone.llm/StreamEvent.Restarted.failed|{}failed[0]
+            final fun <get-failed>(): io.github.shakeabdulrahman.keystone.llm/Attempt // io.github.shakeabdulrahman.keystone.llm/StreamEvent.Restarted.failed.<get-failed>|<get-failed>(){}[0]
+        final val next // io.github.shakeabdulrahman.keystone.llm/StreamEvent.Restarted.next|{}next[0]
+            final fun <get-next>(): io.github.shakeabdulrahman.keystone.llm/ModelRef // io.github.shakeabdulrahman.keystone.llm/StreamEvent.Restarted.next.<get-next>|<get-next>(){}[0]
+
+        final fun component1(): io.github.shakeabdulrahman.keystone.llm/Attempt // io.github.shakeabdulrahman.keystone.llm/StreamEvent.Restarted.component1|component1(){}[0]
+        final fun component2(): io.github.shakeabdulrahman.keystone.llm/ModelRef // io.github.shakeabdulrahman.keystone.llm/StreamEvent.Restarted.component2|component2(){}[0]
+        final fun copy(io.github.shakeabdulrahman.keystone.llm/Attempt = ..., io.github.shakeabdulrahman.keystone.llm/ModelRef = ...): io.github.shakeabdulrahman.keystone.llm/StreamEvent.Restarted // io.github.shakeabdulrahman.keystone.llm/StreamEvent.Restarted.copy|copy(io.github.shakeabdulrahman.keystone.llm.Attempt;io.github.shakeabdulrahman.keystone.llm.ModelRef){}[0]
+        final fun equals(kotlin/Any?): kotlin/Boolean // io.github.shakeabdulrahman.keystone.llm/StreamEvent.Restarted.equals|equals(kotlin.Any?){}[0]
+        final fun hashCode(): kotlin/Int // io.github.shakeabdulrahman.keystone.llm/StreamEvent.Restarted.hashCode|hashCode(){}[0]
+        final fun toString(): kotlin/String // io.github.shakeabdulrahman.keystone.llm/StreamEvent.Restarted.toString|toString(){}[0]
+    }
+
+    final class Started : io.github.shakeabdulrahman.keystone.llm/StreamEvent { // io.github.shakeabdulrahman.keystone.llm/StreamEvent.Started|null[0]
+        constructor <init>(io.github.shakeabdulrahman.keystone.llm/ModelRef, kotlin/String?) // io.github.shakeabdulrahman.keystone.llm/StreamEvent.Started.<init>|<init>(io.github.shakeabdulrahman.keystone.llm.ModelRef;kotlin.String?){}[0]
+
+        final val requestId // io.github.shakeabdulrahman.keystone.llm/StreamEvent.Started.requestId|{}requestId[0]
+            final fun <get-requestId>(): kotlin/String? // io.github.shakeabdulrahman.keystone.llm/StreamEvent.Started.requestId.<get-requestId>|<get-requestId>(){}[0]
+        final val target // io.github.shakeabdulrahman.keystone.llm/StreamEvent.Started.target|{}target[0]
+            final fun <get-target>(): io.github.shakeabdulrahman.keystone.llm/ModelRef // io.github.shakeabdulrahman.keystone.llm/StreamEvent.Started.target.<get-target>|<get-target>(){}[0]
+
+        final fun component1(): io.github.shakeabdulrahman.keystone.llm/ModelRef // io.github.shakeabdulrahman.keystone.llm/StreamEvent.Started.component1|component1(){}[0]
+        final fun component2(): kotlin/String? // io.github.shakeabdulrahman.keystone.llm/StreamEvent.Started.component2|component2(){}[0]
+        final fun copy(io.github.shakeabdulrahman.keystone.llm/ModelRef = ..., kotlin/String? = ...): io.github.shakeabdulrahman.keystone.llm/StreamEvent.Started // io.github.shakeabdulrahman.keystone.llm/StreamEvent.Started.copy|copy(io.github.shakeabdulrahman.keystone.llm.ModelRef;kotlin.String?){}[0]
+        final fun equals(kotlin/Any?): kotlin/Boolean // io.github.shakeabdulrahman.keystone.llm/StreamEvent.Started.equals|equals(kotlin.Any?){}[0]
+        final fun hashCode(): kotlin/Int // io.github.shakeabdulrahman.keystone.llm/StreamEvent.Started.hashCode|hashCode(){}[0]
+        final fun toString(): kotlin/String // io.github.shakeabdulrahman.keystone.llm/StreamEvent.Started.toString|toString(){}[0]
+    }
+
+    final class TextDelta : io.github.shakeabdulrahman.keystone.llm/StreamEvent { // io.github.shakeabdulrahman.keystone.llm/StreamEvent.TextDelta|null[0]
+        constructor <init>(kotlin/String) // io.github.shakeabdulrahman.keystone.llm/StreamEvent.TextDelta.<init>|<init>(kotlin.String){}[0]
+
+        final val text // io.github.shakeabdulrahman.keystone.llm/StreamEvent.TextDelta.text|{}text[0]
+            final fun <get-text>(): kotlin/String // io.github.shakeabdulrahman.keystone.llm/StreamEvent.TextDelta.text.<get-text>|<get-text>(){}[0]
+
+        final fun component1(): kotlin/String // io.github.shakeabdulrahman.keystone.llm/StreamEvent.TextDelta.component1|component1(){}[0]
+        final fun copy(kotlin/String = ...): io.github.shakeabdulrahman.keystone.llm/StreamEvent.TextDelta // io.github.shakeabdulrahman.keystone.llm/StreamEvent.TextDelta.copy|copy(kotlin.String){}[0]
+        final fun equals(kotlin/Any?): kotlin/Boolean // io.github.shakeabdulrahman.keystone.llm/StreamEvent.TextDelta.equals|equals(kotlin.Any?){}[0]
+        final fun hashCode(): kotlin/Int // io.github.shakeabdulrahman.keystone.llm/StreamEvent.TextDelta.hashCode|hashCode(){}[0]
+        final fun toString(): kotlin/String // io.github.shakeabdulrahman.keystone.llm/StreamEvent.TextDelta.toString|toString(){}[0]
+    }
+
+    final class ToolCallCompleted : io.github.shakeabdulrahman.keystone.llm/StreamEvent { // io.github.shakeabdulrahman.keystone.llm/StreamEvent.ToolCallCompleted|null[0]
+        constructor <init>(kotlin/Int, io.github.shakeabdulrahman.keystone.llm/ToolCall) // io.github.shakeabdulrahman.keystone.llm/StreamEvent.ToolCallCompleted.<init>|<init>(kotlin.Int;io.github.shakeabdulrahman.keystone.llm.ToolCall){}[0]
+
+        final val call // io.github.shakeabdulrahman.keystone.llm/StreamEvent.ToolCallCompleted.call|{}call[0]
+            final fun <get-call>(): io.github.shakeabdulrahman.keystone.llm/ToolCall // io.github.shakeabdulrahman.keystone.llm/StreamEvent.ToolCallCompleted.call.<get-call>|<get-call>(){}[0]
+        final val index // io.github.shakeabdulrahman.keystone.llm/StreamEvent.ToolCallCompleted.index|{}index[0]
+            final fun <get-index>(): kotlin/Int // io.github.shakeabdulrahman.keystone.llm/StreamEvent.ToolCallCompleted.index.<get-index>|<get-index>(){}[0]
+
+        final fun component1(): kotlin/Int // io.github.shakeabdulrahman.keystone.llm/StreamEvent.ToolCallCompleted.component1|component1(){}[0]
+        final fun component2(): io.github.shakeabdulrahman.keystone.llm/ToolCall // io.github.shakeabdulrahman.keystone.llm/StreamEvent.ToolCallCompleted.component2|component2(){}[0]
+        final fun copy(kotlin/Int = ..., io.github.shakeabdulrahman.keystone.llm/ToolCall = ...): io.github.shakeabdulrahman.keystone.llm/StreamEvent.ToolCallCompleted // io.github.shakeabdulrahman.keystone.llm/StreamEvent.ToolCallCompleted.copy|copy(kotlin.Int;io.github.shakeabdulrahman.keystone.llm.ToolCall){}[0]
+        final fun equals(kotlin/Any?): kotlin/Boolean // io.github.shakeabdulrahman.keystone.llm/StreamEvent.ToolCallCompleted.equals|equals(kotlin.Any?){}[0]
+        final fun hashCode(): kotlin/Int // io.github.shakeabdulrahman.keystone.llm/StreamEvent.ToolCallCompleted.hashCode|hashCode(){}[0]
+        final fun toString(): kotlin/String // io.github.shakeabdulrahman.keystone.llm/StreamEvent.ToolCallCompleted.toString|toString(){}[0]
+    }
+
+    final class ToolCallDelta : io.github.shakeabdulrahman.keystone.llm/StreamEvent { // io.github.shakeabdulrahman.keystone.llm/StreamEvent.ToolCallDelta|null[0]
+        constructor <init>(kotlin/Int, kotlin/String) // io.github.shakeabdulrahman.keystone.llm/StreamEvent.ToolCallDelta.<init>|<init>(kotlin.Int;kotlin.String){}[0]
+
+        final val argumentsDelta // io.github.shakeabdulrahman.keystone.llm/StreamEvent.ToolCallDelta.argumentsDelta|{}argumentsDelta[0]
+            final fun <get-argumentsDelta>(): kotlin/String // io.github.shakeabdulrahman.keystone.llm/StreamEvent.ToolCallDelta.argumentsDelta.<get-argumentsDelta>|<get-argumentsDelta>(){}[0]
+        final val index // io.github.shakeabdulrahman.keystone.llm/StreamEvent.ToolCallDelta.index|{}index[0]
+            final fun <get-index>(): kotlin/Int // io.github.shakeabdulrahman.keystone.llm/StreamEvent.ToolCallDelta.index.<get-index>|<get-index>(){}[0]
+
+        final fun component1(): kotlin/Int // io.github.shakeabdulrahman.keystone.llm/StreamEvent.ToolCallDelta.component1|component1(){}[0]
+        final fun component2(): kotlin/String // io.github.shakeabdulrahman.keystone.llm/StreamEvent.ToolCallDelta.component2|component2(){}[0]
+        final fun copy(kotlin/Int = ..., kotlin/String = ...): io.github.shakeabdulrahman.keystone.llm/StreamEvent.ToolCallDelta // io.github.shakeabdulrahman.keystone.llm/StreamEvent.ToolCallDelta.copy|copy(kotlin.Int;kotlin.String){}[0]
+        final fun equals(kotlin/Any?): kotlin/Boolean // io.github.shakeabdulrahman.keystone.llm/StreamEvent.ToolCallDelta.equals|equals(kotlin.Any?){}[0]
+        final fun hashCode(): kotlin/Int // io.github.shakeabdulrahman.keystone.llm/StreamEvent.ToolCallDelta.hashCode|hashCode(){}[0]
+        final fun toString(): kotlin/String // io.github.shakeabdulrahman.keystone.llm/StreamEvent.ToolCallDelta.toString|toString(){}[0]
+    }
+
+    final class ToolCallStarted : io.github.shakeabdulrahman.keystone.llm/StreamEvent { // io.github.shakeabdulrahman.keystone.llm/StreamEvent.ToolCallStarted|null[0]
+        constructor <init>(kotlin/Int, kotlin/String, kotlin/String) // io.github.shakeabdulrahman.keystone.llm/StreamEvent.ToolCallStarted.<init>|<init>(kotlin.Int;kotlin.String;kotlin.String){}[0]
+
+        final val id // io.github.shakeabdulrahman.keystone.llm/StreamEvent.ToolCallStarted.id|{}id[0]
+            final fun <get-id>(): kotlin/String // io.github.shakeabdulrahman.keystone.llm/StreamEvent.ToolCallStarted.id.<get-id>|<get-id>(){}[0]
+        final val index // io.github.shakeabdulrahman.keystone.llm/StreamEvent.ToolCallStarted.index|{}index[0]
+            final fun <get-index>(): kotlin/Int // io.github.shakeabdulrahman.keystone.llm/StreamEvent.ToolCallStarted.index.<get-index>|<get-index>(){}[0]
+        final val name // io.github.shakeabdulrahman.keystone.llm/StreamEvent.ToolCallStarted.name|{}name[0]
+            final fun <get-name>(): kotlin/String // io.github.shakeabdulrahman.keystone.llm/StreamEvent.ToolCallStarted.name.<get-name>|<get-name>(){}[0]
+
+        final fun component1(): kotlin/Int // io.github.shakeabdulrahman.keystone.llm/StreamEvent.ToolCallStarted.component1|component1(){}[0]
+        final fun component2(): kotlin/String // io.github.shakeabdulrahman.keystone.llm/StreamEvent.ToolCallStarted.component2|component2(){}[0]
+        final fun component3(): kotlin/String // io.github.shakeabdulrahman.keystone.llm/StreamEvent.ToolCallStarted.component3|component3(){}[0]
+        final fun copy(kotlin/Int = ..., kotlin/String = ..., kotlin/String = ...): io.github.shakeabdulrahman.keystone.llm/StreamEvent.ToolCallStarted // io.github.shakeabdulrahman.keystone.llm/StreamEvent.ToolCallStarted.copy|copy(kotlin.Int;kotlin.String;kotlin.String){}[0]
+        final fun equals(kotlin/Any?): kotlin/Boolean // io.github.shakeabdulrahman.keystone.llm/StreamEvent.ToolCallStarted.equals|equals(kotlin.Any?){}[0]
+        final fun hashCode(): kotlin/Int // io.github.shakeabdulrahman.keystone.llm/StreamEvent.ToolCallStarted.hashCode|hashCode(){}[0]
+        final fun toString(): kotlin/String // io.github.shakeabdulrahman.keystone.llm/StreamEvent.ToolCallStarted.toString|toString(){}[0]
+    }
+}
+
+sealed interface io.github.shakeabdulrahman.keystone.llm/ToolArgumentError { // io.github.shakeabdulrahman.keystone.llm/ToolArgumentError|null[0]
+    final class MalformedJson : io.github.shakeabdulrahman.keystone.llm/ToolArgumentError { // io.github.shakeabdulrahman.keystone.llm/ToolArgumentError.MalformedJson|null[0]
+        constructor <init>(kotlin/String) // io.github.shakeabdulrahman.keystone.llm/ToolArgumentError.MalformedJson.<init>|<init>(kotlin.String){}[0]
+
+        final val detail // io.github.shakeabdulrahman.keystone.llm/ToolArgumentError.MalformedJson.detail|{}detail[0]
+            final fun <get-detail>(): kotlin/String // io.github.shakeabdulrahman.keystone.llm/ToolArgumentError.MalformedJson.detail.<get-detail>|<get-detail>(){}[0]
+
+        final fun component1(): kotlin/String // io.github.shakeabdulrahman.keystone.llm/ToolArgumentError.MalformedJson.component1|component1(){}[0]
+        final fun copy(kotlin/String = ...): io.github.shakeabdulrahman.keystone.llm/ToolArgumentError.MalformedJson // io.github.shakeabdulrahman.keystone.llm/ToolArgumentError.MalformedJson.copy|copy(kotlin.String){}[0]
+        final fun equals(kotlin/Any?): kotlin/Boolean // io.github.shakeabdulrahman.keystone.llm/ToolArgumentError.MalformedJson.equals|equals(kotlin.Any?){}[0]
+        final fun hashCode(): kotlin/Int // io.github.shakeabdulrahman.keystone.llm/ToolArgumentError.MalformedJson.hashCode|hashCode(){}[0]
+        final fun toString(): kotlin/String // io.github.shakeabdulrahman.keystone.llm/ToolArgumentError.MalformedJson.toString|toString(){}[0]
+    }
+
+    final class SchemaMismatch : io.github.shakeabdulrahman.keystone.llm/ToolArgumentError { // io.github.shakeabdulrahman.keystone.llm/ToolArgumentError.SchemaMismatch|null[0]
+        constructor <init>(kotlin.collections/List<io.github.shakeabdulrahman.keystone.llm/SchemaViolation>) // io.github.shakeabdulrahman.keystone.llm/ToolArgumentError.SchemaMismatch.<init>|<init>(kotlin.collections.List<io.github.shakeabdulrahman.keystone.llm.SchemaViolation>){}[0]
+
+        final val violations // io.github.shakeabdulrahman.keystone.llm/ToolArgumentError.SchemaMismatch.violations|{}violations[0]
+            final fun <get-violations>(): kotlin.collections/List<io.github.shakeabdulrahman.keystone.llm/SchemaViolation> // io.github.shakeabdulrahman.keystone.llm/ToolArgumentError.SchemaMismatch.violations.<get-violations>|<get-violations>(){}[0]
+
+        final fun component1(): kotlin.collections/List<io.github.shakeabdulrahman.keystone.llm/SchemaViolation> // io.github.shakeabdulrahman.keystone.llm/ToolArgumentError.SchemaMismatch.component1|component1(){}[0]
+        final fun copy(kotlin.collections/List<io.github.shakeabdulrahman.keystone.llm/SchemaViolation> = ...): io.github.shakeabdulrahman.keystone.llm/ToolArgumentError.SchemaMismatch // io.github.shakeabdulrahman.keystone.llm/ToolArgumentError.SchemaMismatch.copy|copy(kotlin.collections.List<io.github.shakeabdulrahman.keystone.llm.SchemaViolation>){}[0]
+        final fun equals(kotlin/Any?): kotlin/Boolean // io.github.shakeabdulrahman.keystone.llm/ToolArgumentError.SchemaMismatch.equals|equals(kotlin.Any?){}[0]
+        final fun hashCode(): kotlin/Int // io.github.shakeabdulrahman.keystone.llm/ToolArgumentError.SchemaMismatch.hashCode|hashCode(){}[0]
+        final fun toString(): kotlin/String // io.github.shakeabdulrahman.keystone.llm/ToolArgumentError.SchemaMismatch.toString|toString(){}[0]
+    }
+
+    final object NotAnObject : io.github.shakeabdulrahman.keystone.llm/ToolArgumentError { // io.github.shakeabdulrahman.keystone.llm/ToolArgumentError.NotAnObject|null[0]
+        final fun equals(kotlin/Any?): kotlin/Boolean // io.github.shakeabdulrahman.keystone.llm/ToolArgumentError.NotAnObject.equals|equals(kotlin.Any?){}[0]
+        final fun hashCode(): kotlin/Int // io.github.shakeabdulrahman.keystone.llm/ToolArgumentError.NotAnObject.hashCode|hashCode(){}[0]
+        final fun toString(): kotlin/String // io.github.shakeabdulrahman.keystone.llm/ToolArgumentError.NotAnObject.toString|toString(){}[0]
+    }
+
+    final object UnknownTool : io.github.shakeabdulrahman.keystone.llm/ToolArgumentError { // io.github.shakeabdulrahman.keystone.llm/ToolArgumentError.UnknownTool|null[0]
+        final fun equals(kotlin/Any?): kotlin/Boolean // io.github.shakeabdulrahman.keystone.llm/ToolArgumentError.UnknownTool.equals|equals(kotlin.Any?){}[0]
+        final fun hashCode(): kotlin/Int // io.github.shakeabdulrahman.keystone.llm/ToolArgumentError.UnknownTool.hashCode|hashCode(){}[0]
+        final fun toString(): kotlin/String // io.github.shakeabdulrahman.keystone.llm/ToolArgumentError.UnknownTool.toString|toString(){}[0]
+    }
+}
+
+sealed interface io.github.shakeabdulrahman.keystone.llm/ToolArguments { // io.github.shakeabdulrahman.keystone.llm/ToolArguments|null[0]
+    final class Invalid : io.github.shakeabdulrahman.keystone.llm/ToolArguments { // io.github.shakeabdulrahman.keystone.llm/ToolArguments.Invalid|null[0]
+        constructor <init>(io.github.shakeabdulrahman.keystone.llm/ToolArgumentError) // io.github.shakeabdulrahman.keystone.llm/ToolArguments.Invalid.<init>|<init>(io.github.shakeabdulrahman.keystone.llm.ToolArgumentError){}[0]
+
+        final val error // io.github.shakeabdulrahman.keystone.llm/ToolArguments.Invalid.error|{}error[0]
+            final fun <get-error>(): io.github.shakeabdulrahman.keystone.llm/ToolArgumentError // io.github.shakeabdulrahman.keystone.llm/ToolArguments.Invalid.error.<get-error>|<get-error>(){}[0]
+
+        final fun component1(): io.github.shakeabdulrahman.keystone.llm/ToolArgumentError // io.github.shakeabdulrahman.keystone.llm/ToolArguments.Invalid.component1|component1(){}[0]
+        final fun copy(io.github.shakeabdulrahman.keystone.llm/ToolArgumentError = ...): io.github.shakeabdulrahman.keystone.llm/ToolArguments.Invalid // io.github.shakeabdulrahman.keystone.llm/ToolArguments.Invalid.copy|copy(io.github.shakeabdulrahman.keystone.llm.ToolArgumentError){}[0]
+        final fun equals(kotlin/Any?): kotlin/Boolean // io.github.shakeabdulrahman.keystone.llm/ToolArguments.Invalid.equals|equals(kotlin.Any?){}[0]
+        final fun hashCode(): kotlin/Int // io.github.shakeabdulrahman.keystone.llm/ToolArguments.Invalid.hashCode|hashCode(){}[0]
+        final fun toString(): kotlin/String // io.github.shakeabdulrahman.keystone.llm/ToolArguments.Invalid.toString|toString(){}[0]
+    }
+
+    final class Valid : io.github.shakeabdulrahman.keystone.llm/ToolArguments { // io.github.shakeabdulrahman.keystone.llm/ToolArguments.Valid|null[0]
+        constructor <init>(kotlinx.serialization.json/JsonObject) // io.github.shakeabdulrahman.keystone.llm/ToolArguments.Valid.<init>|<init>(kotlinx.serialization.json.JsonObject){}[0]
+
+        final val json // io.github.shakeabdulrahman.keystone.llm/ToolArguments.Valid.json|{}json[0]
+            final fun <get-json>(): kotlinx.serialization.json/JsonObject // io.github.shakeabdulrahman.keystone.llm/ToolArguments.Valid.json.<get-json>|<get-json>(){}[0]
+
+        final fun component1(): kotlinx.serialization.json/JsonObject // io.github.shakeabdulrahman.keystone.llm/ToolArguments.Valid.component1|component1(){}[0]
+        final fun copy(kotlinx.serialization.json/JsonObject = ...): io.github.shakeabdulrahman.keystone.llm/ToolArguments.Valid // io.github.shakeabdulrahman.keystone.llm/ToolArguments.Valid.copy|copy(kotlinx.serialization.json.JsonObject){}[0]
+        final fun equals(kotlin/Any?): kotlin/Boolean // io.github.shakeabdulrahman.keystone.llm/ToolArguments.Valid.equals|equals(kotlin.Any?){}[0]
+        final fun hashCode(): kotlin/Int // io.github.shakeabdulrahman.keystone.llm/ToolArguments.Valid.hashCode|hashCode(){}[0]
+        final fun toString(): kotlin/String // io.github.shakeabdulrahman.keystone.llm/ToolArguments.Valid.toString|toString(){}[0]
+    }
+}
+
+sealed interface io.github.shakeabdulrahman.keystone.llm/ToolChoice { // io.github.shakeabdulrahman.keystone.llm/ToolChoice|null[0]
+    final class Specific : io.github.shakeabdulrahman.keystone.llm/ToolChoice { // io.github.shakeabdulrahman.keystone.llm/ToolChoice.Specific|null[0]
+        constructor <init>(kotlin/String) // io.github.shakeabdulrahman.keystone.llm/ToolChoice.Specific.<init>|<init>(kotlin.String){}[0]
+
+        final val toolName // io.github.shakeabdulrahman.keystone.llm/ToolChoice.Specific.toolName|{}toolName[0]
+            final fun <get-toolName>(): kotlin/String // io.github.shakeabdulrahman.keystone.llm/ToolChoice.Specific.toolName.<get-toolName>|<get-toolName>(){}[0]
+
+        final fun component1(): kotlin/String // io.github.shakeabdulrahman.keystone.llm/ToolChoice.Specific.component1|component1(){}[0]
+        final fun copy(kotlin/String = ...): io.github.shakeabdulrahman.keystone.llm/ToolChoice.Specific // io.github.shakeabdulrahman.keystone.llm/ToolChoice.Specific.copy|copy(kotlin.String){}[0]
+        final fun equals(kotlin/Any?): kotlin/Boolean // io.github.shakeabdulrahman.keystone.llm/ToolChoice.Specific.equals|equals(kotlin.Any?){}[0]
+        final fun hashCode(): kotlin/Int // io.github.shakeabdulrahman.keystone.llm/ToolChoice.Specific.hashCode|hashCode(){}[0]
+        final fun toString(): kotlin/String // io.github.shakeabdulrahman.keystone.llm/ToolChoice.Specific.toString|toString(){}[0]
+    }
+
+    final object Auto : io.github.shakeabdulrahman.keystone.llm/ToolChoice { // io.github.shakeabdulrahman.keystone.llm/ToolChoice.Auto|null[0]
+        final fun equals(kotlin/Any?): kotlin/Boolean // io.github.shakeabdulrahman.keystone.llm/ToolChoice.Auto.equals|equals(kotlin.Any?){}[0]
+        final fun hashCode(): kotlin/Int // io.github.shakeabdulrahman.keystone.llm/ToolChoice.Auto.hashCode|hashCode(){}[0]
+        final fun toString(): kotlin/String // io.github.shakeabdulrahman.keystone.llm/ToolChoice.Auto.toString|toString(){}[0]
+    }
+
+    final object None : io.github.shakeabdulrahman.keystone.llm/ToolChoice { // io.github.shakeabdulrahman.keystone.llm/ToolChoice.None|null[0]
+        final fun equals(kotlin/Any?): kotlin/Boolean // io.github.shakeabdulrahman.keystone.llm/ToolChoice.None.equals|equals(kotlin.Any?){}[0]
+        final fun hashCode(): kotlin/Int // io.github.shakeabdulrahman.keystone.llm/ToolChoice.None.hashCode|hashCode(){}[0]
+        final fun toString(): kotlin/String // io.github.shakeabdulrahman.keystone.llm/ToolChoice.None.toString|toString(){}[0]
+    }
+
+    final object Required : io.github.shakeabdulrahman.keystone.llm/ToolChoice { // io.github.shakeabdulrahman.keystone.llm/ToolChoice.Required|null[0]
+        final fun equals(kotlin/Any?): kotlin/Boolean // io.github.shakeabdulrahman.keystone.llm/ToolChoice.Required.equals|equals(kotlin.Any?){}[0]
+        final fun hashCode(): kotlin/Int // io.github.shakeabdulrahman.keystone.llm/ToolChoice.Required.hashCode|hashCode(){}[0]
+        final fun toString(): kotlin/String // io.github.shakeabdulrahman.keystone.llm/ToolChoice.Required.toString|toString(){}[0]
+    }
+}
+
+final class <#A: kotlin/Any?> io.github.shakeabdulrahman.keystone.llm/StructuredResponse { // io.github.shakeabdulrahman.keystone.llm/StructuredResponse|null[0]
+    constructor <init>(#A, io.github.shakeabdulrahman.keystone.llm/ChatResponse) // io.github.shakeabdulrahman.keystone.llm/StructuredResponse.<init>|<init>(1:0;io.github.shakeabdulrahman.keystone.llm.ChatResponse){}[0]
+
+    final val enforcement // io.github.shakeabdulrahman.keystone.llm/StructuredResponse.enforcement|{}enforcement[0]
+        final fun <get-enforcement>(): io.github.shakeabdulrahman.keystone.llm/StructuredEnforcement? // io.github.shakeabdulrahman.keystone.llm/StructuredResponse.enforcement.<get-enforcement>|<get-enforcement>(){}[0]
+    final val response // io.github.shakeabdulrahman.keystone.llm/StructuredResponse.response|{}response[0]
+        final fun <get-response>(): io.github.shakeabdulrahman.keystone.llm/ChatResponse // io.github.shakeabdulrahman.keystone.llm/StructuredResponse.response.<get-response>|<get-response>(){}[0]
+    final val value // io.github.shakeabdulrahman.keystone.llm/StructuredResponse.value|{}value[0]
+        final fun <get-value>(): #A // io.github.shakeabdulrahman.keystone.llm/StructuredResponse.value.<get-value>|<get-value>(){}[0]
+
+    final fun component1(): #A // io.github.shakeabdulrahman.keystone.llm/StructuredResponse.component1|component1(){}[0]
+    final fun component2(): io.github.shakeabdulrahman.keystone.llm/ChatResponse // io.github.shakeabdulrahman.keystone.llm/StructuredResponse.component2|component2(){}[0]
+    final fun copy(#A = ..., io.github.shakeabdulrahman.keystone.llm/ChatResponse = ...): io.github.shakeabdulrahman.keystone.llm/StructuredResponse<#A> // io.github.shakeabdulrahman.keystone.llm/StructuredResponse.copy|copy(1:0;io.github.shakeabdulrahman.keystone.llm.ChatResponse){}[0]
+    final fun equals(kotlin/Any?): kotlin/Boolean // io.github.shakeabdulrahman.keystone.llm/StructuredResponse.equals|equals(kotlin.Any?){}[0]
+    final fun hashCode(): kotlin/Int // io.github.shakeabdulrahman.keystone.llm/StructuredResponse.hashCode|hashCode(){}[0]
+    final fun toString(): kotlin/String // io.github.shakeabdulrahman.keystone.llm/StructuredResponse.toString|toString(){}[0]
+}
+
+final class io.github.shakeabdulrahman.keystone.llm.http/HttpRequest { // io.github.shakeabdulrahman.keystone.llm.http/HttpRequest|null[0]
+    constructor <init>(kotlin/String, kotlin/String, kotlin.collections/Map<kotlin/String, kotlin/String>, kotlin/ByteArray? = ..., kotlin/String? = ...) // io.github.shakeabdulrahman.keystone.llm.http/HttpRequest.<init>|<init>(kotlin.String;kotlin.String;kotlin.collections.Map<kotlin.String,kotlin.String>;kotlin.ByteArray?;kotlin.String?){}[0]
+
+    final val body // io.github.shakeabdulrahman.keystone.llm.http/HttpRequest.body|{}body[0]
+        final fun <get-body>(): kotlin/ByteArray? // io.github.shakeabdulrahman.keystone.llm.http/HttpRequest.body.<get-body>|<get-body>(){}[0]
+    final val contentType // io.github.shakeabdulrahman.keystone.llm.http/HttpRequest.contentType|{}contentType[0]
+        final fun <get-contentType>(): kotlin/String? // io.github.shakeabdulrahman.keystone.llm.http/HttpRequest.contentType.<get-contentType>|<get-contentType>(){}[0]
+    final val headers // io.github.shakeabdulrahman.keystone.llm.http/HttpRequest.headers|{}headers[0]
+        final fun <get-headers>(): kotlin.collections/Map<kotlin/String, kotlin/String> // io.github.shakeabdulrahman.keystone.llm.http/HttpRequest.headers.<get-headers>|<get-headers>(){}[0]
+    final val method // io.github.shakeabdulrahman.keystone.llm.http/HttpRequest.method|{}method[0]
+        final fun <get-method>(): kotlin/String // io.github.shakeabdulrahman.keystone.llm.http/HttpRequest.method.<get-method>|<get-method>(){}[0]
+    final val url // io.github.shakeabdulrahman.keystone.llm.http/HttpRequest.url|{}url[0]
+        final fun <get-url>(): kotlin/String // io.github.shakeabdulrahman.keystone.llm.http/HttpRequest.url.<get-url>|<get-url>(){}[0]
+
+    final fun toString(): kotlin/String // io.github.shakeabdulrahman.keystone.llm.http/HttpRequest.toString|toString(){}[0]
+}
+
+final class io.github.shakeabdulrahman.keystone.llm/Attempt { // io.github.shakeabdulrahman.keystone.llm/Attempt|null[0]
+    constructor <init>(io.github.shakeabdulrahman.keystone.llm/ModelRef, kotlin/Int, kotlin.time/Duration, io.github.shakeabdulrahman.keystone.llm/LlmErrorKind?, kotlin/Int? = ..., kotlin/String? = ...) // io.github.shakeabdulrahman.keystone.llm/Attempt.<init>|<init>(io.github.shakeabdulrahman.keystone.llm.ModelRef;kotlin.Int;kotlin.time.Duration;io.github.shakeabdulrahman.keystone.llm.LlmErrorKind?;kotlin.Int?;kotlin.String?){}[0]
+
+    final val duration // io.github.shakeabdulrahman.keystone.llm/Attempt.duration|{}duration[0]
+        final fun <get-duration>(): kotlin.time/Duration // io.github.shakeabdulrahman.keystone.llm/Attempt.duration.<get-duration>|<get-duration>(){}[0]
+    final val error // io.github.shakeabdulrahman.keystone.llm/Attempt.error|{}error[0]
+        final fun <get-error>(): io.github.shakeabdulrahman.keystone.llm/LlmErrorKind? // io.github.shakeabdulrahman.keystone.llm/Attempt.error.<get-error>|<get-error>(){}[0]
+    final val httpStatus // io.github.shakeabdulrahman.keystone.llm/Attempt.httpStatus|{}httpStatus[0]
+        final fun <get-httpStatus>(): kotlin/Int? // io.github.shakeabdulrahman.keystone.llm/Attempt.httpStatus.<get-httpStatus>|<get-httpStatus>(){}[0]
+    final val number // io.github.shakeabdulrahman.keystone.llm/Attempt.number|{}number[0]
+        final fun <get-number>(): kotlin/Int // io.github.shakeabdulrahman.keystone.llm/Attempt.number.<get-number>|<get-number>(){}[0]
+    final val requestId // io.github.shakeabdulrahman.keystone.llm/Attempt.requestId|{}requestId[0]
+        final fun <get-requestId>(): kotlin/String? // io.github.shakeabdulrahman.keystone.llm/Attempt.requestId.<get-requestId>|<get-requestId>(){}[0]
+    final val target // io.github.shakeabdulrahman.keystone.llm/Attempt.target|{}target[0]
+        final fun <get-target>(): io.github.shakeabdulrahman.keystone.llm/ModelRef // io.github.shakeabdulrahman.keystone.llm/Attempt.target.<get-target>|<get-target>(){}[0]
+
+    final fun component1(): io.github.shakeabdulrahman.keystone.llm/ModelRef // io.github.shakeabdulrahman.keystone.llm/Attempt.component1|component1(){}[0]
+    final fun component2(): kotlin/Int // io.github.shakeabdulrahman.keystone.llm/Attempt.component2|component2(){}[0]
+    final fun component3(): kotlin.time/Duration // io.github.shakeabdulrahman.keystone.llm/Attempt.component3|component3(){}[0]
+    final fun component4(): io.github.shakeabdulrahman.keystone.llm/LlmErrorKind? // io.github.shakeabdulrahman.keystone.llm/Attempt.component4|component4(){}[0]
+    final fun component5(): kotlin/Int? // io.github.shakeabdulrahman.keystone.llm/Attempt.component5|component5(){}[0]
+    final fun component6(): kotlin/String? // io.github.shakeabdulrahman.keystone.llm/Attempt.component6|component6(){}[0]
+    final fun copy(io.github.shakeabdulrahman.keystone.llm/ModelRef = ..., kotlin/Int = ..., kotlin.time/Duration = ..., io.github.shakeabdulrahman.keystone.llm/LlmErrorKind? = ..., kotlin/Int? = ..., kotlin/String? = ...): io.github.shakeabdulrahman.keystone.llm/Attempt // io.github.shakeabdulrahman.keystone.llm/Attempt.copy|copy(io.github.shakeabdulrahman.keystone.llm.ModelRef;kotlin.Int;kotlin.time.Duration;io.github.shakeabdulrahman.keystone.llm.LlmErrorKind?;kotlin.Int?;kotlin.String?){}[0]
+    final fun equals(kotlin/Any?): kotlin/Boolean // io.github.shakeabdulrahman.keystone.llm/Attempt.equals|equals(kotlin.Any?){}[0]
+    final fun hashCode(): kotlin/Int // io.github.shakeabdulrahman.keystone.llm/Attempt.hashCode|hashCode(){}[0]
+    final fun toString(): kotlin/String // io.github.shakeabdulrahman.keystone.llm/Attempt.toString|toString(){}[0]
+}
+
+final class io.github.shakeabdulrahman.keystone.llm/ChatRequest { // io.github.shakeabdulrahman.keystone.llm/ChatRequest|null[0]
+    constructor <init>(kotlin.collections/List<io.github.shakeabdulrahman.keystone.llm/Message>, io.github.shakeabdulrahman.keystone.llm/Route? = ..., kotlin.collections/List<io.github.shakeabdulrahman.keystone.llm/Tool> = ..., io.github.shakeabdulrahman.keystone.llm/ToolChoice = ..., io.github.shakeabdulrahman.keystone.llm/ResponseFormat = ..., kotlin/Int? = ..., kotlin/Double? = ..., kotlin/Double? = ..., kotlin.collections/List<kotlin/String> = ..., kotlin.collections/Map<kotlin/String, kotlinx.serialization.json/JsonObject> = ...) // io.github.shakeabdulrahman.keystone.llm/ChatRequest.<init>|<init>(kotlin.collections.List<io.github.shakeabdulrahman.keystone.llm.Message>;io.github.shakeabdulrahman.keystone.llm.Route?;kotlin.collections.List<io.github.shakeabdulrahman.keystone.llm.Tool>;io.github.shakeabdulrahman.keystone.llm.ToolChoice;io.github.shakeabdulrahman.keystone.llm.ResponseFormat;kotlin.Int?;kotlin.Double?;kotlin.Double?;kotlin.collections.List<kotlin.String>;kotlin.collections.Map<kotlin.String,kotlinx.serialization.json.JsonObject>){}[0]
+
+    final val maxOutputTokens // io.github.shakeabdulrahman.keystone.llm/ChatRequest.maxOutputTokens|{}maxOutputTokens[0]
+        final fun <get-maxOutputTokens>(): kotlin/Int? // io.github.shakeabdulrahman.keystone.llm/ChatRequest.maxOutputTokens.<get-maxOutputTokens>|<get-maxOutputTokens>(){}[0]
+    final val messages // io.github.shakeabdulrahman.keystone.llm/ChatRequest.messages|{}messages[0]
+        final fun <get-messages>(): kotlin.collections/List<io.github.shakeabdulrahman.keystone.llm/Message> // io.github.shakeabdulrahman.keystone.llm/ChatRequest.messages.<get-messages>|<get-messages>(){}[0]
+    final val providerOptions // io.github.shakeabdulrahman.keystone.llm/ChatRequest.providerOptions|{}providerOptions[0]
+        final fun <get-providerOptions>(): kotlin.collections/Map<kotlin/String, kotlinx.serialization.json/JsonObject> // io.github.shakeabdulrahman.keystone.llm/ChatRequest.providerOptions.<get-providerOptions>|<get-providerOptions>(){}[0]
+    final val responseFormat // io.github.shakeabdulrahman.keystone.llm/ChatRequest.responseFormat|{}responseFormat[0]
+        final fun <get-responseFormat>(): io.github.shakeabdulrahman.keystone.llm/ResponseFormat // io.github.shakeabdulrahman.keystone.llm/ChatRequest.responseFormat.<get-responseFormat>|<get-responseFormat>(){}[0]
+    final val route // io.github.shakeabdulrahman.keystone.llm/ChatRequest.route|{}route[0]
+        final fun <get-route>(): io.github.shakeabdulrahman.keystone.llm/Route? // io.github.shakeabdulrahman.keystone.llm/ChatRequest.route.<get-route>|<get-route>(){}[0]
+    final val stopSequences // io.github.shakeabdulrahman.keystone.llm/ChatRequest.stopSequences|{}stopSequences[0]
+        final fun <get-stopSequences>(): kotlin.collections/List<kotlin/String> // io.github.shakeabdulrahman.keystone.llm/ChatRequest.stopSequences.<get-stopSequences>|<get-stopSequences>(){}[0]
+    final val temperature // io.github.shakeabdulrahman.keystone.llm/ChatRequest.temperature|{}temperature[0]
+        final fun <get-temperature>(): kotlin/Double? // io.github.shakeabdulrahman.keystone.llm/ChatRequest.temperature.<get-temperature>|<get-temperature>(){}[0]
+    final val toolChoice // io.github.shakeabdulrahman.keystone.llm/ChatRequest.toolChoice|{}toolChoice[0]
+        final fun <get-toolChoice>(): io.github.shakeabdulrahman.keystone.llm/ToolChoice // io.github.shakeabdulrahman.keystone.llm/ChatRequest.toolChoice.<get-toolChoice>|<get-toolChoice>(){}[0]
+    final val tools // io.github.shakeabdulrahman.keystone.llm/ChatRequest.tools|{}tools[0]
+        final fun <get-tools>(): kotlin.collections/List<io.github.shakeabdulrahman.keystone.llm/Tool> // io.github.shakeabdulrahman.keystone.llm/ChatRequest.tools.<get-tools>|<get-tools>(){}[0]
+    final val topP // io.github.shakeabdulrahman.keystone.llm/ChatRequest.topP|{}topP[0]
+        final fun <get-topP>(): kotlin/Double? // io.github.shakeabdulrahman.keystone.llm/ChatRequest.topP.<get-topP>|<get-topP>(){}[0]
+
+    final fun component1(): kotlin.collections/List<io.github.shakeabdulrahman.keystone.llm/Message> // io.github.shakeabdulrahman.keystone.llm/ChatRequest.component1|component1(){}[0]
+    final fun component10(): kotlin.collections/Map<kotlin/String, kotlinx.serialization.json/JsonObject> // io.github.shakeabdulrahman.keystone.llm/ChatRequest.component10|component10(){}[0]
+    final fun component2(): io.github.shakeabdulrahman.keystone.llm/Route? // io.github.shakeabdulrahman.keystone.llm/ChatRequest.component2|component2(){}[0]
+    final fun component3(): kotlin.collections/List<io.github.shakeabdulrahman.keystone.llm/Tool> // io.github.shakeabdulrahman.keystone.llm/ChatRequest.component3|component3(){}[0]
+    final fun component4(): io.github.shakeabdulrahman.keystone.llm/ToolChoice // io.github.shakeabdulrahman.keystone.llm/ChatRequest.component4|component4(){}[0]
+    final fun component5(): io.github.shakeabdulrahman.keystone.llm/ResponseFormat // io.github.shakeabdulrahman.keystone.llm/ChatRequest.component5|component5(){}[0]
+    final fun component6(): kotlin/Int? // io.github.shakeabdulrahman.keystone.llm/ChatRequest.component6|component6(){}[0]
+    final fun component7(): kotlin/Double? // io.github.shakeabdulrahman.keystone.llm/ChatRequest.component7|component7(){}[0]
+    final fun component8(): kotlin/Double? // io.github.shakeabdulrahman.keystone.llm/ChatRequest.component8|component8(){}[0]
+    final fun component9(): kotlin.collections/List<kotlin/String> // io.github.shakeabdulrahman.keystone.llm/ChatRequest.component9|component9(){}[0]
+    final fun copy(kotlin.collections/List<io.github.shakeabdulrahman.keystone.llm/Message> = ..., io.github.shakeabdulrahman.keystone.llm/Route? = ..., kotlin.collections/List<io.github.shakeabdulrahman.keystone.llm/Tool> = ..., io.github.shakeabdulrahman.keystone.llm/ToolChoice = ..., io.github.shakeabdulrahman.keystone.llm/ResponseFormat = ..., kotlin/Int? = ..., kotlin/Double? = ..., kotlin/Double? = ..., kotlin.collections/List<kotlin/String> = ..., kotlin.collections/Map<kotlin/String, kotlinx.serialization.json/JsonObject> = ...): io.github.shakeabdulrahman.keystone.llm/ChatRequest // io.github.shakeabdulrahman.keystone.llm/ChatRequest.copy|copy(kotlin.collections.List<io.github.shakeabdulrahman.keystone.llm.Message>;io.github.shakeabdulrahman.keystone.llm.Route?;kotlin.collections.List<io.github.shakeabdulrahman.keystone.llm.Tool>;io.github.shakeabdulrahman.keystone.llm.ToolChoice;io.github.shakeabdulrahman.keystone.llm.ResponseFormat;kotlin.Int?;kotlin.Double?;kotlin.Double?;kotlin.collections.List<kotlin.String>;kotlin.collections.Map<kotlin.String,kotlinx.serialization.json.JsonObject>){}[0]
+    final fun equals(kotlin/Any?): kotlin/Boolean // io.github.shakeabdulrahman.keystone.llm/ChatRequest.equals|equals(kotlin.Any?){}[0]
+    final fun hashCode(): kotlin/Int // io.github.shakeabdulrahman.keystone.llm/ChatRequest.hashCode|hashCode(){}[0]
+    final fun toString(): kotlin/String // io.github.shakeabdulrahman.keystone.llm/ChatRequest.toString|toString(){}[0]
+
+    final object Companion { // io.github.shakeabdulrahman.keystone.llm/ChatRequest.Companion|null[0]
+        final fun of(io.github.shakeabdulrahman.keystone.llm/ModelRef, kotlin/Array<out io.github.shakeabdulrahman.keystone.llm/Message>...): io.github.shakeabdulrahman.keystone.llm/ChatRequest // io.github.shakeabdulrahman.keystone.llm/ChatRequest.Companion.of|of(io.github.shakeabdulrahman.keystone.llm.ModelRef;kotlin.Array<out|io.github.shakeabdulrahman.keystone.llm.Message>...){}[0]
+    }
+}
+
+final class io.github.shakeabdulrahman.keystone.llm/ChatResponse { // io.github.shakeabdulrahman.keystone.llm/ChatResponse|null[0]
+    constructor <init>(io.github.shakeabdulrahman.keystone.llm/Message.Assistant, io.github.shakeabdulrahman.keystone.llm/FinishReason, io.github.shakeabdulrahman.keystone.llm/Usage, io.github.shakeabdulrahman.keystone.llm/CostReport?, io.github.shakeabdulrahman.keystone.llm/ResponseMetadata) // io.github.shakeabdulrahman.keystone.llm/ChatResponse.<init>|<init>(io.github.shakeabdulrahman.keystone.llm.Message.Assistant;io.github.shakeabdulrahman.keystone.llm.FinishReason;io.github.shakeabdulrahman.keystone.llm.Usage;io.github.shakeabdulrahman.keystone.llm.CostReport?;io.github.shakeabdulrahman.keystone.llm.ResponseMetadata){}[0]
+
+    final val cost // io.github.shakeabdulrahman.keystone.llm/ChatResponse.cost|{}cost[0]
+        final fun <get-cost>(): io.github.shakeabdulrahman.keystone.llm/CostReport? // io.github.shakeabdulrahman.keystone.llm/ChatResponse.cost.<get-cost>|<get-cost>(){}[0]
+    final val finishReason // io.github.shakeabdulrahman.keystone.llm/ChatResponse.finishReason|{}finishReason[0]
+        final fun <get-finishReason>(): io.github.shakeabdulrahman.keystone.llm/FinishReason // io.github.shakeabdulrahman.keystone.llm/ChatResponse.finishReason.<get-finishReason>|<get-finishReason>(){}[0]
+    final val message // io.github.shakeabdulrahman.keystone.llm/ChatResponse.message|{}message[0]
+        final fun <get-message>(): io.github.shakeabdulrahman.keystone.llm/Message.Assistant // io.github.shakeabdulrahman.keystone.llm/ChatResponse.message.<get-message>|<get-message>(){}[0]
+    final val metadata // io.github.shakeabdulrahman.keystone.llm/ChatResponse.metadata|{}metadata[0]
+        final fun <get-metadata>(): io.github.shakeabdulrahman.keystone.llm/ResponseMetadata // io.github.shakeabdulrahman.keystone.llm/ChatResponse.metadata.<get-metadata>|<get-metadata>(){}[0]
+    final val text // io.github.shakeabdulrahman.keystone.llm/ChatResponse.text|{}text[0]
+        final fun <get-text>(): kotlin/String // io.github.shakeabdulrahman.keystone.llm/ChatResponse.text.<get-text>|<get-text>(){}[0]
+    final val toolCalls // io.github.shakeabdulrahman.keystone.llm/ChatResponse.toolCalls|{}toolCalls[0]
+        final fun <get-toolCalls>(): kotlin.collections/List<io.github.shakeabdulrahman.keystone.llm/ToolCall> // io.github.shakeabdulrahman.keystone.llm/ChatResponse.toolCalls.<get-toolCalls>|<get-toolCalls>(){}[0]
+    final val usage // io.github.shakeabdulrahman.keystone.llm/ChatResponse.usage|{}usage[0]
+        final fun <get-usage>(): io.github.shakeabdulrahman.keystone.llm/Usage // io.github.shakeabdulrahman.keystone.llm/ChatResponse.usage.<get-usage>|<get-usage>(){}[0]
+
+    final fun component1(): io.github.shakeabdulrahman.keystone.llm/Message.Assistant // io.github.shakeabdulrahman.keystone.llm/ChatResponse.component1|component1(){}[0]
+    final fun component2(): io.github.shakeabdulrahman.keystone.llm/FinishReason // io.github.shakeabdulrahman.keystone.llm/ChatResponse.component2|component2(){}[0]
+    final fun component3(): io.github.shakeabdulrahman.keystone.llm/Usage // io.github.shakeabdulrahman.keystone.llm/ChatResponse.component3|component3(){}[0]
+    final fun component4(): io.github.shakeabdulrahman.keystone.llm/CostReport? // io.github.shakeabdulrahman.keystone.llm/ChatResponse.component4|component4(){}[0]
+    final fun component5(): io.github.shakeabdulrahman.keystone.llm/ResponseMetadata // io.github.shakeabdulrahman.keystone.llm/ChatResponse.component5|component5(){}[0]
+    final fun copy(io.github.shakeabdulrahman.keystone.llm/Message.Assistant = ..., io.github.shakeabdulrahman.keystone.llm/FinishReason = ..., io.github.shakeabdulrahman.keystone.llm/Usage = ..., io.github.shakeabdulrahman.keystone.llm/CostReport? = ..., io.github.shakeabdulrahman.keystone.llm/ResponseMetadata = ...): io.github.shakeabdulrahman.keystone.llm/ChatResponse // io.github.shakeabdulrahman.keystone.llm/ChatResponse.copy|copy(io.github.shakeabdulrahman.keystone.llm.Message.Assistant;io.github.shakeabdulrahman.keystone.llm.FinishReason;io.github.shakeabdulrahman.keystone.llm.Usage;io.github.shakeabdulrahman.keystone.llm.CostReport?;io.github.shakeabdulrahman.keystone.llm.ResponseMetadata){}[0]
+    final fun equals(kotlin/Any?): kotlin/Boolean // io.github.shakeabdulrahman.keystone.llm/ChatResponse.equals|equals(kotlin.Any?){}[0]
+    final fun hashCode(): kotlin/Int // io.github.shakeabdulrahman.keystone.llm/ChatResponse.hashCode|hashCode(){}[0]
+    final fun toString(): kotlin/String // io.github.shakeabdulrahman.keystone.llm/ChatResponse.toString|toString(){}[0]
+}
+
+final class io.github.shakeabdulrahman.keystone.llm/FailoverPolicy { // io.github.shakeabdulrahman.keystone.llm/FailoverPolicy|null[0]
+    constructor <init>(kotlin/Function1<io.github.shakeabdulrahman.keystone.llm/LlmException, kotlin/Boolean> = ...) // io.github.shakeabdulrahman.keystone.llm/FailoverPolicy.<init>|<init>(kotlin.Function1<io.github.shakeabdulrahman.keystone.llm.LlmException,kotlin.Boolean>){}[0]
+
+    final val failoverOn // io.github.shakeabdulrahman.keystone.llm/FailoverPolicy.failoverOn|{}failoverOn[0]
+        final fun <get-failoverOn>(): kotlin/Function1<io.github.shakeabdulrahman.keystone.llm/LlmException, kotlin/Boolean> // io.github.shakeabdulrahman.keystone.llm/FailoverPolicy.failoverOn.<get-failoverOn>|<get-failoverOn>(){}[0]
+
+    final object Companion { // io.github.shakeabdulrahman.keystone.llm/FailoverPolicy.Companion|null[0]
+        final val DEFAULT_KINDS // io.github.shakeabdulrahman.keystone.llm/FailoverPolicy.Companion.DEFAULT_KINDS|{}DEFAULT_KINDS[0]
+            final fun <get-DEFAULT_KINDS>(): kotlin.collections/Set<io.github.shakeabdulrahman.keystone.llm/LlmErrorKind> // io.github.shakeabdulrahman.keystone.llm/FailoverPolicy.Companion.DEFAULT_KINDS.<get-DEFAULT_KINDS>|<get-DEFAULT_KINDS>(){}[0]
+        final val Default // io.github.shakeabdulrahman.keystone.llm/FailoverPolicy.Companion.Default|{}Default[0]
+            final fun <get-Default>(): io.github.shakeabdulrahman.keystone.llm/FailoverPolicy // io.github.shakeabdulrahman.keystone.llm/FailoverPolicy.Companion.Default.<get-Default>|<get-Default>(){}[0]
+        final val Never // io.github.shakeabdulrahman.keystone.llm/FailoverPolicy.Companion.Never|{}Never[0]
+            final fun <get-Never>(): io.github.shakeabdulrahman.keystone.llm/FailoverPolicy // io.github.shakeabdulrahman.keystone.llm/FailoverPolicy.Companion.Never.<get-Never>|<get-Never>(){}[0]
+    }
+}
+
+final class io.github.shakeabdulrahman.keystone.llm/LlmClient : kotlin/AutoCloseable { // io.github.shakeabdulrahman.keystone.llm/LlmClient|null[0]
+    final val providerIds // io.github.shakeabdulrahman.keystone.llm/LlmClient.providerIds|{}providerIds[0]
+        final fun <get-providerIds>(): kotlin.collections/Set<kotlin/String> // io.github.shakeabdulrahman.keystone.llm/LlmClient.providerIds.<get-providerIds>|<get-providerIds>(){}[0]
+
+    final fun capabilities(io.github.shakeabdulrahman.keystone.llm/ModelRef): io.github.shakeabdulrahman.keystone.llm/ProviderCapabilities // io.github.shakeabdulrahman.keystone.llm/LlmClient.capabilities|capabilities(io.github.shakeabdulrahman.keystone.llm.ModelRef){}[0]
+    final fun close() // io.github.shakeabdulrahman.keystone.llm/LlmClient.close|close(){}[0]
+    final fun stream(io.github.shakeabdulrahman.keystone.llm/ChatRequest): kotlinx.coroutines.flow/Flow<io.github.shakeabdulrahman.keystone.llm/StreamEvent> // io.github.shakeabdulrahman.keystone.llm/LlmClient.stream|stream(io.github.shakeabdulrahman.keystone.llm.ChatRequest){}[0]
+    final suspend fun chat(io.github.shakeabdulrahman.keystone.llm/ChatRequest): io.github.shakeabdulrahman.keystone.llm/ChatResponse // io.github.shakeabdulrahman.keystone.llm/LlmClient.chat|chat(io.github.shakeabdulrahman.keystone.llm.ChatRequest){}[0]
+
+    final class Builder { // io.github.shakeabdulrahman.keystone.llm/LlmClient.Builder|null[0]
+        final var defaultRoute // io.github.shakeabdulrahman.keystone.llm/LlmClient.Builder.defaultRoute|{}defaultRoute[0]
+            final fun <get-defaultRoute>(): io.github.shakeabdulrahman.keystone.llm/Route? // io.github.shakeabdulrahman.keystone.llm/LlmClient.Builder.defaultRoute.<get-defaultRoute>|<get-defaultRoute>(){}[0]
+            final fun <set-defaultRoute>(io.github.shakeabdulrahman.keystone.llm/Route?) // io.github.shakeabdulrahman.keystone.llm/LlmClient.Builder.defaultRoute.<set-defaultRoute>|<set-defaultRoute>(io.github.shakeabdulrahman.keystone.llm.Route?){}[0]
+        final var failover // io.github.shakeabdulrahman.keystone.llm/LlmClient.Builder.failover|{}failover[0]
+            final fun <get-failover>(): io.github.shakeabdulrahman.keystone.llm/FailoverPolicy // io.github.shakeabdulrahman.keystone.llm/LlmClient.Builder.failover.<get-failover>|<get-failover>(){}[0]
+            final fun <set-failover>(io.github.shakeabdulrahman.keystone.llm/FailoverPolicy) // io.github.shakeabdulrahman.keystone.llm/LlmClient.Builder.failover.<set-failover>|<set-failover>(io.github.shakeabdulrahman.keystone.llm.FailoverPolicy){}[0]
+        final var listener // io.github.shakeabdulrahman.keystone.llm/LlmClient.Builder.listener|{}listener[0]
+            final fun <get-listener>(): io.github.shakeabdulrahman.keystone.llm/LlmListener? // io.github.shakeabdulrahman.keystone.llm/LlmClient.Builder.listener.<get-listener>|<get-listener>(){}[0]
+            final fun <set-listener>(io.github.shakeabdulrahman.keystone.llm/LlmListener?) // io.github.shakeabdulrahman.keystone.llm/LlmClient.Builder.listener.<set-listener>|<set-listener>(io.github.shakeabdulrahman.keystone.llm.LlmListener?){}[0]
+        final var pricing // io.github.shakeabdulrahman.keystone.llm/LlmClient.Builder.pricing|{}pricing[0]
+            final fun <get-pricing>(): io.github.shakeabdulrahman.keystone.llm/PriceTable? // io.github.shakeabdulrahman.keystone.llm/LlmClient.Builder.pricing.<get-pricing>|<get-pricing>(){}[0]
+            final fun <set-pricing>(io.github.shakeabdulrahman.keystone.llm/PriceTable?) // io.github.shakeabdulrahman.keystone.llm/LlmClient.Builder.pricing.<set-pricing>|<set-pricing>(io.github.shakeabdulrahman.keystone.llm.PriceTable?){}[0]
+        final var retry // io.github.shakeabdulrahman.keystone.llm/LlmClient.Builder.retry|{}retry[0]
+            final fun <get-retry>(): io.github.shakeabdulrahman.keystone.llm/RetryPolicy // io.github.shakeabdulrahman.keystone.llm/LlmClient.Builder.retry.<get-retry>|<get-retry>(){}[0]
+            final fun <set-retry>(io.github.shakeabdulrahman.keystone.llm/RetryPolicy) // io.github.shakeabdulrahman.keystone.llm/LlmClient.Builder.retry.<set-retry>|<set-retry>(io.github.shakeabdulrahman.keystone.llm.RetryPolicy){}[0]
+        final var streamRestart // io.github.shakeabdulrahman.keystone.llm/LlmClient.Builder.streamRestart|{}streamRestart[0]
+            final fun <get-streamRestart>(): io.github.shakeabdulrahman.keystone.llm/StreamRestartPolicy // io.github.shakeabdulrahman.keystone.llm/LlmClient.Builder.streamRestart.<get-streamRestart>|<get-streamRestart>(){}[0]
+            final fun <set-streamRestart>(io.github.shakeabdulrahman.keystone.llm/StreamRestartPolicy) // io.github.shakeabdulrahman.keystone.llm/LlmClient.Builder.streamRestart.<set-streamRestart>|<set-streamRestart>(io.github.shakeabdulrahman.keystone.llm.StreamRestartPolicy){}[0]
+        final var timeouts // io.github.shakeabdulrahman.keystone.llm/LlmClient.Builder.timeouts|{}timeouts[0]
+            final fun <get-timeouts>(): io.github.shakeabdulrahman.keystone.llm/Timeouts // io.github.shakeabdulrahman.keystone.llm/LlmClient.Builder.timeouts.<get-timeouts>|<get-timeouts>(){}[0]
+            final fun <set-timeouts>(io.github.shakeabdulrahman.keystone.llm/Timeouts) // io.github.shakeabdulrahman.keystone.llm/LlmClient.Builder.timeouts.<set-timeouts>|<set-timeouts>(io.github.shakeabdulrahman.keystone.llm.Timeouts){}[0]
+        final var tokenEstimator // io.github.shakeabdulrahman.keystone.llm/LlmClient.Builder.tokenEstimator|{}tokenEstimator[0]
+            final fun <get-tokenEstimator>(): io.github.shakeabdulrahman.keystone.llm/TokenEstimator? // io.github.shakeabdulrahman.keystone.llm/LlmClient.Builder.tokenEstimator.<get-tokenEstimator>|<get-tokenEstimator>(){}[0]
+            final fun <set-tokenEstimator>(io.github.shakeabdulrahman.keystone.llm/TokenEstimator?) // io.github.shakeabdulrahman.keystone.llm/LlmClient.Builder.tokenEstimator.<set-tokenEstimator>|<set-tokenEstimator>(io.github.shakeabdulrahman.keystone.llm.TokenEstimator?){}[0]
+
+        final fun provider(io.github.shakeabdulrahman.keystone.llm/LlmProvider) // io.github.shakeabdulrahman.keystone.llm/LlmClient.Builder.provider|provider(io.github.shakeabdulrahman.keystone.llm.LlmProvider){}[0]
+    }
+}
+
+final class io.github.shakeabdulrahman.keystone.llm/ModelPrice { // io.github.shakeabdulrahman.keystone.llm/ModelPrice|null[0]
+    constructor <init>(io.github.shakeabdulrahman.keystone.llm/Money, io.github.shakeabdulrahman.keystone.llm/Money, io.github.shakeabdulrahman.keystone.llm/Money? = ...) // io.github.shakeabdulrahman.keystone.llm/ModelPrice.<init>|<init>(io.github.shakeabdulrahman.keystone.llm.Money;io.github.shakeabdulrahman.keystone.llm.Money;io.github.shakeabdulrahman.keystone.llm.Money?){}[0]
+
+    final val cachedInputPerMillion // io.github.shakeabdulrahman.keystone.llm/ModelPrice.cachedInputPerMillion|{}cachedInputPerMillion[0]
+        final fun <get-cachedInputPerMillion>(): io.github.shakeabdulrahman.keystone.llm/Money? // io.github.shakeabdulrahman.keystone.llm/ModelPrice.cachedInputPerMillion.<get-cachedInputPerMillion>|<get-cachedInputPerMillion>(){}[0]
+    final val currency // io.github.shakeabdulrahman.keystone.llm/ModelPrice.currency|{}currency[0]
+        final fun <get-currency>(): kotlin/String // io.github.shakeabdulrahman.keystone.llm/ModelPrice.currency.<get-currency>|<get-currency>(){}[0]
+    final val inputPerMillion // io.github.shakeabdulrahman.keystone.llm/ModelPrice.inputPerMillion|{}inputPerMillion[0]
+        final fun <get-inputPerMillion>(): io.github.shakeabdulrahman.keystone.llm/Money // io.github.shakeabdulrahman.keystone.llm/ModelPrice.inputPerMillion.<get-inputPerMillion>|<get-inputPerMillion>(){}[0]
+    final val outputPerMillion // io.github.shakeabdulrahman.keystone.llm/ModelPrice.outputPerMillion|{}outputPerMillion[0]
+        final fun <get-outputPerMillion>(): io.github.shakeabdulrahman.keystone.llm/Money // io.github.shakeabdulrahman.keystone.llm/ModelPrice.outputPerMillion.<get-outputPerMillion>|<get-outputPerMillion>(){}[0]
+
+    final fun component1(): io.github.shakeabdulrahman.keystone.llm/Money // io.github.shakeabdulrahman.keystone.llm/ModelPrice.component1|component1(){}[0]
+    final fun component2(): io.github.shakeabdulrahman.keystone.llm/Money // io.github.shakeabdulrahman.keystone.llm/ModelPrice.component2|component2(){}[0]
+    final fun component3(): io.github.shakeabdulrahman.keystone.llm/Money? // io.github.shakeabdulrahman.keystone.llm/ModelPrice.component3|component3(){}[0]
+    final fun copy(io.github.shakeabdulrahman.keystone.llm/Money = ..., io.github.shakeabdulrahman.keystone.llm/Money = ..., io.github.shakeabdulrahman.keystone.llm/Money? = ...): io.github.shakeabdulrahman.keystone.llm/ModelPrice // io.github.shakeabdulrahman.keystone.llm/ModelPrice.copy|copy(io.github.shakeabdulrahman.keystone.llm.Money;io.github.shakeabdulrahman.keystone.llm.Money;io.github.shakeabdulrahman.keystone.llm.Money?){}[0]
+    final fun equals(kotlin/Any?): kotlin/Boolean // io.github.shakeabdulrahman.keystone.llm/ModelPrice.equals|equals(kotlin.Any?){}[0]
+    final fun hashCode(): kotlin/Int // io.github.shakeabdulrahman.keystone.llm/ModelPrice.hashCode|hashCode(){}[0]
+    final fun toString(): kotlin/String // io.github.shakeabdulrahman.keystone.llm/ModelPrice.toString|toString(){}[0]
+}
+
+final class io.github.shakeabdulrahman.keystone.llm/ModelRef { // io.github.shakeabdulrahman.keystone.llm/ModelRef|null[0]
+    constructor <init>(kotlin/String, kotlin/String) // io.github.shakeabdulrahman.keystone.llm/ModelRef.<init>|<init>(kotlin.String;kotlin.String){}[0]
+
+    final val model // io.github.shakeabdulrahman.keystone.llm/ModelRef.model|{}model[0]
+        final fun <get-model>(): kotlin/String // io.github.shakeabdulrahman.keystone.llm/ModelRef.model.<get-model>|<get-model>(){}[0]
+    final val provider // io.github.shakeabdulrahman.keystone.llm/ModelRef.provider|{}provider[0]
+        final fun <get-provider>(): kotlin/String // io.github.shakeabdulrahman.keystone.llm/ModelRef.provider.<get-provider>|<get-provider>(){}[0]
+
+    final fun component1(): kotlin/String // io.github.shakeabdulrahman.keystone.llm/ModelRef.component1|component1(){}[0]
+    final fun component2(): kotlin/String // io.github.shakeabdulrahman.keystone.llm/ModelRef.component2|component2(){}[0]
+    final fun copy(kotlin/String = ..., kotlin/String = ...): io.github.shakeabdulrahman.keystone.llm/ModelRef // io.github.shakeabdulrahman.keystone.llm/ModelRef.copy|copy(kotlin.String;kotlin.String){}[0]
+    final fun equals(kotlin/Any?): kotlin/Boolean // io.github.shakeabdulrahman.keystone.llm/ModelRef.equals|equals(kotlin.Any?){}[0]
+    final fun hashCode(): kotlin/Int // io.github.shakeabdulrahman.keystone.llm/ModelRef.hashCode|hashCode(){}[0]
+    final fun toString(): kotlin/String // io.github.shakeabdulrahman.keystone.llm/ModelRef.toString|toString(){}[0]
+}
+
+final class io.github.shakeabdulrahman.keystone.llm/Money : kotlin/Comparable<io.github.shakeabdulrahman.keystone.llm/Money> { // io.github.shakeabdulrahman.keystone.llm/Money|null[0]
+    constructor <init>(kotlin/Long, kotlin/String) // io.github.shakeabdulrahman.keystone.llm/Money.<init>|<init>(kotlin.Long;kotlin.String){}[0]
+
+    final val currency // io.github.shakeabdulrahman.keystone.llm/Money.currency|{}currency[0]
+        final fun <get-currency>(): kotlin/String // io.github.shakeabdulrahman.keystone.llm/Money.currency.<get-currency>|<get-currency>(){}[0]
+    final val nanos // io.github.shakeabdulrahman.keystone.llm/Money.nanos|{}nanos[0]
+        final fun <get-nanos>(): kotlin/Long // io.github.shakeabdulrahman.keystone.llm/Money.nanos.<get-nanos>|<get-nanos>(){}[0]
+
+    final fun compareTo(io.github.shakeabdulrahman.keystone.llm/Money): kotlin/Int // io.github.shakeabdulrahman.keystone.llm/Money.compareTo|compareTo(io.github.shakeabdulrahman.keystone.llm.Money){}[0]
+    final fun component1(): kotlin/Long // io.github.shakeabdulrahman.keystone.llm/Money.component1|component1(){}[0]
+    final fun component2(): kotlin/String // io.github.shakeabdulrahman.keystone.llm/Money.component2|component2(){}[0]
+    final fun copy(kotlin/Long = ..., kotlin/String = ...): io.github.shakeabdulrahman.keystone.llm/Money // io.github.shakeabdulrahman.keystone.llm/Money.copy|copy(kotlin.Long;kotlin.String){}[0]
+    final fun equals(kotlin/Any?): kotlin/Boolean // io.github.shakeabdulrahman.keystone.llm/Money.equals|equals(kotlin.Any?){}[0]
+    final fun hashCode(): kotlin/Int // io.github.shakeabdulrahman.keystone.llm/Money.hashCode|hashCode(){}[0]
+    final fun plus(io.github.shakeabdulrahman.keystone.llm/Money): io.github.shakeabdulrahman.keystone.llm/Money // io.github.shakeabdulrahman.keystone.llm/Money.plus|plus(io.github.shakeabdulrahman.keystone.llm.Money){}[0]
+    final fun toDecimalString(kotlin/Int = ...): kotlin/String // io.github.shakeabdulrahman.keystone.llm/Money.toDecimalString|toDecimalString(kotlin.Int){}[0]
+    final fun toString(): kotlin/String // io.github.shakeabdulrahman.keystone.llm/Money.toString|toString(){}[0]
+
+    final object Companion { // io.github.shakeabdulrahman.keystone.llm/Money.Companion|null[0]
+        final fun parse(kotlin/String, kotlin/String): io.github.shakeabdulrahman.keystone.llm/Money // io.github.shakeabdulrahman.keystone.llm/Money.Companion.parse|parse(kotlin.String;kotlin.String){}[0]
+        final fun zero(kotlin/String): io.github.shakeabdulrahman.keystone.llm/Money // io.github.shakeabdulrahman.keystone.llm/Money.Companion.zero|zero(kotlin.String){}[0]
+    }
+}
+
+final class io.github.shakeabdulrahman.keystone.llm/PriceTable { // io.github.shakeabdulrahman.keystone.llm/PriceTable|null[0]
+    constructor <init>(kotlin/String, kotlin.collections/Map<io.github.shakeabdulrahman.keystone.llm/ModelRef, io.github.shakeabdulrahman.keystone.llm/ModelPrice>) // io.github.shakeabdulrahman.keystone.llm/PriceTable.<init>|<init>(kotlin.String;kotlin.collections.Map<io.github.shakeabdulrahman.keystone.llm.ModelRef,io.github.shakeabdulrahman.keystone.llm.ModelPrice>){}[0]
+
+    final val version // io.github.shakeabdulrahman.keystone.llm/PriceTable.version|{}version[0]
+        final fun <get-version>(): kotlin/String // io.github.shakeabdulrahman.keystone.llm/PriceTable.version.<get-version>|<get-version>(){}[0]
+
+    final fun priceOf(io.github.shakeabdulrahman.keystone.llm/ModelRef): io.github.shakeabdulrahman.keystone.llm/ModelPrice? // io.github.shakeabdulrahman.keystone.llm/PriceTable.priceOf|priceOf(io.github.shakeabdulrahman.keystone.llm.ModelRef){}[0]
+    final fun toString(): kotlin/String // io.github.shakeabdulrahman.keystone.llm/PriceTable.toString|toString(){}[0]
+}
+
+final class io.github.shakeabdulrahman.keystone.llm/ProviderCapabilities { // io.github.shakeabdulrahman.keystone.llm/ProviderCapabilities|null[0]
+    constructor <init>(io.github.shakeabdulrahman.keystone.llm/Support, io.github.shakeabdulrahman.keystone.llm/Support, io.github.shakeabdulrahman.keystone.llm/StructuredOutputSupport, io.github.shakeabdulrahman.keystone.llm/Support = ...) // io.github.shakeabdulrahman.keystone.llm/ProviderCapabilities.<init>|<init>(io.github.shakeabdulrahman.keystone.llm.Support;io.github.shakeabdulrahman.keystone.llm.Support;io.github.shakeabdulrahman.keystone.llm.StructuredOutputSupport;io.github.shakeabdulrahman.keystone.llm.Support){}[0]
+
+    final val structuredOutput // io.github.shakeabdulrahman.keystone.llm/ProviderCapabilities.structuredOutput|{}structuredOutput[0]
+        final fun <get-structuredOutput>(): io.github.shakeabdulrahman.keystone.llm/StructuredOutputSupport // io.github.shakeabdulrahman.keystone.llm/ProviderCapabilities.structuredOutput.<get-structuredOutput>|<get-structuredOutput>(){}[0]
+    final val systemMessages // io.github.shakeabdulrahman.keystone.llm/ProviderCapabilities.systemMessages|{}systemMessages[0]
+        final fun <get-systemMessages>(): io.github.shakeabdulrahman.keystone.llm/Support // io.github.shakeabdulrahman.keystone.llm/ProviderCapabilities.systemMessages.<get-systemMessages>|<get-systemMessages>(){}[0]
+    final val toolChoiceRequired // io.github.shakeabdulrahman.keystone.llm/ProviderCapabilities.toolChoiceRequired|{}toolChoiceRequired[0]
+        final fun <get-toolChoiceRequired>(): io.github.shakeabdulrahman.keystone.llm/Support // io.github.shakeabdulrahman.keystone.llm/ProviderCapabilities.toolChoiceRequired.<get-toolChoiceRequired>|<get-toolChoiceRequired>(){}[0]
+    final val tools // io.github.shakeabdulrahman.keystone.llm/ProviderCapabilities.tools|{}tools[0]
+        final fun <get-tools>(): io.github.shakeabdulrahman.keystone.llm/Support // io.github.shakeabdulrahman.keystone.llm/ProviderCapabilities.tools.<get-tools>|<get-tools>(){}[0]
+
+    final fun component1(): io.github.shakeabdulrahman.keystone.llm/Support // io.github.shakeabdulrahman.keystone.llm/ProviderCapabilities.component1|component1(){}[0]
+    final fun component2(): io.github.shakeabdulrahman.keystone.llm/Support // io.github.shakeabdulrahman.keystone.llm/ProviderCapabilities.component2|component2(){}[0]
+    final fun component3(): io.github.shakeabdulrahman.keystone.llm/StructuredOutputSupport // io.github.shakeabdulrahman.keystone.llm/ProviderCapabilities.component3|component3(){}[0]
+    final fun component4(): io.github.shakeabdulrahman.keystone.llm/Support // io.github.shakeabdulrahman.keystone.llm/ProviderCapabilities.component4|component4(){}[0]
+    final fun copy(io.github.shakeabdulrahman.keystone.llm/Support = ..., io.github.shakeabdulrahman.keystone.llm/Support = ..., io.github.shakeabdulrahman.keystone.llm/StructuredOutputSupport = ..., io.github.shakeabdulrahman.keystone.llm/Support = ...): io.github.shakeabdulrahman.keystone.llm/ProviderCapabilities // io.github.shakeabdulrahman.keystone.llm/ProviderCapabilities.copy|copy(io.github.shakeabdulrahman.keystone.llm.Support;io.github.shakeabdulrahman.keystone.llm.Support;io.github.shakeabdulrahman.keystone.llm.StructuredOutputSupport;io.github.shakeabdulrahman.keystone.llm.Support){}[0]
+    final fun equals(kotlin/Any?): kotlin/Boolean // io.github.shakeabdulrahman.keystone.llm/ProviderCapabilities.equals|equals(kotlin.Any?){}[0]
+    final fun hashCode(): kotlin/Int // io.github.shakeabdulrahman.keystone.llm/ProviderCapabilities.hashCode|hashCode(){}[0]
+    final fun missingFor(io.github.shakeabdulrahman.keystone.llm/ChatRequest): kotlin/String? // io.github.shakeabdulrahman.keystone.llm/ProviderCapabilities.missingFor|missingFor(io.github.shakeabdulrahman.keystone.llm.ChatRequest){}[0]
+    final fun toString(): kotlin/String // io.github.shakeabdulrahman.keystone.llm/ProviderCapabilities.toString|toString(){}[0]
+}
+
+final class io.github.shakeabdulrahman.keystone.llm/ProviderRequest { // io.github.shakeabdulrahman.keystone.llm/ProviderRequest|null[0]
+    constructor <init>(kotlin/String, io.github.shakeabdulrahman.keystone.llm/ChatRequest, kotlinx.serialization.json/JsonObject?) // io.github.shakeabdulrahman.keystone.llm/ProviderRequest.<init>|<init>(kotlin.String;io.github.shakeabdulrahman.keystone.llm.ChatRequest;kotlinx.serialization.json.JsonObject?){}[0]
+
+    final val model // io.github.shakeabdulrahman.keystone.llm/ProviderRequest.model|{}model[0]
+        final fun <get-model>(): kotlin/String // io.github.shakeabdulrahman.keystone.llm/ProviderRequest.model.<get-model>|<get-model>(){}[0]
+    final val options // io.github.shakeabdulrahman.keystone.llm/ProviderRequest.options|{}options[0]
+        final fun <get-options>(): kotlinx.serialization.json/JsonObject? // io.github.shakeabdulrahman.keystone.llm/ProviderRequest.options.<get-options>|<get-options>(){}[0]
+    final val request // io.github.shakeabdulrahman.keystone.llm/ProviderRequest.request|{}request[0]
+        final fun <get-request>(): io.github.shakeabdulrahman.keystone.llm/ChatRequest // io.github.shakeabdulrahman.keystone.llm/ProviderRequest.request.<get-request>|<get-request>(){}[0]
+
+    final fun component1(): kotlin/String // io.github.shakeabdulrahman.keystone.llm/ProviderRequest.component1|component1(){}[0]
+    final fun component2(): io.github.shakeabdulrahman.keystone.llm/ChatRequest // io.github.shakeabdulrahman.keystone.llm/ProviderRequest.component2|component2(){}[0]
+    final fun component3(): kotlinx.serialization.json/JsonObject? // io.github.shakeabdulrahman.keystone.llm/ProviderRequest.component3|component3(){}[0]
+    final fun copy(kotlin/String = ..., io.github.shakeabdulrahman.keystone.llm/ChatRequest = ..., kotlinx.serialization.json/JsonObject? = ...): io.github.shakeabdulrahman.keystone.llm/ProviderRequest // io.github.shakeabdulrahman.keystone.llm/ProviderRequest.copy|copy(kotlin.String;io.github.shakeabdulrahman.keystone.llm.ChatRequest;kotlinx.serialization.json.JsonObject?){}[0]
+    final fun equals(kotlin/Any?): kotlin/Boolean // io.github.shakeabdulrahman.keystone.llm/ProviderRequest.equals|equals(kotlin.Any?){}[0]
+    final fun hashCode(): kotlin/Int // io.github.shakeabdulrahman.keystone.llm/ProviderRequest.hashCode|hashCode(){}[0]
+    final fun toString(): kotlin/String // io.github.shakeabdulrahman.keystone.llm/ProviderRequest.toString|toString(){}[0]
+}
+
+final class io.github.shakeabdulrahman.keystone.llm/ResponseMetadata { // io.github.shakeabdulrahman.keystone.llm/ResponseMetadata|null[0]
+    constructor <init>(io.github.shakeabdulrahman.keystone.llm/ModelRef, kotlin/String?, kotlin/String?, kotlin/String?, kotlin.collections/List<io.github.shakeabdulrahman.keystone.llm/Attempt>, io.github.shakeabdulrahman.keystone.llm/StructuredEnforcement? = ...) // io.github.shakeabdulrahman.keystone.llm/ResponseMetadata.<init>|<init>(io.github.shakeabdulrahman.keystone.llm.ModelRef;kotlin.String?;kotlin.String?;kotlin.String?;kotlin.collections.List<io.github.shakeabdulrahman.keystone.llm.Attempt>;io.github.shakeabdulrahman.keystone.llm.StructuredEnforcement?){}[0]
+
+    final val attempts // io.github.shakeabdulrahman.keystone.llm/ResponseMetadata.attempts|{}attempts[0]
+        final fun <get-attempts>(): kotlin.collections/List<io.github.shakeabdulrahman.keystone.llm/Attempt> // io.github.shakeabdulrahman.keystone.llm/ResponseMetadata.attempts.<get-attempts>|<get-attempts>(){}[0]
+    final val model // io.github.shakeabdulrahman.keystone.llm/ResponseMetadata.model|{}model[0]
+        final fun <get-model>(): kotlin/String? // io.github.shakeabdulrahman.keystone.llm/ResponseMetadata.model.<get-model>|<get-model>(){}[0]
+    final val requestId // io.github.shakeabdulrahman.keystone.llm/ResponseMetadata.requestId|{}requestId[0]
+        final fun <get-requestId>(): kotlin/String? // io.github.shakeabdulrahman.keystone.llm/ResponseMetadata.requestId.<get-requestId>|<get-requestId>(){}[0]
+    final val responseId // io.github.shakeabdulrahman.keystone.llm/ResponseMetadata.responseId|{}responseId[0]
+        final fun <get-responseId>(): kotlin/String? // io.github.shakeabdulrahman.keystone.llm/ResponseMetadata.responseId.<get-responseId>|<get-responseId>(){}[0]
+    final val structuredEnforcement // io.github.shakeabdulrahman.keystone.llm/ResponseMetadata.structuredEnforcement|{}structuredEnforcement[0]
+        final fun <get-structuredEnforcement>(): io.github.shakeabdulrahman.keystone.llm/StructuredEnforcement? // io.github.shakeabdulrahman.keystone.llm/ResponseMetadata.structuredEnforcement.<get-structuredEnforcement>|<get-structuredEnforcement>(){}[0]
+    final val target // io.github.shakeabdulrahman.keystone.llm/ResponseMetadata.target|{}target[0]
+        final fun <get-target>(): io.github.shakeabdulrahman.keystone.llm/ModelRef // io.github.shakeabdulrahman.keystone.llm/ResponseMetadata.target.<get-target>|<get-target>(){}[0]
+
+    final fun component1(): io.github.shakeabdulrahman.keystone.llm/ModelRef // io.github.shakeabdulrahman.keystone.llm/ResponseMetadata.component1|component1(){}[0]
+    final fun component2(): kotlin/String? // io.github.shakeabdulrahman.keystone.llm/ResponseMetadata.component2|component2(){}[0]
+    final fun component3(): kotlin/String? // io.github.shakeabdulrahman.keystone.llm/ResponseMetadata.component3|component3(){}[0]
+    final fun component4(): kotlin/String? // io.github.shakeabdulrahman.keystone.llm/ResponseMetadata.component4|component4(){}[0]
+    final fun component5(): kotlin.collections/List<io.github.shakeabdulrahman.keystone.llm/Attempt> // io.github.shakeabdulrahman.keystone.llm/ResponseMetadata.component5|component5(){}[0]
+    final fun component6(): io.github.shakeabdulrahman.keystone.llm/StructuredEnforcement? // io.github.shakeabdulrahman.keystone.llm/ResponseMetadata.component6|component6(){}[0]
+    final fun copy(io.github.shakeabdulrahman.keystone.llm/ModelRef = ..., kotlin/String? = ..., kotlin/String? = ..., kotlin/String? = ..., kotlin.collections/List<io.github.shakeabdulrahman.keystone.llm/Attempt> = ..., io.github.shakeabdulrahman.keystone.llm/StructuredEnforcement? = ...): io.github.shakeabdulrahman.keystone.llm/ResponseMetadata // io.github.shakeabdulrahman.keystone.llm/ResponseMetadata.copy|copy(io.github.shakeabdulrahman.keystone.llm.ModelRef;kotlin.String?;kotlin.String?;kotlin.String?;kotlin.collections.List<io.github.shakeabdulrahman.keystone.llm.Attempt>;io.github.shakeabdulrahman.keystone.llm.StructuredEnforcement?){}[0]
+    final fun equals(kotlin/Any?): kotlin/Boolean // io.github.shakeabdulrahman.keystone.llm/ResponseMetadata.equals|equals(kotlin.Any?){}[0]
+    final fun hashCode(): kotlin/Int // io.github.shakeabdulrahman.keystone.llm/ResponseMetadata.hashCode|hashCode(){}[0]
+    final fun toString(): kotlin/String // io.github.shakeabdulrahman.keystone.llm/ResponseMetadata.toString|toString(){}[0]
+}
+
+final class io.github.shakeabdulrahman.keystone.llm/RetryPolicy { // io.github.shakeabdulrahman.keystone.llm/RetryPolicy|null[0]
+    constructor <init>(kotlin/Int = ..., kotlin.time/Duration = ..., kotlin.time/Duration = ..., kotlin/Double = ..., kotlin/Double = ..., kotlin.time/Duration = ..., kotlin.random/Random = ..., kotlin/Function1<io.github.shakeabdulrahman.keystone.llm/LlmException, kotlin/Boolean> = ...) // io.github.shakeabdulrahman.keystone.llm/RetryPolicy.<init>|<init>(kotlin.Int;kotlin.time.Duration;kotlin.time.Duration;kotlin.Double;kotlin.Double;kotlin.time.Duration;kotlin.random.Random;kotlin.Function1<io.github.shakeabdulrahman.keystone.llm.LlmException,kotlin.Boolean>){}[0]
+
+    final val initialDelay // io.github.shakeabdulrahman.keystone.llm/RetryPolicy.initialDelay|{}initialDelay[0]
+        final fun <get-initialDelay>(): kotlin.time/Duration // io.github.shakeabdulrahman.keystone.llm/RetryPolicy.initialDelay.<get-initialDelay>|<get-initialDelay>(){}[0]
+    final val jitter // io.github.shakeabdulrahman.keystone.llm/RetryPolicy.jitter|{}jitter[0]
+        final fun <get-jitter>(): kotlin/Double // io.github.shakeabdulrahman.keystone.llm/RetryPolicy.jitter.<get-jitter>|<get-jitter>(){}[0]
+    final val maxAttempts // io.github.shakeabdulrahman.keystone.llm/RetryPolicy.maxAttempts|{}maxAttempts[0]
+        final fun <get-maxAttempts>(): kotlin/Int // io.github.shakeabdulrahman.keystone.llm/RetryPolicy.maxAttempts.<get-maxAttempts>|<get-maxAttempts>(){}[0]
+    final val maxDelay // io.github.shakeabdulrahman.keystone.llm/RetryPolicy.maxDelay|{}maxDelay[0]
+        final fun <get-maxDelay>(): kotlin.time/Duration // io.github.shakeabdulrahman.keystone.llm/RetryPolicy.maxDelay.<get-maxDelay>|<get-maxDelay>(){}[0]
+    final val maxRetryAfter // io.github.shakeabdulrahman.keystone.llm/RetryPolicy.maxRetryAfter|{}maxRetryAfter[0]
+        final fun <get-maxRetryAfter>(): kotlin.time/Duration // io.github.shakeabdulrahman.keystone.llm/RetryPolicy.maxRetryAfter.<get-maxRetryAfter>|<get-maxRetryAfter>(){}[0]
+    final val multiplier // io.github.shakeabdulrahman.keystone.llm/RetryPolicy.multiplier|{}multiplier[0]
+        final fun <get-multiplier>(): kotlin/Double // io.github.shakeabdulrahman.keystone.llm/RetryPolicy.multiplier.<get-multiplier>|<get-multiplier>(){}[0]
+    final val retryOn // io.github.shakeabdulrahman.keystone.llm/RetryPolicy.retryOn|{}retryOn[0]
+        final fun <get-retryOn>(): kotlin/Function1<io.github.shakeabdulrahman.keystone.llm/LlmException, kotlin/Boolean> // io.github.shakeabdulrahman.keystone.llm/RetryPolicy.retryOn.<get-retryOn>|<get-retryOn>(){}[0]
+
+    final fun delayBeforeRetry(kotlin/Int, io.github.shakeabdulrahman.keystone.llm/LlmException): kotlin.time/Duration? // io.github.shakeabdulrahman.keystone.llm/RetryPolicy.delayBeforeRetry|delayBeforeRetry(kotlin.Int;io.github.shakeabdulrahman.keystone.llm.LlmException){}[0]
+
+    final object Companion { // io.github.shakeabdulrahman.keystone.llm/RetryPolicy.Companion|null[0]
+        final val None // io.github.shakeabdulrahman.keystone.llm/RetryPolicy.Companion.None|{}None[0]
+            final fun <get-None>(): io.github.shakeabdulrahman.keystone.llm/RetryPolicy // io.github.shakeabdulrahman.keystone.llm/RetryPolicy.Companion.None.<get-None>|<get-None>(){}[0]
+    }
+}
+
+final class io.github.shakeabdulrahman.keystone.llm/Route { // io.github.shakeabdulrahman.keystone.llm/Route|null[0]
+    constructor <init>(io.github.shakeabdulrahman.keystone.llm/ModelRef, kotlin/Array<out io.github.shakeabdulrahman.keystone.llm/ModelRef>...) // io.github.shakeabdulrahman.keystone.llm/Route.<init>|<init>(io.github.shakeabdulrahman.keystone.llm.ModelRef;kotlin.Array<out|io.github.shakeabdulrahman.keystone.llm.ModelRef>...){}[0]
+    constructor <init>(kotlin.collections/List<io.github.shakeabdulrahman.keystone.llm/ModelRef>) // io.github.shakeabdulrahman.keystone.llm/Route.<init>|<init>(kotlin.collections.List<io.github.shakeabdulrahman.keystone.llm.ModelRef>){}[0]
+
+    final val targets // io.github.shakeabdulrahman.keystone.llm/Route.targets|{}targets[0]
+        final fun <get-targets>(): kotlin.collections/List<io.github.shakeabdulrahman.keystone.llm/ModelRef> // io.github.shakeabdulrahman.keystone.llm/Route.targets.<get-targets>|<get-targets>(){}[0]
+
+    final fun component1(): kotlin.collections/List<io.github.shakeabdulrahman.keystone.llm/ModelRef> // io.github.shakeabdulrahman.keystone.llm/Route.component1|component1(){}[0]
+    final fun copy(kotlin.collections/List<io.github.shakeabdulrahman.keystone.llm/ModelRef> = ...): io.github.shakeabdulrahman.keystone.llm/Route // io.github.shakeabdulrahman.keystone.llm/Route.copy|copy(kotlin.collections.List<io.github.shakeabdulrahman.keystone.llm.ModelRef>){}[0]
+    final fun equals(kotlin/Any?): kotlin/Boolean // io.github.shakeabdulrahman.keystone.llm/Route.equals|equals(kotlin.Any?){}[0]
+    final fun hashCode(): kotlin/Int // io.github.shakeabdulrahman.keystone.llm/Route.hashCode|hashCode(){}[0]
+    final fun toString(): kotlin/String // io.github.shakeabdulrahman.keystone.llm/Route.toString|toString(){}[0]
+}
+
+final class io.github.shakeabdulrahman.keystone.llm/SchemaViolation { // io.github.shakeabdulrahman.keystone.llm/SchemaViolation|null[0]
+    constructor <init>(kotlin/String, kotlin/String) // io.github.shakeabdulrahman.keystone.llm/SchemaViolation.<init>|<init>(kotlin.String;kotlin.String){}[0]
+
+    final val message // io.github.shakeabdulrahman.keystone.llm/SchemaViolation.message|{}message[0]
+        final fun <get-message>(): kotlin/String // io.github.shakeabdulrahman.keystone.llm/SchemaViolation.message.<get-message>|<get-message>(){}[0]
+    final val path // io.github.shakeabdulrahman.keystone.llm/SchemaViolation.path|{}path[0]
+        final fun <get-path>(): kotlin/String // io.github.shakeabdulrahman.keystone.llm/SchemaViolation.path.<get-path>|<get-path>(){}[0]
+
+    final fun component1(): kotlin/String // io.github.shakeabdulrahman.keystone.llm/SchemaViolation.component1|component1(){}[0]
+    final fun component2(): kotlin/String // io.github.shakeabdulrahman.keystone.llm/SchemaViolation.component2|component2(){}[0]
+    final fun copy(kotlin/String = ..., kotlin/String = ...): io.github.shakeabdulrahman.keystone.llm/SchemaViolation // io.github.shakeabdulrahman.keystone.llm/SchemaViolation.copy|copy(kotlin.String;kotlin.String){}[0]
+    final fun equals(kotlin/Any?): kotlin/Boolean // io.github.shakeabdulrahman.keystone.llm/SchemaViolation.equals|equals(kotlin.Any?){}[0]
+    final fun hashCode(): kotlin/Int // io.github.shakeabdulrahman.keystone.llm/SchemaViolation.hashCode|hashCode(){}[0]
+    final fun toString(): kotlin/String // io.github.shakeabdulrahman.keystone.llm/SchemaViolation.toString|toString(){}[0]
+}
+
+final class io.github.shakeabdulrahman.keystone.llm/StructuredOutputException : io.github.shakeabdulrahman.keystone.llm/LlmException { // io.github.shakeabdulrahman.keystone.llm/StructuredOutputException|null[0]
+    constructor <init>(io.github.shakeabdulrahman.keystone.llm/StructuredOutputException.Reason, kotlin/String, kotlin/String, io.github.shakeabdulrahman.keystone.llm/ChatResponse, kotlin/Throwable? = ...) // io.github.shakeabdulrahman.keystone.llm/StructuredOutputException.<init>|<init>(io.github.shakeabdulrahman.keystone.llm.StructuredOutputException.Reason;kotlin.String;kotlin.String;io.github.shakeabdulrahman.keystone.llm.ChatResponse;kotlin.Throwable?){}[0]
+
+    final val rawText // io.github.shakeabdulrahman.keystone.llm/StructuredOutputException.rawText|{}rawText[0]
+        final fun <get-rawText>(): kotlin/String // io.github.shakeabdulrahman.keystone.llm/StructuredOutputException.rawText.<get-rawText>|<get-rawText>(){}[0]
+    final val reason // io.github.shakeabdulrahman.keystone.llm/StructuredOutputException.reason|{}reason[0]
+        final fun <get-reason>(): io.github.shakeabdulrahman.keystone.llm/StructuredOutputException.Reason // io.github.shakeabdulrahman.keystone.llm/StructuredOutputException.reason.<get-reason>|<get-reason>(){}[0]
+    final val response // io.github.shakeabdulrahman.keystone.llm/StructuredOutputException.response|{}response[0]
+        final fun <get-response>(): io.github.shakeabdulrahman.keystone.llm/ChatResponse // io.github.shakeabdulrahman.keystone.llm/StructuredOutputException.response.<get-response>|<get-response>(){}[0]
+
+    sealed interface Reason { // io.github.shakeabdulrahman.keystone.llm/StructuredOutputException.Reason|null[0]
+        final class DecodingFailed : io.github.shakeabdulrahman.keystone.llm/StructuredOutputException.Reason { // io.github.shakeabdulrahman.keystone.llm/StructuredOutputException.Reason.DecodingFailed|null[0]
+            constructor <init>(kotlin/String) // io.github.shakeabdulrahman.keystone.llm/StructuredOutputException.Reason.DecodingFailed.<init>|<init>(kotlin.String){}[0]
+
+            final val detail // io.github.shakeabdulrahman.keystone.llm/StructuredOutputException.Reason.DecodingFailed.detail|{}detail[0]
+                final fun <get-detail>(): kotlin/String // io.github.shakeabdulrahman.keystone.llm/StructuredOutputException.Reason.DecodingFailed.detail.<get-detail>|<get-detail>(){}[0]
+
+            final fun component1(): kotlin/String // io.github.shakeabdulrahman.keystone.llm/StructuredOutputException.Reason.DecodingFailed.component1|component1(){}[0]
+            final fun copy(kotlin/String = ...): io.github.shakeabdulrahman.keystone.llm/StructuredOutputException.Reason.DecodingFailed // io.github.shakeabdulrahman.keystone.llm/StructuredOutputException.Reason.DecodingFailed.copy|copy(kotlin.String){}[0]
+            final fun equals(kotlin/Any?): kotlin/Boolean // io.github.shakeabdulrahman.keystone.llm/StructuredOutputException.Reason.DecodingFailed.equals|equals(kotlin.Any?){}[0]
+            final fun hashCode(): kotlin/Int // io.github.shakeabdulrahman.keystone.llm/StructuredOutputException.Reason.DecodingFailed.hashCode|hashCode(){}[0]
+            final fun toString(): kotlin/String // io.github.shakeabdulrahman.keystone.llm/StructuredOutputException.Reason.DecodingFailed.toString|toString(){}[0]
+        }
+
+        final class MalformedJson : io.github.shakeabdulrahman.keystone.llm/StructuredOutputException.Reason { // io.github.shakeabdulrahman.keystone.llm/StructuredOutputException.Reason.MalformedJson|null[0]
+            constructor <init>(kotlin/String) // io.github.shakeabdulrahman.keystone.llm/StructuredOutputException.Reason.MalformedJson.<init>|<init>(kotlin.String){}[0]
+
+            final val detail // io.github.shakeabdulrahman.keystone.llm/StructuredOutputException.Reason.MalformedJson.detail|{}detail[0]
+                final fun <get-detail>(): kotlin/String // io.github.shakeabdulrahman.keystone.llm/StructuredOutputException.Reason.MalformedJson.detail.<get-detail>|<get-detail>(){}[0]
+
+            final fun component1(): kotlin/String // io.github.shakeabdulrahman.keystone.llm/StructuredOutputException.Reason.MalformedJson.component1|component1(){}[0]
+            final fun copy(kotlin/String = ...): io.github.shakeabdulrahman.keystone.llm/StructuredOutputException.Reason.MalformedJson // io.github.shakeabdulrahman.keystone.llm/StructuredOutputException.Reason.MalformedJson.copy|copy(kotlin.String){}[0]
+            final fun equals(kotlin/Any?): kotlin/Boolean // io.github.shakeabdulrahman.keystone.llm/StructuredOutputException.Reason.MalformedJson.equals|equals(kotlin.Any?){}[0]
+            final fun hashCode(): kotlin/Int // io.github.shakeabdulrahman.keystone.llm/StructuredOutputException.Reason.MalformedJson.hashCode|hashCode(){}[0]
+            final fun toString(): kotlin/String // io.github.shakeabdulrahman.keystone.llm/StructuredOutputException.Reason.MalformedJson.toString|toString(){}[0]
+        }
+
+        final class SchemaMismatch : io.github.shakeabdulrahman.keystone.llm/StructuredOutputException.Reason { // io.github.shakeabdulrahman.keystone.llm/StructuredOutputException.Reason.SchemaMismatch|null[0]
+            constructor <init>(kotlin.collections/List<io.github.shakeabdulrahman.keystone.llm/SchemaViolation>) // io.github.shakeabdulrahman.keystone.llm/StructuredOutputException.Reason.SchemaMismatch.<init>|<init>(kotlin.collections.List<io.github.shakeabdulrahman.keystone.llm.SchemaViolation>){}[0]
+
+            final val violations // io.github.shakeabdulrahman.keystone.llm/StructuredOutputException.Reason.SchemaMismatch.violations|{}violations[0]
+                final fun <get-violations>(): kotlin.collections/List<io.github.shakeabdulrahman.keystone.llm/SchemaViolation> // io.github.shakeabdulrahman.keystone.llm/StructuredOutputException.Reason.SchemaMismatch.violations.<get-violations>|<get-violations>(){}[0]
+
+            final fun component1(): kotlin.collections/List<io.github.shakeabdulrahman.keystone.llm/SchemaViolation> // io.github.shakeabdulrahman.keystone.llm/StructuredOutputException.Reason.SchemaMismatch.component1|component1(){}[0]
+            final fun copy(kotlin.collections/List<io.github.shakeabdulrahman.keystone.llm/SchemaViolation> = ...): io.github.shakeabdulrahman.keystone.llm/StructuredOutputException.Reason.SchemaMismatch // io.github.shakeabdulrahman.keystone.llm/StructuredOutputException.Reason.SchemaMismatch.copy|copy(kotlin.collections.List<io.github.shakeabdulrahman.keystone.llm.SchemaViolation>){}[0]
+            final fun equals(kotlin/Any?): kotlin/Boolean // io.github.shakeabdulrahman.keystone.llm/StructuredOutputException.Reason.SchemaMismatch.equals|equals(kotlin.Any?){}[0]
+            final fun hashCode(): kotlin/Int // io.github.shakeabdulrahman.keystone.llm/StructuredOutputException.Reason.SchemaMismatch.hashCode|hashCode(){}[0]
+            final fun toString(): kotlin/String // io.github.shakeabdulrahman.keystone.llm/StructuredOutputException.Reason.SchemaMismatch.toString|toString(){}[0]
+        }
+
+        final object NoContent : io.github.shakeabdulrahman.keystone.llm/StructuredOutputException.Reason { // io.github.shakeabdulrahman.keystone.llm/StructuredOutputException.Reason.NoContent|null[0]
+            final fun equals(kotlin/Any?): kotlin/Boolean // io.github.shakeabdulrahman.keystone.llm/StructuredOutputException.Reason.NoContent.equals|equals(kotlin.Any?){}[0]
+            final fun hashCode(): kotlin/Int // io.github.shakeabdulrahman.keystone.llm/StructuredOutputException.Reason.NoContent.hashCode|hashCode(){}[0]
+            final fun toString(): kotlin/String // io.github.shakeabdulrahman.keystone.llm/StructuredOutputException.Reason.NoContent.toString|toString(){}[0]
+        }
+
+        final object Truncated : io.github.shakeabdulrahman.keystone.llm/StructuredOutputException.Reason { // io.github.shakeabdulrahman.keystone.llm/StructuredOutputException.Reason.Truncated|null[0]
+            final fun equals(kotlin/Any?): kotlin/Boolean // io.github.shakeabdulrahman.keystone.llm/StructuredOutputException.Reason.Truncated.equals|equals(kotlin.Any?){}[0]
+            final fun hashCode(): kotlin/Int // io.github.shakeabdulrahman.keystone.llm/StructuredOutputException.Reason.Truncated.hashCode|hashCode(){}[0]
+            final fun toString(): kotlin/String // io.github.shakeabdulrahman.keystone.llm/StructuredOutputException.Reason.Truncated.toString|toString(){}[0]
+        }
+    }
+}
+
+final class io.github.shakeabdulrahman.keystone.llm/Timeouts { // io.github.shakeabdulrahman.keystone.llm/Timeouts|null[0]
+    constructor <init>(kotlin.time/Duration? = ..., kotlin.time/Duration? = ..., kotlin.time/Duration? = ...) // io.github.shakeabdulrahman.keystone.llm/Timeouts.<init>|<init>(kotlin.time.Duration?;kotlin.time.Duration?;kotlin.time.Duration?){}[0]
+
+    final val firstEvent // io.github.shakeabdulrahman.keystone.llm/Timeouts.firstEvent|{}firstEvent[0]
+        final fun <get-firstEvent>(): kotlin.time/Duration? // io.github.shakeabdulrahman.keystone.llm/Timeouts.firstEvent.<get-firstEvent>|<get-firstEvent>(){}[0]
+    final val idle // io.github.shakeabdulrahman.keystone.llm/Timeouts.idle|{}idle[0]
+        final fun <get-idle>(): kotlin.time/Duration? // io.github.shakeabdulrahman.keystone.llm/Timeouts.idle.<get-idle>|<get-idle>(){}[0]
+    final val total // io.github.shakeabdulrahman.keystone.llm/Timeouts.total|{}total[0]
+        final fun <get-total>(): kotlin.time/Duration? // io.github.shakeabdulrahman.keystone.llm/Timeouts.total.<get-total>|<get-total>(){}[0]
+
+    final fun component1(): kotlin.time/Duration? // io.github.shakeabdulrahman.keystone.llm/Timeouts.component1|component1(){}[0]
+    final fun component2(): kotlin.time/Duration? // io.github.shakeabdulrahman.keystone.llm/Timeouts.component2|component2(){}[0]
+    final fun component3(): kotlin.time/Duration? // io.github.shakeabdulrahman.keystone.llm/Timeouts.component3|component3(){}[0]
+    final fun copy(kotlin.time/Duration? = ..., kotlin.time/Duration? = ..., kotlin.time/Duration? = ...): io.github.shakeabdulrahman.keystone.llm/Timeouts // io.github.shakeabdulrahman.keystone.llm/Timeouts.copy|copy(kotlin.time.Duration?;kotlin.time.Duration?;kotlin.time.Duration?){}[0]
+    final fun equals(kotlin/Any?): kotlin/Boolean // io.github.shakeabdulrahman.keystone.llm/Timeouts.equals|equals(kotlin.Any?){}[0]
+    final fun hashCode(): kotlin/Int // io.github.shakeabdulrahman.keystone.llm/Timeouts.hashCode|hashCode(){}[0]
+    final fun toString(): kotlin/String // io.github.shakeabdulrahman.keystone.llm/Timeouts.toString|toString(){}[0]
+}
+
+final class io.github.shakeabdulrahman.keystone.llm/Tool { // io.github.shakeabdulrahman.keystone.llm/Tool|null[0]
+    constructor <init>(kotlin/String, kotlin/String, kotlinx.serialization.json/JsonObject) // io.github.shakeabdulrahman.keystone.llm/Tool.<init>|<init>(kotlin.String;kotlin.String;kotlinx.serialization.json.JsonObject){}[0]
+
+    final val description // io.github.shakeabdulrahman.keystone.llm/Tool.description|{}description[0]
+        final fun <get-description>(): kotlin/String // io.github.shakeabdulrahman.keystone.llm/Tool.description.<get-description>|<get-description>(){}[0]
+    final val name // io.github.shakeabdulrahman.keystone.llm/Tool.name|{}name[0]
+        final fun <get-name>(): kotlin/String // io.github.shakeabdulrahman.keystone.llm/Tool.name.<get-name>|<get-name>(){}[0]
+    final val parameters // io.github.shakeabdulrahman.keystone.llm/Tool.parameters|{}parameters[0]
+        final fun <get-parameters>(): kotlinx.serialization.json/JsonObject // io.github.shakeabdulrahman.keystone.llm/Tool.parameters.<get-parameters>|<get-parameters>(){}[0]
+
+    final fun equals(kotlin/Any?): kotlin/Boolean // io.github.shakeabdulrahman.keystone.llm/Tool.equals|equals(kotlin.Any?){}[0]
+    final fun hashCode(): kotlin/Int // io.github.shakeabdulrahman.keystone.llm/Tool.hashCode|hashCode(){}[0]
+    final fun toString(): kotlin/String // io.github.shakeabdulrahman.keystone.llm/Tool.toString|toString(){}[0]
+}
+
+final class io.github.shakeabdulrahman.keystone.llm/ToolCall { // io.github.shakeabdulrahman.keystone.llm/ToolCall|null[0]
+    constructor <init>(kotlin/String, kotlin/String, io.github.shakeabdulrahman.keystone.llm/ToolArguments, kotlin/String, kotlin.collections/Map<kotlin/String, kotlin/String> = ...) // io.github.shakeabdulrahman.keystone.llm/ToolCall.<init>|<init>(kotlin.String;kotlin.String;io.github.shakeabdulrahman.keystone.llm.ToolArguments;kotlin.String;kotlin.collections.Map<kotlin.String,kotlin.String>){}[0]
+
+    final val arguments // io.github.shakeabdulrahman.keystone.llm/ToolCall.arguments|{}arguments[0]
+        final fun <get-arguments>(): io.github.shakeabdulrahman.keystone.llm/ToolArguments // io.github.shakeabdulrahman.keystone.llm/ToolCall.arguments.<get-arguments>|<get-arguments>(){}[0]
+    final val argumentsOrNull // io.github.shakeabdulrahman.keystone.llm/ToolCall.argumentsOrNull|{}argumentsOrNull[0]
+        final fun <get-argumentsOrNull>(): kotlinx.serialization.json/JsonObject? // io.github.shakeabdulrahman.keystone.llm/ToolCall.argumentsOrNull.<get-argumentsOrNull>|<get-argumentsOrNull>(){}[0]
+    final val id // io.github.shakeabdulrahman.keystone.llm/ToolCall.id|{}id[0]
+        final fun <get-id>(): kotlin/String // io.github.shakeabdulrahman.keystone.llm/ToolCall.id.<get-id>|<get-id>(){}[0]
+    final val name // io.github.shakeabdulrahman.keystone.llm/ToolCall.name|{}name[0]
+        final fun <get-name>(): kotlin/String // io.github.shakeabdulrahman.keystone.llm/ToolCall.name.<get-name>|<get-name>(){}[0]
+    final val providerMetadata // io.github.shakeabdulrahman.keystone.llm/ToolCall.providerMetadata|{}providerMetadata[0]
+        final fun <get-providerMetadata>(): kotlin.collections/Map<kotlin/String, kotlin/String> // io.github.shakeabdulrahman.keystone.llm/ToolCall.providerMetadata.<get-providerMetadata>|<get-providerMetadata>(){}[0]
+    final val rawArguments // io.github.shakeabdulrahman.keystone.llm/ToolCall.rawArguments|{}rawArguments[0]
+        final fun <get-rawArguments>(): kotlin/String // io.github.shakeabdulrahman.keystone.llm/ToolCall.rawArguments.<get-rawArguments>|<get-rawArguments>(){}[0]
+
+    final fun <#A1: kotlin/Any?> decodeArguments(kotlinx.serialization/DeserializationStrategy<#A1>, kotlinx.serialization.json/Json = ...): #A1 // io.github.shakeabdulrahman.keystone.llm/ToolCall.decodeArguments|decodeArguments(kotlinx.serialization.DeserializationStrategy<0:0>;kotlinx.serialization.json.Json){0§<kotlin.Any?>}[0]
+    final fun component1(): kotlin/String // io.github.shakeabdulrahman.keystone.llm/ToolCall.component1|component1(){}[0]
+    final fun component2(): kotlin/String // io.github.shakeabdulrahman.keystone.llm/ToolCall.component2|component2(){}[0]
+    final fun component3(): io.github.shakeabdulrahman.keystone.llm/ToolArguments // io.github.shakeabdulrahman.keystone.llm/ToolCall.component3|component3(){}[0]
+    final fun component4(): kotlin/String // io.github.shakeabdulrahman.keystone.llm/ToolCall.component4|component4(){}[0]
+    final fun component5(): kotlin.collections/Map<kotlin/String, kotlin/String> // io.github.shakeabdulrahman.keystone.llm/ToolCall.component5|component5(){}[0]
+    final fun copy(kotlin/String = ..., kotlin/String = ..., io.github.shakeabdulrahman.keystone.llm/ToolArguments = ..., kotlin/String = ..., kotlin.collections/Map<kotlin/String, kotlin/String> = ...): io.github.shakeabdulrahman.keystone.llm/ToolCall // io.github.shakeabdulrahman.keystone.llm/ToolCall.copy|copy(kotlin.String;kotlin.String;io.github.shakeabdulrahman.keystone.llm.ToolArguments;kotlin.String;kotlin.collections.Map<kotlin.String,kotlin.String>){}[0]
+    final fun equals(kotlin/Any?): kotlin/Boolean // io.github.shakeabdulrahman.keystone.llm/ToolCall.equals|equals(kotlin.Any?){}[0]
+    final fun hashCode(): kotlin/Int // io.github.shakeabdulrahman.keystone.llm/ToolCall.hashCode|hashCode(){}[0]
+    final fun toString(): kotlin/String // io.github.shakeabdulrahman.keystone.llm/ToolCall.toString|toString(){}[0]
+}
+
+final class io.github.shakeabdulrahman.keystone.llm/Usage { // io.github.shakeabdulrahman.keystone.llm/Usage|null[0]
+    constructor <init>(kotlin/Long? = ..., kotlin/Long? = ..., kotlin/Long? = ..., io.github.shakeabdulrahman.keystone.llm/UsageSource = ...) // io.github.shakeabdulrahman.keystone.llm/Usage.<init>|<init>(kotlin.Long?;kotlin.Long?;kotlin.Long?;io.github.shakeabdulrahman.keystone.llm.UsageSource){}[0]
+
+    final val cachedInputTokens // io.github.shakeabdulrahman.keystone.llm/Usage.cachedInputTokens|{}cachedInputTokens[0]
+        final fun <get-cachedInputTokens>(): kotlin/Long? // io.github.shakeabdulrahman.keystone.llm/Usage.cachedInputTokens.<get-cachedInputTokens>|<get-cachedInputTokens>(){}[0]
+    final val inputTokens // io.github.shakeabdulrahman.keystone.llm/Usage.inputTokens|{}inputTokens[0]
+        final fun <get-inputTokens>(): kotlin/Long? // io.github.shakeabdulrahman.keystone.llm/Usage.inputTokens.<get-inputTokens>|<get-inputTokens>(){}[0]
+    final val outputTokens // io.github.shakeabdulrahman.keystone.llm/Usage.outputTokens|{}outputTokens[0]
+        final fun <get-outputTokens>(): kotlin/Long? // io.github.shakeabdulrahman.keystone.llm/Usage.outputTokens.<get-outputTokens>|<get-outputTokens>(){}[0]
+    final val source // io.github.shakeabdulrahman.keystone.llm/Usage.source|{}source[0]
+        final fun <get-source>(): io.github.shakeabdulrahman.keystone.llm/UsageSource // io.github.shakeabdulrahman.keystone.llm/Usage.source.<get-source>|<get-source>(){}[0]
+    final val totalTokens // io.github.shakeabdulrahman.keystone.llm/Usage.totalTokens|{}totalTokens[0]
+        final fun <get-totalTokens>(): kotlin/Long? // io.github.shakeabdulrahman.keystone.llm/Usage.totalTokens.<get-totalTokens>|<get-totalTokens>(){}[0]
+
+    final fun component1(): kotlin/Long? // io.github.shakeabdulrahman.keystone.llm/Usage.component1|component1(){}[0]
+    final fun component2(): kotlin/Long? // io.github.shakeabdulrahman.keystone.llm/Usage.component2|component2(){}[0]
+    final fun component3(): kotlin/Long? // io.github.shakeabdulrahman.keystone.llm/Usage.component3|component3(){}[0]
+    final fun component4(): io.github.shakeabdulrahman.keystone.llm/UsageSource // io.github.shakeabdulrahman.keystone.llm/Usage.component4|component4(){}[0]
+    final fun copy(kotlin/Long? = ..., kotlin/Long? = ..., kotlin/Long? = ..., io.github.shakeabdulrahman.keystone.llm/UsageSource = ...): io.github.shakeabdulrahman.keystone.llm/Usage // io.github.shakeabdulrahman.keystone.llm/Usage.copy|copy(kotlin.Long?;kotlin.Long?;kotlin.Long?;io.github.shakeabdulrahman.keystone.llm.UsageSource){}[0]
+    final fun equals(kotlin/Any?): kotlin/Boolean // io.github.shakeabdulrahman.keystone.llm/Usage.equals|equals(kotlin.Any?){}[0]
+    final fun hashCode(): kotlin/Int // io.github.shakeabdulrahman.keystone.llm/Usage.hashCode|hashCode(){}[0]
+    final fun toString(): kotlin/String // io.github.shakeabdulrahman.keystone.llm/Usage.toString|toString(){}[0]
+
+    final object Companion { // io.github.shakeabdulrahman.keystone.llm/Usage.Companion|null[0]
+        final val Unknown // io.github.shakeabdulrahman.keystone.llm/Usage.Companion.Unknown|{}Unknown[0]
+            final fun <get-Unknown>(): io.github.shakeabdulrahman.keystone.llm/Usage // io.github.shakeabdulrahman.keystone.llm/Usage.Companion.Unknown.<get-Unknown>|<get-Unknown>(){}[0]
+    }
+}
+
+open class io.github.shakeabdulrahman.keystone.llm/LlmException : kotlin/Exception { // io.github.shakeabdulrahman.keystone.llm/LlmException|null[0]
+    constructor <init>(io.github.shakeabdulrahman.keystone.llm/LlmErrorKind, kotlin/String, kotlin/String? = ..., kotlin/Int? = ..., kotlin/String? = ..., kotlin/String? = ..., kotlin/String? = ..., kotlin.time/Duration? = ..., kotlin/Throwable? = ...) // io.github.shakeabdulrahman.keystone.llm/LlmException.<init>|<init>(io.github.shakeabdulrahman.keystone.llm.LlmErrorKind;kotlin.String;kotlin.String?;kotlin.Int?;kotlin.String?;kotlin.String?;kotlin.String?;kotlin.time.Duration?;kotlin.Throwable?){}[0]
+
+    final val httpStatus // io.github.shakeabdulrahman.keystone.llm/LlmException.httpStatus|{}httpStatus[0]
+        final fun <get-httpStatus>(): kotlin/Int? // io.github.shakeabdulrahman.keystone.llm/LlmException.httpStatus.<get-httpStatus>|<get-httpStatus>(){}[0]
+    final val isTransient // io.github.shakeabdulrahman.keystone.llm/LlmException.isTransient|{}isTransient[0]
+        final fun <get-isTransient>(): kotlin/Boolean // io.github.shakeabdulrahman.keystone.llm/LlmException.isTransient.<get-isTransient>|<get-isTransient>(){}[0]
+    final val kind // io.github.shakeabdulrahman.keystone.llm/LlmException.kind|{}kind[0]
+        final fun <get-kind>(): io.github.shakeabdulrahman.keystone.llm/LlmErrorKind // io.github.shakeabdulrahman.keystone.llm/LlmException.kind.<get-kind>|<get-kind>(){}[0]
+    final val provider // io.github.shakeabdulrahman.keystone.llm/LlmException.provider|{}provider[0]
+        final fun <get-provider>(): kotlin/String? // io.github.shakeabdulrahman.keystone.llm/LlmException.provider.<get-provider>|<get-provider>(){}[0]
+    final val providerCode // io.github.shakeabdulrahman.keystone.llm/LlmException.providerCode|{}providerCode[0]
+        final fun <get-providerCode>(): kotlin/String? // io.github.shakeabdulrahman.keystone.llm/LlmException.providerCode.<get-providerCode>|<get-providerCode>(){}[0]
+    final val providerMessage // io.github.shakeabdulrahman.keystone.llm/LlmException.providerMessage|{}providerMessage[0]
+        final fun <get-providerMessage>(): kotlin/String? // io.github.shakeabdulrahman.keystone.llm/LlmException.providerMessage.<get-providerMessage>|<get-providerMessage>(){}[0]
+    final val requestId // io.github.shakeabdulrahman.keystone.llm/LlmException.requestId|{}requestId[0]
+        final fun <get-requestId>(): kotlin/String? // io.github.shakeabdulrahman.keystone.llm/LlmException.requestId.<get-requestId>|<get-requestId>(){}[0]
+    final val retryAfter // io.github.shakeabdulrahman.keystone.llm/LlmException.retryAfter|{}retryAfter[0]
+        final fun <get-retryAfter>(): kotlin.time/Duration? // io.github.shakeabdulrahman.keystone.llm/LlmException.retryAfter.<get-retryAfter>|<get-retryAfter>(){}[0]
+
+    final var attempts // io.github.shakeabdulrahman.keystone.llm/LlmException.attempts|{}attempts[0]
+        final fun <get-attempts>(): kotlin.collections/List<io.github.shakeabdulrahman.keystone.llm/Attempt> // io.github.shakeabdulrahman.keystone.llm/LlmException.attempts.<get-attempts>|<get-attempts>(){}[0]
+}
+
+final object io.github.shakeabdulrahman.keystone.llm.schema/JsonSchemaGenerator { // io.github.shakeabdulrahman.keystone.llm.schema/JsonSchemaGenerator|null[0]
+    final fun from(kotlinx.serialization.descriptors/SerialDescriptor): kotlinx.serialization.json/JsonObject // io.github.shakeabdulrahman.keystone.llm.schema/JsonSchemaGenerator.from|from(kotlinx.serialization.descriptors.SerialDescriptor){}[0]
+}
+
+final object io.github.shakeabdulrahman.keystone.llm.schema/JsonSchemaValidator { // io.github.shakeabdulrahman.keystone.llm.schema/JsonSchemaValidator|null[0]
+    final fun validate(kotlinx.serialization.json/JsonElement, kotlinx.serialization.json/JsonObject): kotlin.collections/List<io.github.shakeabdulrahman.keystone.llm/SchemaViolation> // io.github.shakeabdulrahman.keystone.llm.schema/JsonSchemaValidator.validate|validate(kotlinx.serialization.json.JsonElement;kotlinx.serialization.json.JsonObject){}[0]
+}
+
+final val io.github.shakeabdulrahman.keystone.llm/LenientDecoding // io.github.shakeabdulrahman.keystone.llm/LenientDecoding|{}LenientDecoding[0]
+    final fun <get-LenientDecoding>(): kotlinx.serialization.json/Json // io.github.shakeabdulrahman.keystone.llm/LenientDecoding.<get-LenientDecoding>|<get-LenientDecoding>(){}[0]
+
+final fun io.github.shakeabdulrahman.keystone.llm/LlmClient(kotlin/Function1<io.github.shakeabdulrahman.keystone.llm/LlmClient.Builder, kotlin/Unit>): io.github.shakeabdulrahman.keystone.llm/LlmClient // io.github.shakeabdulrahman.keystone.llm/LlmClient|LlmClient(kotlin.Function1<io.github.shakeabdulrahman.keystone.llm.LlmClient.Builder,kotlin.Unit>){}[0]
+final suspend fun (io.github.shakeabdulrahman.keystone.llm.http/HttpResponse).io.github.shakeabdulrahman.keystone.llm.http/readText(kotlin/Int = ...): kotlin/String // io.github.shakeabdulrahman.keystone.llm.http/readText|readText@io.github.shakeabdulrahman.keystone.llm.http.HttpResponse(kotlin.Int){}[0]
+final suspend fun <#A: kotlin/Any?> (io.github.shakeabdulrahman.keystone.llm/LlmClient).io.github.shakeabdulrahman.keystone.llm/chatStructured(io.github.shakeabdulrahman.keystone.llm/ChatRequest, kotlinx.serialization/DeserializationStrategy<#A>, kotlinx.serialization.json/JsonObject, kotlin/String = ..., kotlin/Boolean = ..., kotlin/Boolean = ..., kotlinx.serialization.json/Json = ...): io.github.shakeabdulrahman.keystone.llm/StructuredResponse<#A> // io.github.shakeabdulrahman.keystone.llm/chatStructured|chatStructured@io.github.shakeabdulrahman.keystone.llm.LlmClient(io.github.shakeabdulrahman.keystone.llm.ChatRequest;kotlinx.serialization.DeserializationStrategy<0:0>;kotlinx.serialization.json.JsonObject;kotlin.String;kotlin.Boolean;kotlin.Boolean;kotlinx.serialization.json.Json){0§<kotlin.Any?>}[0]
+final suspend inline fun <#A: reified kotlin/Any?> (io.github.shakeabdulrahman.keystone.llm/LlmClient).io.github.shakeabdulrahman.keystone.llm/chatStructured(io.github.shakeabdulrahman.keystone.llm/ChatRequest, kotlin/String = ..., kotlin/Boolean = ..., kotlin/Boolean = ...): io.github.shakeabdulrahman.keystone.llm/StructuredResponse<#A> // io.github.shakeabdulrahman.keystone.llm/chatStructured|chatStructured@io.github.shakeabdulrahman.keystone.llm.LlmClient(io.github.shakeabdulrahman.keystone.llm.ChatRequest;kotlin.String;kotlin.Boolean;kotlin.Boolean){0§<kotlin.Any?>}[0]

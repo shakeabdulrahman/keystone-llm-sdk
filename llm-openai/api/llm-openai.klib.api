@@ -1,0 +1,49 @@
+// Klib ABI Dump
+// Targets: [iosArm64, iosSimulatorArm64]
+// Rendering settings:
+// - Signature version: 2
+// - Show manifest properties: true
+// - Show declarations: true
+
+// Library unique name: <io.github.shakeabdulrahman:llm-openai>
+final class io.github.shakeabdulrahman.keystone.llm.openai/OpenAiCompatibleOptions { // io.github.shakeabdulrahman.keystone.llm.openai/OpenAiCompatibleOptions|null[0]
+    constructor <init>(kotlin/String = ..., kotlin/Boolean = ..., kotlin.collections/Map<kotlin/String, kotlin/String> = ..., kotlin/String? = ...) // io.github.shakeabdulrahman.keystone.llm.openai/OpenAiCompatibleOptions.<init>|<init>(kotlin.String;kotlin.Boolean;kotlin.collections.Map<kotlin.String,kotlin.String>;kotlin.String?){}[0]
+
+    final val extraHeaders // io.github.shakeabdulrahman.keystone.llm.openai/OpenAiCompatibleOptions.extraHeaders|{}extraHeaders[0]
+        final fun <get-extraHeaders>(): kotlin.collections/Map<kotlin/String, kotlin/String> // io.github.shakeabdulrahman.keystone.llm.openai/OpenAiCompatibleOptions.extraHeaders.<get-extraHeaders>|<get-extraHeaders>(){}[0]
+    final val includeStreamUsage // io.github.shakeabdulrahman.keystone.llm.openai/OpenAiCompatibleOptions.includeStreamUsage|{}includeStreamUsage[0]
+        final fun <get-includeStreamUsage>(): kotlin/Boolean // io.github.shakeabdulrahman.keystone.llm.openai/OpenAiCompatibleOptions.includeStreamUsage.<get-includeStreamUsage>|<get-includeStreamUsage>(){}[0]
+    final val maxTokensField // io.github.shakeabdulrahman.keystone.llm.openai/OpenAiCompatibleOptions.maxTokensField|{}maxTokensField[0]
+        final fun <get-maxTokensField>(): kotlin/String // io.github.shakeabdulrahman.keystone.llm.openai/OpenAiCompatibleOptions.maxTokensField.<get-maxTokensField>|<get-maxTokensField>(){}[0]
+    final val requestIdHeader // io.github.shakeabdulrahman.keystone.llm.openai/OpenAiCompatibleOptions.requestIdHeader|{}requestIdHeader[0]
+        final fun <get-requestIdHeader>(): kotlin/String? // io.github.shakeabdulrahman.keystone.llm.openai/OpenAiCompatibleOptions.requestIdHeader.<get-requestIdHeader>|<get-requestIdHeader>(){}[0]
+
+    final fun component1(): kotlin/String // io.github.shakeabdulrahman.keystone.llm.openai/OpenAiCompatibleOptions.component1|component1(){}[0]
+    final fun component2(): kotlin/Boolean // io.github.shakeabdulrahman.keystone.llm.openai/OpenAiCompatibleOptions.component2|component2(){}[0]
+    final fun component3(): kotlin.collections/Map<kotlin/String, kotlin/String> // io.github.shakeabdulrahman.keystone.llm.openai/OpenAiCompatibleOptions.component3|component3(){}[0]
+    final fun component4(): kotlin/String? // io.github.shakeabdulrahman.keystone.llm.openai/OpenAiCompatibleOptions.component4|component4(){}[0]
+    final fun copy(kotlin/String = ..., kotlin/Boolean = ..., kotlin.collections/Map<kotlin/String, kotlin/String> = ..., kotlin/String? = ...): io.github.shakeabdulrahman.keystone.llm.openai/OpenAiCompatibleOptions // io.github.shakeabdulrahman.keystone.llm.openai/OpenAiCompatibleOptions.copy|copy(kotlin.String;kotlin.Boolean;kotlin.collections.Map<kotlin.String,kotlin.String>;kotlin.String?){}[0]
+    final fun equals(kotlin/Any?): kotlin/Boolean // io.github.shakeabdulrahman.keystone.llm.openai/OpenAiCompatibleOptions.equals|equals(kotlin.Any?){}[0]
+    final fun hashCode(): kotlin/Int // io.github.shakeabdulrahman.keystone.llm.openai/OpenAiCompatibleOptions.hashCode|hashCode(){}[0]
+    final fun toString(): kotlin/String // io.github.shakeabdulrahman.keystone.llm.openai/OpenAiCompatibleOptions.toString|toString(){}[0]
+}
+
+final class io.github.shakeabdulrahman.keystone.llm.openai/OpenAiCompatibleProvider : io.github.shakeabdulrahman.keystone.llm/LlmProvider { // io.github.shakeabdulrahman.keystone.llm.openai/OpenAiCompatibleProvider|null[0]
+    constructor <init>(kotlin/String, kotlin/String, io.github.shakeabdulrahman.keystone.llm/Auth, kotlin/Function1<kotlin/String, io.github.shakeabdulrahman.keystone.llm/ProviderCapabilities> = ..., io.github.shakeabdulrahman.keystone.llm.openai/OpenAiCompatibleOptions = ..., io.github.shakeabdulrahman.keystone.llm.http/HttpTransport? = ...) // io.github.shakeabdulrahman.keystone.llm.openai/OpenAiCompatibleProvider.<init>|<init>(kotlin.String;kotlin.String;io.github.shakeabdulrahman.keystone.llm.Auth;kotlin.Function1<kotlin.String,io.github.shakeabdulrahman.keystone.llm.ProviderCapabilities>;io.github.shakeabdulrahman.keystone.llm.openai.OpenAiCompatibleOptions;io.github.shakeabdulrahman.keystone.llm.http.HttpTransport?){}[0]
+
+    final val id // io.github.shakeabdulrahman.keystone.llm.openai/OpenAiCompatibleProvider.id|{}id[0]
+        final fun <get-id>(): kotlin/String // io.github.shakeabdulrahman.keystone.llm.openai/OpenAiCompatibleProvider.id.<get-id>|<get-id>(){}[0]
+
+    final fun capabilities(kotlin/String): io.github.shakeabdulrahman.keystone.llm/ProviderCapabilities // io.github.shakeabdulrahman.keystone.llm.openai/OpenAiCompatibleProvider.capabilities|capabilities(kotlin.String){}[0]
+    final fun close() // io.github.shakeabdulrahman.keystone.llm.openai/OpenAiCompatibleProvider.close|close(){}[0]
+    final fun stream(io.github.shakeabdulrahman.keystone.llm/ProviderRequest): kotlinx.coroutines.flow/Flow<io.github.shakeabdulrahman.keystone.llm/ProviderEvent> // io.github.shakeabdulrahman.keystone.llm.openai/OpenAiCompatibleProvider.stream|stream(io.github.shakeabdulrahman.keystone.llm.ProviderRequest){}[0]
+
+    final object Companion { // io.github.shakeabdulrahman.keystone.llm.openai/OpenAiCompatibleProvider.Companion|null[0]
+        final val GenericCapabilities // io.github.shakeabdulrahman.keystone.llm.openai/OpenAiCompatibleProvider.Companion.GenericCapabilities|{}GenericCapabilities[0]
+            final fun <get-GenericCapabilities>(): io.github.shakeabdulrahman.keystone.llm/ProviderCapabilities // io.github.shakeabdulrahman.keystone.llm.openai/OpenAiCompatibleProvider.Companion.GenericCapabilities.<get-GenericCapabilities>|<get-GenericCapabilities>(){}[0]
+        final val OpenAiCapabilities // io.github.shakeabdulrahman.keystone.llm.openai/OpenAiCompatibleProvider.Companion.OpenAiCapabilities|{}OpenAiCapabilities[0]
+            final fun <get-OpenAiCapabilities>(): io.github.shakeabdulrahman.keystone.llm/ProviderCapabilities // io.github.shakeabdulrahman.keystone.llm.openai/OpenAiCompatibleProvider.Companion.OpenAiCapabilities.<get-OpenAiCapabilities>|<get-OpenAiCapabilities>(){}[0]
+        final val TextOnlyCapabilities // io.github.shakeabdulrahman.keystone.llm.openai/OpenAiCompatibleProvider.Companion.TextOnlyCapabilities|{}TextOnlyCapabilities[0]
+            final fun <get-TextOnlyCapabilities>(): io.github.shakeabdulrahman.keystone.llm/ProviderCapabilities // io.github.shakeabdulrahman.keystone.llm.openai/OpenAiCompatibleProvider.Companion.TextOnlyCapabilities.<get-TextOnlyCapabilities>|<get-TextOnlyCapabilities>(){}[0]
+    }
+}

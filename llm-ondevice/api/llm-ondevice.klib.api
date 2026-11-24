@@ -1,0 +1,138 @@
+// Klib ABI Dump
+// Targets: [iosArm64, iosSimulatorArm64]
+// Rendering settings:
+// - Signature version: 2
+// - Show manifest properties: true
+// - Show declarations: true
+
+// Library unique name: <io.github.shakeabdulrahman:llm-ondevice>
+abstract interface io.github.shakeabdulrahman.keystone.llm.ondevice/OnDeviceEngine : kotlin/AutoCloseable { // io.github.shakeabdulrahman.keystone.llm.ondevice/OnDeviceEngine|null[0]
+    abstract fun generate(kotlin/String, io.github.shakeabdulrahman.keystone.llm.ondevice/OnDevicePrompt): kotlinx.coroutines.flow/Flow<io.github.shakeabdulrahman.keystone.llm.ondevice/OnDeviceOutput> // io.github.shakeabdulrahman.keystone.llm.ondevice/OnDeviceEngine.generate|generate(kotlin.String;io.github.shakeabdulrahman.keystone.llm.ondevice.OnDevicePrompt){}[0]
+    abstract suspend fun availability(kotlin/String): io.github.shakeabdulrahman.keystone.llm.ondevice/OnDeviceAvailability // io.github.shakeabdulrahman.keystone.llm.ondevice/OnDeviceEngine.availability|availability(kotlin.String){}[0]
+    open fun close() // io.github.shakeabdulrahman.keystone.llm.ondevice/OnDeviceEngine.close|close(){}[0]
+}
+
+sealed interface io.github.shakeabdulrahman.keystone.llm.ondevice/OnDeviceAvailability { // io.github.shakeabdulrahman.keystone.llm.ondevice/OnDeviceAvailability|null[0]
+    final class NotReady : io.github.shakeabdulrahman.keystone.llm.ondevice/OnDeviceAvailability { // io.github.shakeabdulrahman.keystone.llm.ondevice/OnDeviceAvailability.NotReady|null[0]
+        constructor <init>(kotlin/String) // io.github.shakeabdulrahman.keystone.llm.ondevice/OnDeviceAvailability.NotReady.<init>|<init>(kotlin.String){}[0]
+
+        final val reason // io.github.shakeabdulrahman.keystone.llm.ondevice/OnDeviceAvailability.NotReady.reason|{}reason[0]
+            final fun <get-reason>(): kotlin/String // io.github.shakeabdulrahman.keystone.llm.ondevice/OnDeviceAvailability.NotReady.reason.<get-reason>|<get-reason>(){}[0]
+
+        final fun component1(): kotlin/String // io.github.shakeabdulrahman.keystone.llm.ondevice/OnDeviceAvailability.NotReady.component1|component1(){}[0]
+        final fun copy(kotlin/String = ...): io.github.shakeabdulrahman.keystone.llm.ondevice/OnDeviceAvailability.NotReady // io.github.shakeabdulrahman.keystone.llm.ondevice/OnDeviceAvailability.NotReady.copy|copy(kotlin.String){}[0]
+        final fun equals(kotlin/Any?): kotlin/Boolean // io.github.shakeabdulrahman.keystone.llm.ondevice/OnDeviceAvailability.NotReady.equals|equals(kotlin.Any?){}[0]
+        final fun hashCode(): kotlin/Int // io.github.shakeabdulrahman.keystone.llm.ondevice/OnDeviceAvailability.NotReady.hashCode|hashCode(){}[0]
+        final fun toString(): kotlin/String // io.github.shakeabdulrahman.keystone.llm.ondevice/OnDeviceAvailability.NotReady.toString|toString(){}[0]
+    }
+
+    final class Unsupported : io.github.shakeabdulrahman.keystone.llm.ondevice/OnDeviceAvailability { // io.github.shakeabdulrahman.keystone.llm.ondevice/OnDeviceAvailability.Unsupported|null[0]
+        constructor <init>(kotlin/String) // io.github.shakeabdulrahman.keystone.llm.ondevice/OnDeviceAvailability.Unsupported.<init>|<init>(kotlin.String){}[0]
+
+        final val reason // io.github.shakeabdulrahman.keystone.llm.ondevice/OnDeviceAvailability.Unsupported.reason|{}reason[0]
+            final fun <get-reason>(): kotlin/String // io.github.shakeabdulrahman.keystone.llm.ondevice/OnDeviceAvailability.Unsupported.reason.<get-reason>|<get-reason>(){}[0]
+
+        final fun component1(): kotlin/String // io.github.shakeabdulrahman.keystone.llm.ondevice/OnDeviceAvailability.Unsupported.component1|component1(){}[0]
+        final fun copy(kotlin/String = ...): io.github.shakeabdulrahman.keystone.llm.ondevice/OnDeviceAvailability.Unsupported // io.github.shakeabdulrahman.keystone.llm.ondevice/OnDeviceAvailability.Unsupported.copy|copy(kotlin.String){}[0]
+        final fun equals(kotlin/Any?): kotlin/Boolean // io.github.shakeabdulrahman.keystone.llm.ondevice/OnDeviceAvailability.Unsupported.equals|equals(kotlin.Any?){}[0]
+        final fun hashCode(): kotlin/Int // io.github.shakeabdulrahman.keystone.llm.ondevice/OnDeviceAvailability.Unsupported.hashCode|hashCode(){}[0]
+        final fun toString(): kotlin/String // io.github.shakeabdulrahman.keystone.llm.ondevice/OnDeviceAvailability.Unsupported.toString|toString(){}[0]
+    }
+
+    final object Available : io.github.shakeabdulrahman.keystone.llm.ondevice/OnDeviceAvailability { // io.github.shakeabdulrahman.keystone.llm.ondevice/OnDeviceAvailability.Available|null[0]
+        final fun equals(kotlin/Any?): kotlin/Boolean // io.github.shakeabdulrahman.keystone.llm.ondevice/OnDeviceAvailability.Available.equals|equals(kotlin.Any?){}[0]
+        final fun hashCode(): kotlin/Int // io.github.shakeabdulrahman.keystone.llm.ondevice/OnDeviceAvailability.Available.hashCode|hashCode(){}[0]
+        final fun toString(): kotlin/String // io.github.shakeabdulrahman.keystone.llm.ondevice/OnDeviceAvailability.Available.toString|toString(){}[0]
+    }
+}
+
+sealed interface io.github.shakeabdulrahman.keystone.llm.ondevice/OnDeviceOutput { // io.github.shakeabdulrahman.keystone.llm.ondevice/OnDeviceOutput|null[0]
+    final class Done : io.github.shakeabdulrahman.keystone.llm.ondevice/OnDeviceOutput { // io.github.shakeabdulrahman.keystone.llm.ondevice/OnDeviceOutput.Done|null[0]
+        constructor <init>(kotlin/Long? = ..., kotlin/Long? = ..., kotlin/Boolean = ...) // io.github.shakeabdulrahman.keystone.llm.ondevice/OnDeviceOutput.Done.<init>|<init>(kotlin.Long?;kotlin.Long?;kotlin.Boolean){}[0]
+
+        final val hitTokenLimit // io.github.shakeabdulrahman.keystone.llm.ondevice/OnDeviceOutput.Done.hitTokenLimit|{}hitTokenLimit[0]
+            final fun <get-hitTokenLimit>(): kotlin/Boolean // io.github.shakeabdulrahman.keystone.llm.ondevice/OnDeviceOutput.Done.hitTokenLimit.<get-hitTokenLimit>|<get-hitTokenLimit>(){}[0]
+        final val inputTokens // io.github.shakeabdulrahman.keystone.llm.ondevice/OnDeviceOutput.Done.inputTokens|{}inputTokens[0]
+            final fun <get-inputTokens>(): kotlin/Long? // io.github.shakeabdulrahman.keystone.llm.ondevice/OnDeviceOutput.Done.inputTokens.<get-inputTokens>|<get-inputTokens>(){}[0]
+        final val outputTokens // io.github.shakeabdulrahman.keystone.llm.ondevice/OnDeviceOutput.Done.outputTokens|{}outputTokens[0]
+            final fun <get-outputTokens>(): kotlin/Long? // io.github.shakeabdulrahman.keystone.llm.ondevice/OnDeviceOutput.Done.outputTokens.<get-outputTokens>|<get-outputTokens>(){}[0]
+
+        final fun component1(): kotlin/Long? // io.github.shakeabdulrahman.keystone.llm.ondevice/OnDeviceOutput.Done.component1|component1(){}[0]
+        final fun component2(): kotlin/Long? // io.github.shakeabdulrahman.keystone.llm.ondevice/OnDeviceOutput.Done.component2|component2(){}[0]
+        final fun component3(): kotlin/Boolean // io.github.shakeabdulrahman.keystone.llm.ondevice/OnDeviceOutput.Done.component3|component3(){}[0]
+        final fun copy(kotlin/Long? = ..., kotlin/Long? = ..., kotlin/Boolean = ...): io.github.shakeabdulrahman.keystone.llm.ondevice/OnDeviceOutput.Done // io.github.shakeabdulrahman.keystone.llm.ondevice/OnDeviceOutput.Done.copy|copy(kotlin.Long?;kotlin.Long?;kotlin.Boolean){}[0]
+        final fun equals(kotlin/Any?): kotlin/Boolean // io.github.shakeabdulrahman.keystone.llm.ondevice/OnDeviceOutput.Done.equals|equals(kotlin.Any?){}[0]
+        final fun hashCode(): kotlin/Int // io.github.shakeabdulrahman.keystone.llm.ondevice/OnDeviceOutput.Done.hashCode|hashCode(){}[0]
+        final fun toString(): kotlin/String // io.github.shakeabdulrahman.keystone.llm.ondevice/OnDeviceOutput.Done.toString|toString(){}[0]
+    }
+
+    final class Text : io.github.shakeabdulrahman.keystone.llm.ondevice/OnDeviceOutput { // io.github.shakeabdulrahman.keystone.llm.ondevice/OnDeviceOutput.Text|null[0]
+        constructor <init>(kotlin/String) // io.github.shakeabdulrahman.keystone.llm.ondevice/OnDeviceOutput.Text.<init>|<init>(kotlin.String){}[0]
+
+        final val text // io.github.shakeabdulrahman.keystone.llm.ondevice/OnDeviceOutput.Text.text|{}text[0]
+            final fun <get-text>(): kotlin/String // io.github.shakeabdulrahman.keystone.llm.ondevice/OnDeviceOutput.Text.text.<get-text>|<get-text>(){}[0]
+
+        final fun component1(): kotlin/String // io.github.shakeabdulrahman.keystone.llm.ondevice/OnDeviceOutput.Text.component1|component1(){}[0]
+        final fun copy(kotlin/String = ...): io.github.shakeabdulrahman.keystone.llm.ondevice/OnDeviceOutput.Text // io.github.shakeabdulrahman.keystone.llm.ondevice/OnDeviceOutput.Text.copy|copy(kotlin.String){}[0]
+        final fun equals(kotlin/Any?): kotlin/Boolean // io.github.shakeabdulrahman.keystone.llm.ondevice/OnDeviceOutput.Text.equals|equals(kotlin.Any?){}[0]
+        final fun hashCode(): kotlin/Int // io.github.shakeabdulrahman.keystone.llm.ondevice/OnDeviceOutput.Text.hashCode|hashCode(){}[0]
+        final fun toString(): kotlin/String // io.github.shakeabdulrahman.keystone.llm.ondevice/OnDeviceOutput.Text.toString|toString(){}[0]
+    }
+}
+
+final class io.github.shakeabdulrahman.keystone.llm.ondevice/OnDevicePrompt { // io.github.shakeabdulrahman.keystone.llm.ondevice/OnDevicePrompt|null[0]
+    constructor <init>(kotlin/String?, kotlin.collections/List<io.github.shakeabdulrahman.keystone.llm.ondevice/OnDevicePrompt.Turn>, kotlin/Int?, kotlin/Double?, kotlin.collections/List<kotlin/String>) // io.github.shakeabdulrahman.keystone.llm.ondevice/OnDevicePrompt.<init>|<init>(kotlin.String?;kotlin.collections.List<io.github.shakeabdulrahman.keystone.llm.ondevice.OnDevicePrompt.Turn>;kotlin.Int?;kotlin.Double?;kotlin.collections.List<kotlin.String>){}[0]
+
+    final val maxOutputTokens // io.github.shakeabdulrahman.keystone.llm.ondevice/OnDevicePrompt.maxOutputTokens|{}maxOutputTokens[0]
+        final fun <get-maxOutputTokens>(): kotlin/Int? // io.github.shakeabdulrahman.keystone.llm.ondevice/OnDevicePrompt.maxOutputTokens.<get-maxOutputTokens>|<get-maxOutputTokens>(){}[0]
+    final val stopSequences // io.github.shakeabdulrahman.keystone.llm.ondevice/OnDevicePrompt.stopSequences|{}stopSequences[0]
+        final fun <get-stopSequences>(): kotlin.collections/List<kotlin/String> // io.github.shakeabdulrahman.keystone.llm.ondevice/OnDevicePrompt.stopSequences.<get-stopSequences>|<get-stopSequences>(){}[0]
+    final val system // io.github.shakeabdulrahman.keystone.llm.ondevice/OnDevicePrompt.system|{}system[0]
+        final fun <get-system>(): kotlin/String? // io.github.shakeabdulrahman.keystone.llm.ondevice/OnDevicePrompt.system.<get-system>|<get-system>(){}[0]
+    final val temperature // io.github.shakeabdulrahman.keystone.llm.ondevice/OnDevicePrompt.temperature|{}temperature[0]
+        final fun <get-temperature>(): kotlin/Double? // io.github.shakeabdulrahman.keystone.llm.ondevice/OnDevicePrompt.temperature.<get-temperature>|<get-temperature>(){}[0]
+    final val turns // io.github.shakeabdulrahman.keystone.llm.ondevice/OnDevicePrompt.turns|{}turns[0]
+        final fun <get-turns>(): kotlin.collections/List<io.github.shakeabdulrahman.keystone.llm.ondevice/OnDevicePrompt.Turn> // io.github.shakeabdulrahman.keystone.llm.ondevice/OnDevicePrompt.turns.<get-turns>|<get-turns>(){}[0]
+
+    final fun component1(): kotlin/String? // io.github.shakeabdulrahman.keystone.llm.ondevice/OnDevicePrompt.component1|component1(){}[0]
+    final fun component2(): kotlin.collections/List<io.github.shakeabdulrahman.keystone.llm.ondevice/OnDevicePrompt.Turn> // io.github.shakeabdulrahman.keystone.llm.ondevice/OnDevicePrompt.component2|component2(){}[0]
+    final fun component3(): kotlin/Int? // io.github.shakeabdulrahman.keystone.llm.ondevice/OnDevicePrompt.component3|component3(){}[0]
+    final fun component4(): kotlin/Double? // io.github.shakeabdulrahman.keystone.llm.ondevice/OnDevicePrompt.component4|component4(){}[0]
+    final fun component5(): kotlin.collections/List<kotlin/String> // io.github.shakeabdulrahman.keystone.llm.ondevice/OnDevicePrompt.component5|component5(){}[0]
+    final fun copy(kotlin/String? = ..., kotlin.collections/List<io.github.shakeabdulrahman.keystone.llm.ondevice/OnDevicePrompt.Turn> = ..., kotlin/Int? = ..., kotlin/Double? = ..., kotlin.collections/List<kotlin/String> = ...): io.github.shakeabdulrahman.keystone.llm.ondevice/OnDevicePrompt // io.github.shakeabdulrahman.keystone.llm.ondevice/OnDevicePrompt.copy|copy(kotlin.String?;kotlin.collections.List<io.github.shakeabdulrahman.keystone.llm.ondevice.OnDevicePrompt.Turn>;kotlin.Int?;kotlin.Double?;kotlin.collections.List<kotlin.String>){}[0]
+    final fun equals(kotlin/Any?): kotlin/Boolean // io.github.shakeabdulrahman.keystone.llm.ondevice/OnDevicePrompt.equals|equals(kotlin.Any?){}[0]
+    final fun hashCode(): kotlin/Int // io.github.shakeabdulrahman.keystone.llm.ondevice/OnDevicePrompt.hashCode|hashCode(){}[0]
+    final fun toString(): kotlin/String // io.github.shakeabdulrahman.keystone.llm.ondevice/OnDevicePrompt.toString|toString(){}[0]
+
+    final class Turn { // io.github.shakeabdulrahman.keystone.llm.ondevice/OnDevicePrompt.Turn|null[0]
+        constructor <init>(kotlin/Boolean, kotlin/String) // io.github.shakeabdulrahman.keystone.llm.ondevice/OnDevicePrompt.Turn.<init>|<init>(kotlin.Boolean;kotlin.String){}[0]
+
+        final val fromUser // io.github.shakeabdulrahman.keystone.llm.ondevice/OnDevicePrompt.Turn.fromUser|{}fromUser[0]
+            final fun <get-fromUser>(): kotlin/Boolean // io.github.shakeabdulrahman.keystone.llm.ondevice/OnDevicePrompt.Turn.fromUser.<get-fromUser>|<get-fromUser>(){}[0]
+        final val text // io.github.shakeabdulrahman.keystone.llm.ondevice/OnDevicePrompt.Turn.text|{}text[0]
+            final fun <get-text>(): kotlin/String // io.github.shakeabdulrahman.keystone.llm.ondevice/OnDevicePrompt.Turn.text.<get-text>|<get-text>(){}[0]
+
+        final fun component1(): kotlin/Boolean // io.github.shakeabdulrahman.keystone.llm.ondevice/OnDevicePrompt.Turn.component1|component1(){}[0]
+        final fun component2(): kotlin/String // io.github.shakeabdulrahman.keystone.llm.ondevice/OnDevicePrompt.Turn.component2|component2(){}[0]
+        final fun copy(kotlin/Boolean = ..., kotlin/String = ...): io.github.shakeabdulrahman.keystone.llm.ondevice/OnDevicePrompt.Turn // io.github.shakeabdulrahman.keystone.llm.ondevice/OnDevicePrompt.Turn.copy|copy(kotlin.Boolean;kotlin.String){}[0]
+        final fun equals(kotlin/Any?): kotlin/Boolean // io.github.shakeabdulrahman.keystone.llm.ondevice/OnDevicePrompt.Turn.equals|equals(kotlin.Any?){}[0]
+        final fun hashCode(): kotlin/Int // io.github.shakeabdulrahman.keystone.llm.ondevice/OnDevicePrompt.Turn.hashCode|hashCode(){}[0]
+        final fun toString(): kotlin/String // io.github.shakeabdulrahman.keystone.llm.ondevice/OnDevicePrompt.Turn.toString|toString(){}[0]
+    }
+}
+
+final class io.github.shakeabdulrahman.keystone.llm.ondevice/OnDeviceProvider : io.github.shakeabdulrahman.keystone.llm/LlmProvider { // io.github.shakeabdulrahman.keystone.llm.ondevice/OnDeviceProvider|null[0]
+    constructor <init>(io.github.shakeabdulrahman.keystone.llm.ondevice/OnDeviceEngine, kotlin/String = ...) // io.github.shakeabdulrahman.keystone.llm.ondevice/OnDeviceProvider.<init>|<init>(io.github.shakeabdulrahman.keystone.llm.ondevice.OnDeviceEngine;kotlin.String){}[0]
+
+    final val id // io.github.shakeabdulrahman.keystone.llm.ondevice/OnDeviceProvider.id|{}id[0]
+        final fun <get-id>(): kotlin/String // io.github.shakeabdulrahman.keystone.llm.ondevice/OnDeviceProvider.id.<get-id>|<get-id>(){}[0]
+
+    final fun capabilities(kotlin/String): io.github.shakeabdulrahman.keystone.llm/ProviderCapabilities // io.github.shakeabdulrahman.keystone.llm.ondevice/OnDeviceProvider.capabilities|capabilities(kotlin.String){}[0]
+    final fun close() // io.github.shakeabdulrahman.keystone.llm.ondevice/OnDeviceProvider.close|close(){}[0]
+    final fun stream(io.github.shakeabdulrahman.keystone.llm/ProviderRequest): kotlinx.coroutines.flow/Flow<io.github.shakeabdulrahman.keystone.llm/ProviderEvent> // io.github.shakeabdulrahman.keystone.llm.ondevice/OnDeviceProvider.stream|stream(io.github.shakeabdulrahman.keystone.llm.ProviderRequest){}[0]
+
+    final object Companion { // io.github.shakeabdulrahman.keystone.llm.ondevice/OnDeviceProvider.Companion|null[0]
+        final val TextOnly // io.github.shakeabdulrahman.keystone.llm.ondevice/OnDeviceProvider.Companion.TextOnly|{}TextOnly[0]
+            final fun <get-TextOnly>(): io.github.shakeabdulrahman.keystone.llm/ProviderCapabilities // io.github.shakeabdulrahman.keystone.llm.ondevice/OnDeviceProvider.Companion.TextOnly.<get-TextOnly>|<get-TextOnly>(){}[0]
+    }
+}

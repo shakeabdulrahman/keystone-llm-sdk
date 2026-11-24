@@ -1,0 +1,23 @@
+// Klib ABI Dump
+// Targets: [iosArm64, iosSimulatorArm64]
+// Rendering settings:
+// - Signature version: 2
+// - Show manifest properties: true
+// - Show declarations: true
+
+// Library unique name: <io.github.shakeabdulrahman:llm-gemini>
+final class io.github.shakeabdulrahman.keystone.llm.gemini/GeminiProvider : io.github.shakeabdulrahman.keystone.llm/LlmProvider { // io.github.shakeabdulrahman.keystone.llm.gemini/GeminiProvider|null[0]
+    constructor <init>(io.github.shakeabdulrahman.keystone.llm/Auth, kotlin/String = ..., kotlin/String = ..., kotlin/Function1<kotlin/String, io.github.shakeabdulrahman.keystone.llm/ProviderCapabilities> = ..., io.github.shakeabdulrahman.keystone.llm.http/HttpTransport? = ...) // io.github.shakeabdulrahman.keystone.llm.gemini/GeminiProvider.<init>|<init>(io.github.shakeabdulrahman.keystone.llm.Auth;kotlin.String;kotlin.String;kotlin.Function1<kotlin.String,io.github.shakeabdulrahman.keystone.llm.ProviderCapabilities>;io.github.shakeabdulrahman.keystone.llm.http.HttpTransport?){}[0]
+
+    final val id // io.github.shakeabdulrahman.keystone.llm.gemini/GeminiProvider.id|{}id[0]
+        final fun <get-id>(): kotlin/String // io.github.shakeabdulrahman.keystone.llm.gemini/GeminiProvider.id.<get-id>|<get-id>(){}[0]
+
+    final fun capabilities(kotlin/String): io.github.shakeabdulrahman.keystone.llm/ProviderCapabilities // io.github.shakeabdulrahman.keystone.llm.gemini/GeminiProvider.capabilities|capabilities(kotlin.String){}[0]
+    final fun close() // io.github.shakeabdulrahman.keystone.llm.gemini/GeminiProvider.close|close(){}[0]
+    final fun stream(io.github.shakeabdulrahman.keystone.llm/ProviderRequest): kotlinx.coroutines.flow/Flow<io.github.shakeabdulrahman.keystone.llm/ProviderEvent> // io.github.shakeabdulrahman.keystone.llm.gemini/GeminiProvider.stream|stream(io.github.shakeabdulrahman.keystone.llm.ProviderRequest){}[0]
+
+    final object Companion { // io.github.shakeabdulrahman.keystone.llm.gemini/GeminiProvider.Companion|null[0]
+        final val DefaultCapabilities // io.github.shakeabdulrahman.keystone.llm.gemini/GeminiProvider.Companion.DefaultCapabilities|{}DefaultCapabilities[0]
+            final fun <get-DefaultCapabilities>(): io.github.shakeabdulrahman.keystone.llm/ProviderCapabilities // io.github.shakeabdulrahman.keystone.llm.gemini/GeminiProvider.Companion.DefaultCapabilities.<get-DefaultCapabilities>|<get-DefaultCapabilities>(){}[0]
+    }
+}

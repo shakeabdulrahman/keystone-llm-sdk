@@ -1,0 +1,15 @@
+// Klib ABI Dump
+// Targets: [iosArm64, iosSimulatorArm64]
+// Rendering settings:
+// - Signature version: 2
+// - Show manifest properties: true
+// - Show declarations: true
+
+// Library unique name: <io.github.shakeabdulrahman:llm-ktor>
+final class io.github.shakeabdulrahman.keystone.llm.ktor/KtorHttpTransport : io.github.shakeabdulrahman.keystone.llm.http/HttpTransport { // io.github.shakeabdulrahman.keystone.llm.ktor/KtorHttpTransport|null[0]
+    constructor <init>(io.ktor.client/HttpClient) // io.github.shakeabdulrahman.keystone.llm.ktor/KtorHttpTransport.<init>|<init>(io.ktor.client.HttpClient){}[0]
+    constructor <init>(kotlin.time/Duration = ..., kotlin.time/Duration = ...) // io.github.shakeabdulrahman.keystone.llm.ktor/KtorHttpTransport.<init>|<init>(kotlin.time.Duration;kotlin.time.Duration){}[0]
+
+    final fun close() // io.github.shakeabdulrahman.keystone.llm.ktor/KtorHttpTransport.close|close(){}[0]
+    final suspend fun <#A1: kotlin/Any?> execute(io.github.shakeabdulrahman.keystone.llm.http/HttpRequest, kotlin.coroutines/SuspendFunction1<io.github.shakeabdulrahman.keystone.llm.http/HttpResponse, #A1>): #A1 // io.github.shakeabdulrahman.keystone.llm.ktor/KtorHttpTransport.execute|execute(io.github.shakeabdulrahman.keystone.llm.http.HttpRequest;kotlin.coroutines.SuspendFunction1<io.github.shakeabdulrahman.keystone.llm.http.HttpResponse,0:0>){0§<kotlin.Any?>}[0]
+}

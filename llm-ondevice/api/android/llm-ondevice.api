@@ -1,0 +1,119 @@
+public abstract interface class io/github/shakeabdulrahman/keystone/llm/ondevice/OnDeviceAvailability {
+}
+
+public final class io/github/shakeabdulrahman/keystone/llm/ondevice/OnDeviceAvailability$Available : io/github/shakeabdulrahman/keystone/llm/ondevice/OnDeviceAvailability {
+	public static final field INSTANCE Lio/github/shakeabdulrahman/keystone/llm/ondevice/OnDeviceAvailability$Available;
+	public fun equals (Ljava/lang/Object;)Z
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class io/github/shakeabdulrahman/keystone/llm/ondevice/OnDeviceAvailability$NotReady : io/github/shakeabdulrahman/keystone/llm/ondevice/OnDeviceAvailability {
+	public fun <init> (Ljava/lang/String;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun copy (Ljava/lang/String;)Lio/github/shakeabdulrahman/keystone/llm/ondevice/OnDeviceAvailability$NotReady;
+	public static synthetic fun copy$default (Lio/github/shakeabdulrahman/keystone/llm/ondevice/OnDeviceAvailability$NotReady;Ljava/lang/String;ILjava/lang/Object;)Lio/github/shakeabdulrahman/keystone/llm/ondevice/OnDeviceAvailability$NotReady;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getReason ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class io/github/shakeabdulrahman/keystone/llm/ondevice/OnDeviceAvailability$Unsupported : io/github/shakeabdulrahman/keystone/llm/ondevice/OnDeviceAvailability {
+	public fun <init> (Ljava/lang/String;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun copy (Ljava/lang/String;)Lio/github/shakeabdulrahman/keystone/llm/ondevice/OnDeviceAvailability$Unsupported;
+	public static synthetic fun copy$default (Lio/github/shakeabdulrahman/keystone/llm/ondevice/OnDeviceAvailability$Unsupported;Ljava/lang/String;ILjava/lang/Object;)Lio/github/shakeabdulrahman/keystone/llm/ondevice/OnDeviceAvailability$Unsupported;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getReason ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public abstract interface class io/github/shakeabdulrahman/keystone/llm/ondevice/OnDeviceEngine : java/lang/AutoCloseable {
+	public abstract fun availability (Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public abstract fun close ()V
+	public abstract fun generate (Ljava/lang/String;Lio/github/shakeabdulrahman/keystone/llm/ondevice/OnDevicePrompt;)Lkotlinx/coroutines/flow/Flow;
+}
+
+public final class io/github/shakeabdulrahman/keystone/llm/ondevice/OnDeviceEngine$DefaultImpls {
+	public static fun close (Lio/github/shakeabdulrahman/keystone/llm/ondevice/OnDeviceEngine;)V
+}
+
+public abstract interface class io/github/shakeabdulrahman/keystone/llm/ondevice/OnDeviceOutput {
+}
+
+public final class io/github/shakeabdulrahman/keystone/llm/ondevice/OnDeviceOutput$Done : io/github/shakeabdulrahman/keystone/llm/ondevice/OnDeviceOutput {
+	public fun <init> ()V
+	public fun <init> (Ljava/lang/Long;Ljava/lang/Long;Z)V
+	public synthetic fun <init> (Ljava/lang/Long;Ljava/lang/Long;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/lang/Long;
+	public final fun component2 ()Ljava/lang/Long;
+	public final fun component3 ()Z
+	public final fun copy (Ljava/lang/Long;Ljava/lang/Long;Z)Lio/github/shakeabdulrahman/keystone/llm/ondevice/OnDeviceOutput$Done;
+	public static synthetic fun copy$default (Lio/github/shakeabdulrahman/keystone/llm/ondevice/OnDeviceOutput$Done;Ljava/lang/Long;Ljava/lang/Long;ZILjava/lang/Object;)Lio/github/shakeabdulrahman/keystone/llm/ondevice/OnDeviceOutput$Done;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getHitTokenLimit ()Z
+	public final fun getInputTokens ()Ljava/lang/Long;
+	public final fun getOutputTokens ()Ljava/lang/Long;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class io/github/shakeabdulrahman/keystone/llm/ondevice/OnDeviceOutput$Text : io/github/shakeabdulrahman/keystone/llm/ondevice/OnDeviceOutput {
+	public fun <init> (Ljava/lang/String;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun copy (Ljava/lang/String;)Lio/github/shakeabdulrahman/keystone/llm/ondevice/OnDeviceOutput$Text;
+	public static synthetic fun copy$default (Lio/github/shakeabdulrahman/keystone/llm/ondevice/OnDeviceOutput$Text;Ljava/lang/String;ILjava/lang/Object;)Lio/github/shakeabdulrahman/keystone/llm/ondevice/OnDeviceOutput$Text;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getText ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class io/github/shakeabdulrahman/keystone/llm/ondevice/OnDevicePrompt {
+	public fun <init> (Ljava/lang/String;Ljava/util/List;Ljava/lang/Integer;Ljava/lang/Double;Ljava/util/List;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()Ljava/util/List;
+	public final fun component3 ()Ljava/lang/Integer;
+	public final fun component4 ()Ljava/lang/Double;
+	public final fun component5 ()Ljava/util/List;
+	public final fun copy (Ljava/lang/String;Ljava/util/List;Ljava/lang/Integer;Ljava/lang/Double;Ljava/util/List;)Lio/github/shakeabdulrahman/keystone/llm/ondevice/OnDevicePrompt;
+	public static synthetic fun copy$default (Lio/github/shakeabdulrahman/keystone/llm/ondevice/OnDevicePrompt;Ljava/lang/String;Ljava/util/List;Ljava/lang/Integer;Ljava/lang/Double;Ljava/util/List;ILjava/lang/Object;)Lio/github/shakeabdulrahman/keystone/llm/ondevice/OnDevicePrompt;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getMaxOutputTokens ()Ljava/lang/Integer;
+	public final fun getStopSequences ()Ljava/util/List;
+	public final fun getSystem ()Ljava/lang/String;
+	public final fun getTemperature ()Ljava/lang/Double;
+	public final fun getTurns ()Ljava/util/List;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class io/github/shakeabdulrahman/keystone/llm/ondevice/OnDevicePrompt$Turn {
+	public fun <init> (ZLjava/lang/String;)V
+	public final fun component1 ()Z
+	public final fun component2 ()Ljava/lang/String;
+	public final fun copy (ZLjava/lang/String;)Lio/github/shakeabdulrahman/keystone/llm/ondevice/OnDevicePrompt$Turn;
+	public static synthetic fun copy$default (Lio/github/shakeabdulrahman/keystone/llm/ondevice/OnDevicePrompt$Turn;ZLjava/lang/String;ILjava/lang/Object;)Lio/github/shakeabdulrahman/keystone/llm/ondevice/OnDevicePrompt$Turn;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getFromUser ()Z
+	public final fun getText ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class io/github/shakeabdulrahman/keystone/llm/ondevice/OnDeviceProvider : io/github/shakeabdulrahman/keystone/llm/LlmProvider {
+	public static final field Companion Lio/github/shakeabdulrahman/keystone/llm/ondevice/OnDeviceProvider$Companion;
+	public fun <init> (Lio/github/shakeabdulrahman/keystone/llm/ondevice/OnDeviceEngine;Ljava/lang/String;)V
+	public synthetic fun <init> (Lio/github/shakeabdulrahman/keystone/llm/ondevice/OnDeviceEngine;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public fun capabilities (Ljava/lang/String;)Lio/github/shakeabdulrahman/keystone/llm/ProviderCapabilities;
+	public fun close ()V
+	public fun getId ()Ljava/lang/String;
+	public fun stream (Lio/github/shakeabdulrahman/keystone/llm/ProviderRequest;)Lkotlinx/coroutines/flow/Flow;
+}
+
+public final class io/github/shakeabdulrahman/keystone/llm/ondevice/OnDeviceProvider$Companion {
+	public final fun getTextOnly ()Lio/github/shakeabdulrahman/keystone/llm/ProviderCapabilities;
+}
+

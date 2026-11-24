@@ -1,0 +1,1106 @@
+public final class io/github/shakeabdulrahman/keystone/llm/Attempt {
+	public synthetic fun <init> (Lio/github/shakeabdulrahman/keystone/llm/ModelRef;IJLio/github/shakeabdulrahman/keystone/llm/LlmErrorKind;Ljava/lang/Integer;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public synthetic fun <init> (Lio/github/shakeabdulrahman/keystone/llm/ModelRef;IJLio/github/shakeabdulrahman/keystone/llm/LlmErrorKind;Ljava/lang/Integer;Ljava/lang/String;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Lio/github/shakeabdulrahman/keystone/llm/ModelRef;
+	public final fun component2 ()I
+	public final fun component3-UwyO8pc ()J
+	public final fun component4 ()Lio/github/shakeabdulrahman/keystone/llm/LlmErrorKind;
+	public final fun component5 ()Ljava/lang/Integer;
+	public final fun component6 ()Ljava/lang/String;
+	public final fun copy-WPi__2c (Lio/github/shakeabdulrahman/keystone/llm/ModelRef;IJLio/github/shakeabdulrahman/keystone/llm/LlmErrorKind;Ljava/lang/Integer;Ljava/lang/String;)Lio/github/shakeabdulrahman/keystone/llm/Attempt;
+	public static synthetic fun copy-WPi__2c$default (Lio/github/shakeabdulrahman/keystone/llm/Attempt;Lio/github/shakeabdulrahman/keystone/llm/ModelRef;IJLio/github/shakeabdulrahman/keystone/llm/LlmErrorKind;Ljava/lang/Integer;Ljava/lang/String;ILjava/lang/Object;)Lio/github/shakeabdulrahman/keystone/llm/Attempt;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getDuration-UwyO8pc ()J
+	public final fun getError ()Lio/github/shakeabdulrahman/keystone/llm/LlmErrorKind;
+	public final fun getHttpStatus ()Ljava/lang/Integer;
+	public final fun getNumber ()I
+	public final fun getRequestId ()Ljava/lang/String;
+	public final fun getTarget ()Lio/github/shakeabdulrahman/keystone/llm/ModelRef;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public abstract interface class io/github/shakeabdulrahman/keystone/llm/Auth {
+}
+
+public final class io/github/shakeabdulrahman/keystone/llm/Auth$ApiKey : io/github/shakeabdulrahman/keystone/llm/Auth {
+	public fun <init> (Ljava/lang/String;)V
+	public final fun getValue ()Ljava/lang/String;
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class io/github/shakeabdulrahman/keystone/llm/Auth$Headers : io/github/shakeabdulrahman/keystone/llm/Auth {
+	public fun <init> (Lkotlin/jvm/functions/Function1;)V
+	public final fun getProvide ()Lkotlin/jvm/functions/Function1;
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class io/github/shakeabdulrahman/keystone/llm/Auth$None : io/github/shakeabdulrahman/keystone/llm/Auth {
+	public static final field INSTANCE Lio/github/shakeabdulrahman/keystone/llm/Auth$None;
+	public fun equals (Ljava/lang/Object;)Z
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class io/github/shakeabdulrahman/keystone/llm/ChatRequest {
+	public static final field Companion Lio/github/shakeabdulrahman/keystone/llm/ChatRequest$Companion;
+	public fun <init> (Ljava/util/List;Lio/github/shakeabdulrahman/keystone/llm/Route;Ljava/util/List;Lio/github/shakeabdulrahman/keystone/llm/ToolChoice;Lio/github/shakeabdulrahman/keystone/llm/ResponseFormat;Ljava/lang/Integer;Ljava/lang/Double;Ljava/lang/Double;Ljava/util/List;Ljava/util/Map;)V
+	public synthetic fun <init> (Ljava/util/List;Lio/github/shakeabdulrahman/keystone/llm/Route;Ljava/util/List;Lio/github/shakeabdulrahman/keystone/llm/ToolChoice;Lio/github/shakeabdulrahman/keystone/llm/ResponseFormat;Ljava/lang/Integer;Ljava/lang/Double;Ljava/lang/Double;Ljava/util/List;Ljava/util/Map;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/util/List;
+	public final fun component10 ()Ljava/util/Map;
+	public final fun component2 ()Lio/github/shakeabdulrahman/keystone/llm/Route;
+	public final fun component3 ()Ljava/util/List;
+	public final fun component4 ()Lio/github/shakeabdulrahman/keystone/llm/ToolChoice;
+	public final fun component5 ()Lio/github/shakeabdulrahman/keystone/llm/ResponseFormat;
+	public final fun component6 ()Ljava/lang/Integer;
+	public final fun component7 ()Ljava/lang/Double;
+	public final fun component8 ()Ljava/lang/Double;
+	public final fun component9 ()Ljava/util/List;
+	public final fun copy (Ljava/util/List;Lio/github/shakeabdulrahman/keystone/llm/Route;Ljava/util/List;Lio/github/shakeabdulrahman/keystone/llm/ToolChoice;Lio/github/shakeabdulrahman/keystone/llm/ResponseFormat;Ljava/lang/Integer;Ljava/lang/Double;Ljava/lang/Double;Ljava/util/List;Ljava/util/Map;)Lio/github/shakeabdulrahman/keystone/llm/ChatRequest;
+	public static synthetic fun copy$default (Lio/github/shakeabdulrahman/keystone/llm/ChatRequest;Ljava/util/List;Lio/github/shakeabdulrahman/keystone/llm/Route;Ljava/util/List;Lio/github/shakeabdulrahman/keystone/llm/ToolChoice;Lio/github/shakeabdulrahman/keystone/llm/ResponseFormat;Ljava/lang/Integer;Ljava/lang/Double;Ljava/lang/Double;Ljava/util/List;Ljava/util/Map;ILjava/lang/Object;)Lio/github/shakeabdulrahman/keystone/llm/ChatRequest;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getMaxOutputTokens ()Ljava/lang/Integer;
+	public final fun getMessages ()Ljava/util/List;
+	public final fun getProviderOptions ()Ljava/util/Map;
+	public final fun getResponseFormat ()Lio/github/shakeabdulrahman/keystone/llm/ResponseFormat;
+	public final fun getRoute ()Lio/github/shakeabdulrahman/keystone/llm/Route;
+	public final fun getStopSequences ()Ljava/util/List;
+	public final fun getTemperature ()Ljava/lang/Double;
+	public final fun getToolChoice ()Lio/github/shakeabdulrahman/keystone/llm/ToolChoice;
+	public final fun getTools ()Ljava/util/List;
+	public final fun getTopP ()Ljava/lang/Double;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class io/github/shakeabdulrahman/keystone/llm/ChatRequest$Companion {
+	public final fun of (Lio/github/shakeabdulrahman/keystone/llm/ModelRef;[Lio/github/shakeabdulrahman/keystone/llm/Message;)Lio/github/shakeabdulrahman/keystone/llm/ChatRequest;
+}
+
+public final class io/github/shakeabdulrahman/keystone/llm/ChatResponse {
+	public fun <init> (Lio/github/shakeabdulrahman/keystone/llm/Message$Assistant;Lio/github/shakeabdulrahman/keystone/llm/FinishReason;Lio/github/shakeabdulrahman/keystone/llm/Usage;Lio/github/shakeabdulrahman/keystone/llm/CostReport;Lio/github/shakeabdulrahman/keystone/llm/ResponseMetadata;)V
+	public final fun component1 ()Lio/github/shakeabdulrahman/keystone/llm/Message$Assistant;
+	public final fun component2 ()Lio/github/shakeabdulrahman/keystone/llm/FinishReason;
+	public final fun component3 ()Lio/github/shakeabdulrahman/keystone/llm/Usage;
+	public final fun component4 ()Lio/github/shakeabdulrahman/keystone/llm/CostReport;
+	public final fun component5 ()Lio/github/shakeabdulrahman/keystone/llm/ResponseMetadata;
+	public final fun copy (Lio/github/shakeabdulrahman/keystone/llm/Message$Assistant;Lio/github/shakeabdulrahman/keystone/llm/FinishReason;Lio/github/shakeabdulrahman/keystone/llm/Usage;Lio/github/shakeabdulrahman/keystone/llm/CostReport;Lio/github/shakeabdulrahman/keystone/llm/ResponseMetadata;)Lio/github/shakeabdulrahman/keystone/llm/ChatResponse;
+	public static synthetic fun copy$default (Lio/github/shakeabdulrahman/keystone/llm/ChatResponse;Lio/github/shakeabdulrahman/keystone/llm/Message$Assistant;Lio/github/shakeabdulrahman/keystone/llm/FinishReason;Lio/github/shakeabdulrahman/keystone/llm/Usage;Lio/github/shakeabdulrahman/keystone/llm/CostReport;Lio/github/shakeabdulrahman/keystone/llm/ResponseMetadata;ILjava/lang/Object;)Lio/github/shakeabdulrahman/keystone/llm/ChatResponse;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getCost ()Lio/github/shakeabdulrahman/keystone/llm/CostReport;
+	public final fun getFinishReason ()Lio/github/shakeabdulrahman/keystone/llm/FinishReason;
+	public final fun getMessage ()Lio/github/shakeabdulrahman/keystone/llm/Message$Assistant;
+	public final fun getMetadata ()Lio/github/shakeabdulrahman/keystone/llm/ResponseMetadata;
+	public final fun getText ()Ljava/lang/String;
+	public final fun getToolCalls ()Ljava/util/List;
+	public final fun getUsage ()Lio/github/shakeabdulrahman/keystone/llm/Usage;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public abstract interface class io/github/shakeabdulrahman/keystone/llm/CostReport {
+	public static final field Companion Lio/github/shakeabdulrahman/keystone/llm/CostReport$Companion;
+}
+
+public final class io/github/shakeabdulrahman/keystone/llm/CostReport$Companion {
+	public final fun calculate (Lio/github/shakeabdulrahman/keystone/llm/Usage;Lio/github/shakeabdulrahman/keystone/llm/ModelPrice;Ljava/lang/String;)Lio/github/shakeabdulrahman/keystone/llm/CostReport;
+}
+
+public final class io/github/shakeabdulrahman/keystone/llm/CostReport$Priced : io/github/shakeabdulrahman/keystone/llm/CostReport {
+	public fun <init> (Lio/github/shakeabdulrahman/keystone/llm/Money;Lio/github/shakeabdulrahman/keystone/llm/Money;Lio/github/shakeabdulrahman/keystone/llm/Money;ZLjava/lang/String;)V
+	public final fun component1 ()Lio/github/shakeabdulrahman/keystone/llm/Money;
+	public final fun component2 ()Lio/github/shakeabdulrahman/keystone/llm/Money;
+	public final fun component3 ()Lio/github/shakeabdulrahman/keystone/llm/Money;
+	public final fun component4 ()Z
+	public final fun component5 ()Ljava/lang/String;
+	public final fun copy (Lio/github/shakeabdulrahman/keystone/llm/Money;Lio/github/shakeabdulrahman/keystone/llm/Money;Lio/github/shakeabdulrahman/keystone/llm/Money;ZLjava/lang/String;)Lio/github/shakeabdulrahman/keystone/llm/CostReport$Priced;
+	public static synthetic fun copy$default (Lio/github/shakeabdulrahman/keystone/llm/CostReport$Priced;Lio/github/shakeabdulrahman/keystone/llm/Money;Lio/github/shakeabdulrahman/keystone/llm/Money;Lio/github/shakeabdulrahman/keystone/llm/Money;ZLjava/lang/String;ILjava/lang/Object;)Lio/github/shakeabdulrahman/keystone/llm/CostReport$Priced;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getEstimated ()Z
+	public final fun getInput ()Lio/github/shakeabdulrahman/keystone/llm/Money;
+	public final fun getOutput ()Lio/github/shakeabdulrahman/keystone/llm/Money;
+	public final fun getPriceTableVersion ()Ljava/lang/String;
+	public final fun getTotal ()Lio/github/shakeabdulrahman/keystone/llm/Money;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class io/github/shakeabdulrahman/keystone/llm/CostReport$Unavailable : io/github/shakeabdulrahman/keystone/llm/CostReport {
+	public fun <init> (Lio/github/shakeabdulrahman/keystone/llm/CostReport$Unavailable$Reason;Ljava/lang/String;)V
+	public final fun component1 ()Lio/github/shakeabdulrahman/keystone/llm/CostReport$Unavailable$Reason;
+	public final fun component2 ()Ljava/lang/String;
+	public final fun copy (Lio/github/shakeabdulrahman/keystone/llm/CostReport$Unavailable$Reason;Ljava/lang/String;)Lio/github/shakeabdulrahman/keystone/llm/CostReport$Unavailable;
+	public static synthetic fun copy$default (Lio/github/shakeabdulrahman/keystone/llm/CostReport$Unavailable;Lio/github/shakeabdulrahman/keystone/llm/CostReport$Unavailable$Reason;Ljava/lang/String;ILjava/lang/Object;)Lio/github/shakeabdulrahman/keystone/llm/CostReport$Unavailable;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getPriceTableVersion ()Ljava/lang/String;
+	public final fun getReason ()Lio/github/shakeabdulrahman/keystone/llm/CostReport$Unavailable$Reason;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class io/github/shakeabdulrahman/keystone/llm/CostReport$Unavailable$Reason : java/lang/Enum {
+	public static final field NoPriceForModel Lio/github/shakeabdulrahman/keystone/llm/CostReport$Unavailable$Reason;
+	public static final field UsageUnknown Lio/github/shakeabdulrahman/keystone/llm/CostReport$Unavailable$Reason;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public static fun valueOf (Ljava/lang/String;)Lio/github/shakeabdulrahman/keystone/llm/CostReport$Unavailable$Reason;
+	public static fun values ()[Lio/github/shakeabdulrahman/keystone/llm/CostReport$Unavailable$Reason;
+}
+
+public final class io/github/shakeabdulrahman/keystone/llm/FailoverPolicy {
+	public static final field Companion Lio/github/shakeabdulrahman/keystone/llm/FailoverPolicy$Companion;
+	public fun <init> ()V
+	public fun <init> (Lkotlin/jvm/functions/Function1;)V
+	public synthetic fun <init> (Lkotlin/jvm/functions/Function1;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun getFailoverOn ()Lkotlin/jvm/functions/Function1;
+}
+
+public final class io/github/shakeabdulrahman/keystone/llm/FailoverPolicy$Companion {
+	public final fun getDEFAULT_KINDS ()Ljava/util/Set;
+	public final fun getDefault ()Lio/github/shakeabdulrahman/keystone/llm/FailoverPolicy;
+	public final fun getNever ()Lio/github/shakeabdulrahman/keystone/llm/FailoverPolicy;
+}
+
+public abstract interface class io/github/shakeabdulrahman/keystone/llm/FinishReason {
+}
+
+public final class io/github/shakeabdulrahman/keystone/llm/FinishReason$ContentFilter : io/github/shakeabdulrahman/keystone/llm/FinishReason {
+	public static final field INSTANCE Lio/github/shakeabdulrahman/keystone/llm/FinishReason$ContentFilter;
+	public fun equals (Ljava/lang/Object;)Z
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class io/github/shakeabdulrahman/keystone/llm/FinishReason$Length : io/github/shakeabdulrahman/keystone/llm/FinishReason {
+	public static final field INSTANCE Lio/github/shakeabdulrahman/keystone/llm/FinishReason$Length;
+	public fun equals (Ljava/lang/Object;)Z
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class io/github/shakeabdulrahman/keystone/llm/FinishReason$Other : io/github/shakeabdulrahman/keystone/llm/FinishReason {
+	public fun <init> (Ljava/lang/String;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun copy (Ljava/lang/String;)Lio/github/shakeabdulrahman/keystone/llm/FinishReason$Other;
+	public static synthetic fun copy$default (Lio/github/shakeabdulrahman/keystone/llm/FinishReason$Other;Ljava/lang/String;ILjava/lang/Object;)Lio/github/shakeabdulrahman/keystone/llm/FinishReason$Other;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getRaw ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class io/github/shakeabdulrahman/keystone/llm/FinishReason$Stop : io/github/shakeabdulrahman/keystone/llm/FinishReason {
+	public static final field INSTANCE Lio/github/shakeabdulrahman/keystone/llm/FinishReason$Stop;
+	public fun equals (Ljava/lang/Object;)Z
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class io/github/shakeabdulrahman/keystone/llm/FinishReason$ToolCalls : io/github/shakeabdulrahman/keystone/llm/FinishReason {
+	public static final field INSTANCE Lio/github/shakeabdulrahman/keystone/llm/FinishReason$ToolCalls;
+	public fun equals (Ljava/lang/Object;)Z
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class io/github/shakeabdulrahman/keystone/llm/FinishReason$Unknown : io/github/shakeabdulrahman/keystone/llm/FinishReason {
+	public static final field INSTANCE Lio/github/shakeabdulrahman/keystone/llm/FinishReason$Unknown;
+	public fun equals (Ljava/lang/Object;)Z
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public abstract interface annotation class io/github/shakeabdulrahman/keystone/llm/InternalKeystoneLlmApi : java/lang/annotation/Annotation {
+}
+
+public final class io/github/shakeabdulrahman/keystone/llm/LlmClient : java/lang/AutoCloseable {
+	public final fun capabilities (Lio/github/shakeabdulrahman/keystone/llm/ModelRef;)Lio/github/shakeabdulrahman/keystone/llm/ProviderCapabilities;
+	public final fun chat (Lio/github/shakeabdulrahman/keystone/llm/ChatRequest;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public fun close ()V
+	public final fun getProviderIds ()Ljava/util/Set;
+	public final fun stream (Lio/github/shakeabdulrahman/keystone/llm/ChatRequest;)Lkotlinx/coroutines/flow/Flow;
+}
+
+public final class io/github/shakeabdulrahman/keystone/llm/LlmClient$Builder {
+	public final fun getDefaultRoute ()Lio/github/shakeabdulrahman/keystone/llm/Route;
+	public final fun getFailover ()Lio/github/shakeabdulrahman/keystone/llm/FailoverPolicy;
+	public final fun getListener ()Lio/github/shakeabdulrahman/keystone/llm/LlmListener;
+	public final fun getPricing ()Lio/github/shakeabdulrahman/keystone/llm/PriceTable;
+	public final fun getRetry ()Lio/github/shakeabdulrahman/keystone/llm/RetryPolicy;
+	public final fun getStreamRestart ()Lio/github/shakeabdulrahman/keystone/llm/StreamRestartPolicy;
+	public final fun getTimeouts ()Lio/github/shakeabdulrahman/keystone/llm/Timeouts;
+	public final fun getTokenEstimator ()Lio/github/shakeabdulrahman/keystone/llm/TokenEstimator;
+	public final fun provider (Lio/github/shakeabdulrahman/keystone/llm/LlmProvider;)V
+	public final fun setDefaultRoute (Lio/github/shakeabdulrahman/keystone/llm/Route;)V
+	public final fun setFailover (Lio/github/shakeabdulrahman/keystone/llm/FailoverPolicy;)V
+	public final fun setListener (Lio/github/shakeabdulrahman/keystone/llm/LlmListener;)V
+	public final fun setPricing (Lio/github/shakeabdulrahman/keystone/llm/PriceTable;)V
+	public final fun setRetry (Lio/github/shakeabdulrahman/keystone/llm/RetryPolicy;)V
+	public final fun setStreamRestart (Lio/github/shakeabdulrahman/keystone/llm/StreamRestartPolicy;)V
+	public final fun setTimeouts (Lio/github/shakeabdulrahman/keystone/llm/Timeouts;)V
+	public final fun setTokenEstimator (Lio/github/shakeabdulrahman/keystone/llm/TokenEstimator;)V
+}
+
+public final class io/github/shakeabdulrahman/keystone/llm/LlmClientKt {
+	public static final fun LlmClient (Lkotlin/jvm/functions/Function1;)Lio/github/shakeabdulrahman/keystone/llm/LlmClient;
+}
+
+public final class io/github/shakeabdulrahman/keystone/llm/LlmErrorKind : java/lang/Enum {
+	public static final field Authentication Lio/github/shakeabdulrahman/keystone/llm/LlmErrorKind;
+	public static final field ContentFiltered Lio/github/shakeabdulrahman/keystone/llm/LlmErrorKind;
+	public static final field InvalidRequest Lio/github/shakeabdulrahman/keystone/llm/LlmErrorKind;
+	public static final field MalformedResponse Lio/github/shakeabdulrahman/keystone/llm/LlmErrorKind;
+	public static final field Network Lio/github/shakeabdulrahman/keystone/llm/LlmErrorKind;
+	public static final field NotFound Lio/github/shakeabdulrahman/keystone/llm/LlmErrorKind;
+	public static final field PermissionDenied Lio/github/shakeabdulrahman/keystone/llm/LlmErrorKind;
+	public static final field QuotaExceeded Lio/github/shakeabdulrahman/keystone/llm/LlmErrorKind;
+	public static final field RateLimited Lio/github/shakeabdulrahman/keystone/llm/LlmErrorKind;
+	public static final field ServerError Lio/github/shakeabdulrahman/keystone/llm/LlmErrorKind;
+	public static final field StructuredOutput Lio/github/shakeabdulrahman/keystone/llm/LlmErrorKind;
+	public static final field Timeout Lio/github/shakeabdulrahman/keystone/llm/LlmErrorKind;
+	public static final field Unknown Lio/github/shakeabdulrahman/keystone/llm/LlmErrorKind;
+	public static final field Unsupported Lio/github/shakeabdulrahman/keystone/llm/LlmErrorKind;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public final fun isTransient ()Z
+	public static fun valueOf (Ljava/lang/String;)Lio/github/shakeabdulrahman/keystone/llm/LlmErrorKind;
+	public static fun values ()[Lio/github/shakeabdulrahman/keystone/llm/LlmErrorKind;
+}
+
+public class io/github/shakeabdulrahman/keystone/llm/LlmException : java/lang/Exception {
+	public synthetic fun <init> (Lio/github/shakeabdulrahman/keystone/llm/LlmErrorKind;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lkotlin/time/Duration;Ljava/lang/Throwable;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public synthetic fun <init> (Lio/github/shakeabdulrahman/keystone/llm/LlmErrorKind;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lkotlin/time/Duration;Ljava/lang/Throwable;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun getAttempts ()Ljava/util/List;
+	public final fun getHttpStatus ()Ljava/lang/Integer;
+	public final fun getKind ()Lio/github/shakeabdulrahman/keystone/llm/LlmErrorKind;
+	public final fun getProvider ()Ljava/lang/String;
+	public final fun getProviderCode ()Ljava/lang/String;
+	public final fun getProviderMessage ()Ljava/lang/String;
+	public final fun getRequestId ()Ljava/lang/String;
+	public final fun getRetryAfter-FghU774 ()Lkotlin/time/Duration;
+	public final fun isTransient ()Z
+}
+
+public abstract interface class io/github/shakeabdulrahman/keystone/llm/LlmListener {
+	public abstract fun onAttemptFailed (Lio/github/shakeabdulrahman/keystone/llm/Attempt;Lio/github/shakeabdulrahman/keystone/llm/LlmException;Lio/github/shakeabdulrahman/keystone/llm/LlmListener$NextStep;)V
+	public abstract fun onAttemptStarted (Lio/github/shakeabdulrahman/keystone/llm/ModelRef;I)V
+	public abstract fun onSucceeded (Lio/github/shakeabdulrahman/keystone/llm/Attempt;)V
+}
+
+public final class io/github/shakeabdulrahman/keystone/llm/LlmListener$DefaultImpls {
+	public static fun onAttemptFailed (Lio/github/shakeabdulrahman/keystone/llm/LlmListener;Lio/github/shakeabdulrahman/keystone/llm/Attempt;Lio/github/shakeabdulrahman/keystone/llm/LlmException;Lio/github/shakeabdulrahman/keystone/llm/LlmListener$NextStep;)V
+	public static fun onAttemptStarted (Lio/github/shakeabdulrahman/keystone/llm/LlmListener;Lio/github/shakeabdulrahman/keystone/llm/ModelRef;I)V
+	public static fun onSucceeded (Lio/github/shakeabdulrahman/keystone/llm/LlmListener;Lio/github/shakeabdulrahman/keystone/llm/Attempt;)V
+}
+
+public abstract interface class io/github/shakeabdulrahman/keystone/llm/LlmListener$NextStep {
+}
+
+public final class io/github/shakeabdulrahman/keystone/llm/LlmListener$NextStep$Failover : io/github/shakeabdulrahman/keystone/llm/LlmListener$NextStep {
+	public fun <init> (Lio/github/shakeabdulrahman/keystone/llm/ModelRef;)V
+	public final fun component1 ()Lio/github/shakeabdulrahman/keystone/llm/ModelRef;
+	public final fun copy (Lio/github/shakeabdulrahman/keystone/llm/ModelRef;)Lio/github/shakeabdulrahman/keystone/llm/LlmListener$NextStep$Failover;
+	public static synthetic fun copy$default (Lio/github/shakeabdulrahman/keystone/llm/LlmListener$NextStep$Failover;Lio/github/shakeabdulrahman/keystone/llm/ModelRef;ILjava/lang/Object;)Lio/github/shakeabdulrahman/keystone/llm/LlmListener$NextStep$Failover;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getTo ()Lio/github/shakeabdulrahman/keystone/llm/ModelRef;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class io/github/shakeabdulrahman/keystone/llm/LlmListener$NextStep$GiveUp : io/github/shakeabdulrahman/keystone/llm/LlmListener$NextStep {
+	public static final field INSTANCE Lio/github/shakeabdulrahman/keystone/llm/LlmListener$NextStep$GiveUp;
+	public fun equals (Ljava/lang/Object;)Z
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class io/github/shakeabdulrahman/keystone/llm/LlmListener$NextStep$Retry : io/github/shakeabdulrahman/keystone/llm/LlmListener$NextStep {
+	public synthetic fun <init> (JLkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1-UwyO8pc ()J
+	public final fun copy-LRDsOJo (J)Lio/github/shakeabdulrahman/keystone/llm/LlmListener$NextStep$Retry;
+	public static synthetic fun copy-LRDsOJo$default (Lio/github/shakeabdulrahman/keystone/llm/LlmListener$NextStep$Retry;JILjava/lang/Object;)Lio/github/shakeabdulrahman/keystone/llm/LlmListener$NextStep$Retry;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getDelay-UwyO8pc ()J
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public abstract interface class io/github/shakeabdulrahman/keystone/llm/LlmProvider : java/lang/AutoCloseable {
+	public abstract fun capabilities (Ljava/lang/String;)Lio/github/shakeabdulrahman/keystone/llm/ProviderCapabilities;
+	public abstract fun close ()V
+	public abstract fun getId ()Ljava/lang/String;
+	public abstract fun stream (Lio/github/shakeabdulrahman/keystone/llm/ProviderRequest;)Lkotlinx/coroutines/flow/Flow;
+}
+
+public final class io/github/shakeabdulrahman/keystone/llm/LlmProvider$DefaultImpls {
+	public static fun close (Lio/github/shakeabdulrahman/keystone/llm/LlmProvider;)V
+}
+
+public abstract interface class io/github/shakeabdulrahman/keystone/llm/Message {
+	public static final field Companion Lio/github/shakeabdulrahman/keystone/llm/Message$Companion;
+}
+
+public final class io/github/shakeabdulrahman/keystone/llm/Message$Assistant : io/github/shakeabdulrahman/keystone/llm/Message {
+	public fun <init> ()V
+	public fun <init> (Ljava/lang/String;Ljava/util/List;)V
+	public synthetic fun <init> (Ljava/lang/String;Ljava/util/List;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()Ljava/util/List;
+	public final fun copy (Ljava/lang/String;Ljava/util/List;)Lio/github/shakeabdulrahman/keystone/llm/Message$Assistant;
+	public static synthetic fun copy$default (Lio/github/shakeabdulrahman/keystone/llm/Message$Assistant;Ljava/lang/String;Ljava/util/List;ILjava/lang/Object;)Lio/github/shakeabdulrahman/keystone/llm/Message$Assistant;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getText ()Ljava/lang/String;
+	public final fun getToolCalls ()Ljava/util/List;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class io/github/shakeabdulrahman/keystone/llm/Message$Companion {
+	public final fun assistant (Ljava/lang/String;)Lio/github/shakeabdulrahman/keystone/llm/Message;
+	public final fun system (Ljava/lang/String;)Lio/github/shakeabdulrahman/keystone/llm/Message;
+	public final fun user (Ljava/lang/String;)Lio/github/shakeabdulrahman/keystone/llm/Message;
+}
+
+public final class io/github/shakeabdulrahman/keystone/llm/Message$System : io/github/shakeabdulrahman/keystone/llm/Message {
+	public fun <init> (Ljava/lang/String;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun copy (Ljava/lang/String;)Lio/github/shakeabdulrahman/keystone/llm/Message$System;
+	public static synthetic fun copy$default (Lio/github/shakeabdulrahman/keystone/llm/Message$System;Ljava/lang/String;ILjava/lang/Object;)Lio/github/shakeabdulrahman/keystone/llm/Message$System;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getText ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class io/github/shakeabdulrahman/keystone/llm/Message$ToolResult : io/github/shakeabdulrahman/keystone/llm/Message {
+	public fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)V
+	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()Ljava/lang/String;
+	public final fun component3 ()Ljava/lang/String;
+	public final fun component4 ()Z
+	public final fun copy (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)Lio/github/shakeabdulrahman/keystone/llm/Message$ToolResult;
+	public static synthetic fun copy$default (Lio/github/shakeabdulrahman/keystone/llm/Message$ToolResult;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZILjava/lang/Object;)Lio/github/shakeabdulrahman/keystone/llm/Message$ToolResult;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getCallId ()Ljava/lang/String;
+	public final fun getContent ()Ljava/lang/String;
+	public final fun getToolName ()Ljava/lang/String;
+	public fun hashCode ()I
+	public final fun isError ()Z
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class io/github/shakeabdulrahman/keystone/llm/Message$User : io/github/shakeabdulrahman/keystone/llm/Message {
+	public fun <init> (Ljava/lang/String;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun copy (Ljava/lang/String;)Lio/github/shakeabdulrahman/keystone/llm/Message$User;
+	public static synthetic fun copy$default (Lio/github/shakeabdulrahman/keystone/llm/Message$User;Ljava/lang/String;ILjava/lang/Object;)Lio/github/shakeabdulrahman/keystone/llm/Message$User;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getText ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class io/github/shakeabdulrahman/keystone/llm/ModelPrice {
+	public fun <init> (Lio/github/shakeabdulrahman/keystone/llm/Money;Lio/github/shakeabdulrahman/keystone/llm/Money;Lio/github/shakeabdulrahman/keystone/llm/Money;)V
+	public synthetic fun <init> (Lio/github/shakeabdulrahman/keystone/llm/Money;Lio/github/shakeabdulrahman/keystone/llm/Money;Lio/github/shakeabdulrahman/keystone/llm/Money;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Lio/github/shakeabdulrahman/keystone/llm/Money;
+	public final fun component2 ()Lio/github/shakeabdulrahman/keystone/llm/Money;
+	public final fun component3 ()Lio/github/shakeabdulrahman/keystone/llm/Money;
+	public final fun copy (Lio/github/shakeabdulrahman/keystone/llm/Money;Lio/github/shakeabdulrahman/keystone/llm/Money;Lio/github/shakeabdulrahman/keystone/llm/Money;)Lio/github/shakeabdulrahman/keystone/llm/ModelPrice;
+	public static synthetic fun copy$default (Lio/github/shakeabdulrahman/keystone/llm/ModelPrice;Lio/github/shakeabdulrahman/keystone/llm/Money;Lio/github/shakeabdulrahman/keystone/llm/Money;Lio/github/shakeabdulrahman/keystone/llm/Money;ILjava/lang/Object;)Lio/github/shakeabdulrahman/keystone/llm/ModelPrice;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getCachedInputPerMillion ()Lio/github/shakeabdulrahman/keystone/llm/Money;
+	public final fun getCurrency ()Ljava/lang/String;
+	public final fun getInputPerMillion ()Lio/github/shakeabdulrahman/keystone/llm/Money;
+	public final fun getOutputPerMillion ()Lio/github/shakeabdulrahman/keystone/llm/Money;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class io/github/shakeabdulrahman/keystone/llm/ModelRef {
+	public fun <init> (Ljava/lang/String;Ljava/lang/String;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()Ljava/lang/String;
+	public final fun copy (Ljava/lang/String;Ljava/lang/String;)Lio/github/shakeabdulrahman/keystone/llm/ModelRef;
+	public static synthetic fun copy$default (Lio/github/shakeabdulrahman/keystone/llm/ModelRef;Ljava/lang/String;Ljava/lang/String;ILjava/lang/Object;)Lio/github/shakeabdulrahman/keystone/llm/ModelRef;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getModel ()Ljava/lang/String;
+	public final fun getProvider ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class io/github/shakeabdulrahman/keystone/llm/Money : java/lang/Comparable {
+	public static final field Companion Lio/github/shakeabdulrahman/keystone/llm/Money$Companion;
+	public fun <init> (JLjava/lang/String;)V
+	public fun compareTo (Lio/github/shakeabdulrahman/keystone/llm/Money;)I
+	public synthetic fun compareTo (Ljava/lang/Object;)I
+	public final fun component1 ()J
+	public final fun component2 ()Ljava/lang/String;
+	public final fun copy (JLjava/lang/String;)Lio/github/shakeabdulrahman/keystone/llm/Money;
+	public static synthetic fun copy$default (Lio/github/shakeabdulrahman/keystone/llm/Money;JLjava/lang/String;ILjava/lang/Object;)Lio/github/shakeabdulrahman/keystone/llm/Money;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getCurrency ()Ljava/lang/String;
+	public final fun getNanos ()J
+	public fun hashCode ()I
+	public final fun plus (Lio/github/shakeabdulrahman/keystone/llm/Money;)Lio/github/shakeabdulrahman/keystone/llm/Money;
+	public final fun toDecimalString (I)Ljava/lang/String;
+	public static synthetic fun toDecimalString$default (Lio/github/shakeabdulrahman/keystone/llm/Money;IILjava/lang/Object;)Ljava/lang/String;
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class io/github/shakeabdulrahman/keystone/llm/Money$Companion {
+	public final fun parse (Ljava/lang/String;Ljava/lang/String;)Lio/github/shakeabdulrahman/keystone/llm/Money;
+	public final fun zero (Ljava/lang/String;)Lio/github/shakeabdulrahman/keystone/llm/Money;
+}
+
+public final class io/github/shakeabdulrahman/keystone/llm/PriceTable {
+	public fun <init> (Ljava/lang/String;Ljava/util/Map;)V
+	public final fun getVersion ()Ljava/lang/String;
+	public final fun priceOf (Lio/github/shakeabdulrahman/keystone/llm/ModelRef;)Lio/github/shakeabdulrahman/keystone/llm/ModelPrice;
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class io/github/shakeabdulrahman/keystone/llm/ProviderCapabilities {
+	public fun <init> (Lio/github/shakeabdulrahman/keystone/llm/Support;Lio/github/shakeabdulrahman/keystone/llm/Support;Lio/github/shakeabdulrahman/keystone/llm/StructuredOutputSupport;Lio/github/shakeabdulrahman/keystone/llm/Support;)V
+	public synthetic fun <init> (Lio/github/shakeabdulrahman/keystone/llm/Support;Lio/github/shakeabdulrahman/keystone/llm/Support;Lio/github/shakeabdulrahman/keystone/llm/StructuredOutputSupport;Lio/github/shakeabdulrahman/keystone/llm/Support;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Lio/github/shakeabdulrahman/keystone/llm/Support;
+	public final fun component2 ()Lio/github/shakeabdulrahman/keystone/llm/Support;
+	public final fun component3 ()Lio/github/shakeabdulrahman/keystone/llm/StructuredOutputSupport;
+	public final fun component4 ()Lio/github/shakeabdulrahman/keystone/llm/Support;
+	public final fun copy (Lio/github/shakeabdulrahman/keystone/llm/Support;Lio/github/shakeabdulrahman/keystone/llm/Support;Lio/github/shakeabdulrahman/keystone/llm/StructuredOutputSupport;Lio/github/shakeabdulrahman/keystone/llm/Support;)Lio/github/shakeabdulrahman/keystone/llm/ProviderCapabilities;
+	public static synthetic fun copy$default (Lio/github/shakeabdulrahman/keystone/llm/ProviderCapabilities;Lio/github/shakeabdulrahman/keystone/llm/Support;Lio/github/shakeabdulrahman/keystone/llm/Support;Lio/github/shakeabdulrahman/keystone/llm/StructuredOutputSupport;Lio/github/shakeabdulrahman/keystone/llm/Support;ILjava/lang/Object;)Lio/github/shakeabdulrahman/keystone/llm/ProviderCapabilities;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getStructuredOutput ()Lio/github/shakeabdulrahman/keystone/llm/StructuredOutputSupport;
+	public final fun getSystemMessages ()Lio/github/shakeabdulrahman/keystone/llm/Support;
+	public final fun getToolChoiceRequired ()Lio/github/shakeabdulrahman/keystone/llm/Support;
+	public final fun getTools ()Lio/github/shakeabdulrahman/keystone/llm/Support;
+	public fun hashCode ()I
+	public final fun missingFor (Lio/github/shakeabdulrahman/keystone/llm/ChatRequest;)Ljava/lang/String;
+	public fun toString ()Ljava/lang/String;
+}
+
+public abstract interface class io/github/shakeabdulrahman/keystone/llm/ProviderEvent {
+}
+
+public final class io/github/shakeabdulrahman/keystone/llm/ProviderEvent$Finish : io/github/shakeabdulrahman/keystone/llm/ProviderEvent {
+	public fun <init> (Lio/github/shakeabdulrahman/keystone/llm/FinishReason;)V
+	public final fun component1 ()Lio/github/shakeabdulrahman/keystone/llm/FinishReason;
+	public final fun copy (Lio/github/shakeabdulrahman/keystone/llm/FinishReason;)Lio/github/shakeabdulrahman/keystone/llm/ProviderEvent$Finish;
+	public static synthetic fun copy$default (Lio/github/shakeabdulrahman/keystone/llm/ProviderEvent$Finish;Lio/github/shakeabdulrahman/keystone/llm/FinishReason;ILjava/lang/Object;)Lio/github/shakeabdulrahman/keystone/llm/ProviderEvent$Finish;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getReason ()Lio/github/shakeabdulrahman/keystone/llm/FinishReason;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class io/github/shakeabdulrahman/keystone/llm/ProviderEvent$Metadata : io/github/shakeabdulrahman/keystone/llm/ProviderEvent {
+	public fun <init> ()V
+	public fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()Ljava/lang/String;
+	public final fun component3 ()Ljava/lang/String;
+	public final fun copy (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lio/github/shakeabdulrahman/keystone/llm/ProviderEvent$Metadata;
+	public static synthetic fun copy$default (Lio/github/shakeabdulrahman/keystone/llm/ProviderEvent$Metadata;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/Object;)Lio/github/shakeabdulrahman/keystone/llm/ProviderEvent$Metadata;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getModel ()Ljava/lang/String;
+	public final fun getRequestId ()Ljava/lang/String;
+	public final fun getResponseId ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class io/github/shakeabdulrahman/keystone/llm/ProviderEvent$TextDelta : io/github/shakeabdulrahman/keystone/llm/ProviderEvent {
+	public fun <init> (Ljava/lang/String;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun copy (Ljava/lang/String;)Lio/github/shakeabdulrahman/keystone/llm/ProviderEvent$TextDelta;
+	public static synthetic fun copy$default (Lio/github/shakeabdulrahman/keystone/llm/ProviderEvent$TextDelta;Ljava/lang/String;ILjava/lang/Object;)Lio/github/shakeabdulrahman/keystone/llm/ProviderEvent$TextDelta;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getText ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class io/github/shakeabdulrahman/keystone/llm/ProviderEvent$ToolCallChunk : io/github/shakeabdulrahman/keystone/llm/ProviderEvent {
+	public fun <init> (ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;)V
+	public synthetic fun <init> (ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()I
+	public final fun component2 ()Ljava/lang/String;
+	public final fun component3 ()Ljava/lang/String;
+	public final fun component4 ()Ljava/lang/String;
+	public final fun component5 ()Ljava/util/Map;
+	public final fun copy (ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;)Lio/github/shakeabdulrahman/keystone/llm/ProviderEvent$ToolCallChunk;
+	public static synthetic fun copy$default (Lio/github/shakeabdulrahman/keystone/llm/ProviderEvent$ToolCallChunk;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;ILjava/lang/Object;)Lio/github/shakeabdulrahman/keystone/llm/ProviderEvent$ToolCallChunk;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getArgumentsDelta ()Ljava/lang/String;
+	public final fun getId ()Ljava/lang/String;
+	public final fun getIndex ()I
+	public final fun getName ()Ljava/lang/String;
+	public final fun getProviderMetadata ()Ljava/util/Map;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class io/github/shakeabdulrahman/keystone/llm/ProviderEvent$UsageUpdate : io/github/shakeabdulrahman/keystone/llm/ProviderEvent {
+	public fun <init> (Lio/github/shakeabdulrahman/keystone/llm/Usage;)V
+	public final fun component1 ()Lio/github/shakeabdulrahman/keystone/llm/Usage;
+	public final fun copy (Lio/github/shakeabdulrahman/keystone/llm/Usage;)Lio/github/shakeabdulrahman/keystone/llm/ProviderEvent$UsageUpdate;
+	public static synthetic fun copy$default (Lio/github/shakeabdulrahman/keystone/llm/ProviderEvent$UsageUpdate;Lio/github/shakeabdulrahman/keystone/llm/Usage;ILjava/lang/Object;)Lio/github/shakeabdulrahman/keystone/llm/ProviderEvent$UsageUpdate;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getUsage ()Lio/github/shakeabdulrahman/keystone/llm/Usage;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class io/github/shakeabdulrahman/keystone/llm/ProviderRequest {
+	public fun <init> (Ljava/lang/String;Lio/github/shakeabdulrahman/keystone/llm/ChatRequest;Lkotlinx/serialization/json/JsonObject;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()Lio/github/shakeabdulrahman/keystone/llm/ChatRequest;
+	public final fun component3 ()Lkotlinx/serialization/json/JsonObject;
+	public final fun copy (Ljava/lang/String;Lio/github/shakeabdulrahman/keystone/llm/ChatRequest;Lkotlinx/serialization/json/JsonObject;)Lio/github/shakeabdulrahman/keystone/llm/ProviderRequest;
+	public static synthetic fun copy$default (Lio/github/shakeabdulrahman/keystone/llm/ProviderRequest;Ljava/lang/String;Lio/github/shakeabdulrahman/keystone/llm/ChatRequest;Lkotlinx/serialization/json/JsonObject;ILjava/lang/Object;)Lio/github/shakeabdulrahman/keystone/llm/ProviderRequest;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getModel ()Ljava/lang/String;
+	public final fun getOptions ()Lkotlinx/serialization/json/JsonObject;
+	public final fun getRequest ()Lio/github/shakeabdulrahman/keystone/llm/ChatRequest;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public abstract interface class io/github/shakeabdulrahman/keystone/llm/ResponseFormat {
+}
+
+public final class io/github/shakeabdulrahman/keystone/llm/ResponseFormat$JsonMode : io/github/shakeabdulrahman/keystone/llm/ResponseFormat {
+	public static final field INSTANCE Lio/github/shakeabdulrahman/keystone/llm/ResponseFormat$JsonMode;
+	public fun equals (Ljava/lang/Object;)Z
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class io/github/shakeabdulrahman/keystone/llm/ResponseFormat$JsonSchema : io/github/shakeabdulrahman/keystone/llm/ResponseFormat {
+	public fun <init> (Ljava/lang/String;Lkotlinx/serialization/json/JsonObject;ZZ)V
+	public synthetic fun <init> (Ljava/lang/String;Lkotlinx/serialization/json/JsonObject;ZZILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()Lkotlinx/serialization/json/JsonObject;
+	public final fun component3 ()Z
+	public final fun component4 ()Z
+	public final fun copy (Ljava/lang/String;Lkotlinx/serialization/json/JsonObject;ZZ)Lio/github/shakeabdulrahman/keystone/llm/ResponseFormat$JsonSchema;
+	public static synthetic fun copy$default (Lio/github/shakeabdulrahman/keystone/llm/ResponseFormat$JsonSchema;Ljava/lang/String;Lkotlinx/serialization/json/JsonObject;ZZILjava/lang/Object;)Lio/github/shakeabdulrahman/keystone/llm/ResponseFormat$JsonSchema;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getAllowDowngrade ()Z
+	public final fun getName ()Ljava/lang/String;
+	public final fun getSchema ()Lkotlinx/serialization/json/JsonObject;
+	public final fun getStrict ()Z
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class io/github/shakeabdulrahman/keystone/llm/ResponseFormat$Text : io/github/shakeabdulrahman/keystone/llm/ResponseFormat {
+	public static final field INSTANCE Lio/github/shakeabdulrahman/keystone/llm/ResponseFormat$Text;
+	public fun equals (Ljava/lang/Object;)Z
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class io/github/shakeabdulrahman/keystone/llm/ResponseMetadata {
+	public fun <init> (Lio/github/shakeabdulrahman/keystone/llm/ModelRef;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Lio/github/shakeabdulrahman/keystone/llm/StructuredEnforcement;)V
+	public synthetic fun <init> (Lio/github/shakeabdulrahman/keystone/llm/ModelRef;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Lio/github/shakeabdulrahman/keystone/llm/StructuredEnforcement;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Lio/github/shakeabdulrahman/keystone/llm/ModelRef;
+	public final fun component2 ()Ljava/lang/String;
+	public final fun component3 ()Ljava/lang/String;
+	public final fun component4 ()Ljava/lang/String;
+	public final fun component5 ()Ljava/util/List;
+	public final fun component6 ()Lio/github/shakeabdulrahman/keystone/llm/StructuredEnforcement;
+	public final fun copy (Lio/github/shakeabdulrahman/keystone/llm/ModelRef;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Lio/github/shakeabdulrahman/keystone/llm/StructuredEnforcement;)Lio/github/shakeabdulrahman/keystone/llm/ResponseMetadata;
+	public static synthetic fun copy$default (Lio/github/shakeabdulrahman/keystone/llm/ResponseMetadata;Lio/github/shakeabdulrahman/keystone/llm/ModelRef;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Lio/github/shakeabdulrahman/keystone/llm/StructuredEnforcement;ILjava/lang/Object;)Lio/github/shakeabdulrahman/keystone/llm/ResponseMetadata;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getAttempts ()Ljava/util/List;
+	public final fun getModel ()Ljava/lang/String;
+	public final fun getRequestId ()Ljava/lang/String;
+	public final fun getResponseId ()Ljava/lang/String;
+	public final fun getStructuredEnforcement ()Lio/github/shakeabdulrahman/keystone/llm/StructuredEnforcement;
+	public final fun getTarget ()Lio/github/shakeabdulrahman/keystone/llm/ModelRef;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class io/github/shakeabdulrahman/keystone/llm/RetryPolicy {
+	public static final field Companion Lio/github/shakeabdulrahman/keystone/llm/RetryPolicy$Companion;
+	public synthetic fun <init> (IJJDDJLkotlin/random/Random;Lkotlin/jvm/functions/Function1;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public synthetic fun <init> (IJJDDJLkotlin/random/Random;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun delayBeforeRetry-3UGz1UU (ILio/github/shakeabdulrahman/keystone/llm/LlmException;)Lkotlin/time/Duration;
+	public final fun getInitialDelay-UwyO8pc ()J
+	public final fun getJitter ()D
+	public final fun getMaxAttempts ()I
+	public final fun getMaxDelay-UwyO8pc ()J
+	public final fun getMaxRetryAfter-UwyO8pc ()J
+	public final fun getMultiplier ()D
+	public final fun getRetryOn ()Lkotlin/jvm/functions/Function1;
+}
+
+public final class io/github/shakeabdulrahman/keystone/llm/RetryPolicy$Companion {
+	public final fun getNone ()Lio/github/shakeabdulrahman/keystone/llm/RetryPolicy;
+}
+
+public final class io/github/shakeabdulrahman/keystone/llm/Route {
+	public fun <init> (Lio/github/shakeabdulrahman/keystone/llm/ModelRef;[Lio/github/shakeabdulrahman/keystone/llm/ModelRef;)V
+	public fun <init> (Ljava/util/List;)V
+	public final fun component1 ()Ljava/util/List;
+	public final fun copy (Ljava/util/List;)Lio/github/shakeabdulrahman/keystone/llm/Route;
+	public static synthetic fun copy$default (Lio/github/shakeabdulrahman/keystone/llm/Route;Ljava/util/List;ILjava/lang/Object;)Lio/github/shakeabdulrahman/keystone/llm/Route;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getTargets ()Ljava/util/List;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class io/github/shakeabdulrahman/keystone/llm/SchemaViolation {
+	public fun <init> (Ljava/lang/String;Ljava/lang/String;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()Ljava/lang/String;
+	public final fun copy (Ljava/lang/String;Ljava/lang/String;)Lio/github/shakeabdulrahman/keystone/llm/SchemaViolation;
+	public static synthetic fun copy$default (Lio/github/shakeabdulrahman/keystone/llm/SchemaViolation;Ljava/lang/String;Ljava/lang/String;ILjava/lang/Object;)Lio/github/shakeabdulrahman/keystone/llm/SchemaViolation;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getMessage ()Ljava/lang/String;
+	public final fun getPath ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public abstract interface class io/github/shakeabdulrahman/keystone/llm/StreamEvent {
+}
+
+public final class io/github/shakeabdulrahman/keystone/llm/StreamEvent$Completed : io/github/shakeabdulrahman/keystone/llm/StreamEvent {
+	public fun <init> (Lio/github/shakeabdulrahman/keystone/llm/ChatResponse;)V
+	public final fun component1 ()Lio/github/shakeabdulrahman/keystone/llm/ChatResponse;
+	public final fun copy (Lio/github/shakeabdulrahman/keystone/llm/ChatResponse;)Lio/github/shakeabdulrahman/keystone/llm/StreamEvent$Completed;
+	public static synthetic fun copy$default (Lio/github/shakeabdulrahman/keystone/llm/StreamEvent$Completed;Lio/github/shakeabdulrahman/keystone/llm/ChatResponse;ILjava/lang/Object;)Lio/github/shakeabdulrahman/keystone/llm/StreamEvent$Completed;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getResponse ()Lio/github/shakeabdulrahman/keystone/llm/ChatResponse;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class io/github/shakeabdulrahman/keystone/llm/StreamEvent$Restarted : io/github/shakeabdulrahman/keystone/llm/StreamEvent {
+	public fun <init> (Lio/github/shakeabdulrahman/keystone/llm/Attempt;Lio/github/shakeabdulrahman/keystone/llm/ModelRef;)V
+	public final fun component1 ()Lio/github/shakeabdulrahman/keystone/llm/Attempt;
+	public final fun component2 ()Lio/github/shakeabdulrahman/keystone/llm/ModelRef;
+	public final fun copy (Lio/github/shakeabdulrahman/keystone/llm/Attempt;Lio/github/shakeabdulrahman/keystone/llm/ModelRef;)Lio/github/shakeabdulrahman/keystone/llm/StreamEvent$Restarted;
+	public static synthetic fun copy$default (Lio/github/shakeabdulrahman/keystone/llm/StreamEvent$Restarted;Lio/github/shakeabdulrahman/keystone/llm/Attempt;Lio/github/shakeabdulrahman/keystone/llm/ModelRef;ILjava/lang/Object;)Lio/github/shakeabdulrahman/keystone/llm/StreamEvent$Restarted;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getFailed ()Lio/github/shakeabdulrahman/keystone/llm/Attempt;
+	public final fun getNext ()Lio/github/shakeabdulrahman/keystone/llm/ModelRef;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class io/github/shakeabdulrahman/keystone/llm/StreamEvent$Started : io/github/shakeabdulrahman/keystone/llm/StreamEvent {
+	public fun <init> (Lio/github/shakeabdulrahman/keystone/llm/ModelRef;Ljava/lang/String;)V
+	public final fun component1 ()Lio/github/shakeabdulrahman/keystone/llm/ModelRef;
+	public final fun component2 ()Ljava/lang/String;
+	public final fun copy (Lio/github/shakeabdulrahman/keystone/llm/ModelRef;Ljava/lang/String;)Lio/github/shakeabdulrahman/keystone/llm/StreamEvent$Started;
+	public static synthetic fun copy$default (Lio/github/shakeabdulrahman/keystone/llm/StreamEvent$Started;Lio/github/shakeabdulrahman/keystone/llm/ModelRef;Ljava/lang/String;ILjava/lang/Object;)Lio/github/shakeabdulrahman/keystone/llm/StreamEvent$Started;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getRequestId ()Ljava/lang/String;
+	public final fun getTarget ()Lio/github/shakeabdulrahman/keystone/llm/ModelRef;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class io/github/shakeabdulrahman/keystone/llm/StreamEvent$TextDelta : io/github/shakeabdulrahman/keystone/llm/StreamEvent {
+	public fun <init> (Ljava/lang/String;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun copy (Ljava/lang/String;)Lio/github/shakeabdulrahman/keystone/llm/StreamEvent$TextDelta;
+	public static synthetic fun copy$default (Lio/github/shakeabdulrahman/keystone/llm/StreamEvent$TextDelta;Ljava/lang/String;ILjava/lang/Object;)Lio/github/shakeabdulrahman/keystone/llm/StreamEvent$TextDelta;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getText ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class io/github/shakeabdulrahman/keystone/llm/StreamEvent$ToolCallCompleted : io/github/shakeabdulrahman/keystone/llm/StreamEvent {
+	public fun <init> (ILio/github/shakeabdulrahman/keystone/llm/ToolCall;)V
+	public final fun component1 ()I
+	public final fun component2 ()Lio/github/shakeabdulrahman/keystone/llm/ToolCall;
+	public final fun copy (ILio/github/shakeabdulrahman/keystone/llm/ToolCall;)Lio/github/shakeabdulrahman/keystone/llm/StreamEvent$ToolCallCompleted;
+	public static synthetic fun copy$default (Lio/github/shakeabdulrahman/keystone/llm/StreamEvent$ToolCallCompleted;ILio/github/shakeabdulrahman/keystone/llm/ToolCall;ILjava/lang/Object;)Lio/github/shakeabdulrahman/keystone/llm/StreamEvent$ToolCallCompleted;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getCall ()Lio/github/shakeabdulrahman/keystone/llm/ToolCall;
+	public final fun getIndex ()I
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class io/github/shakeabdulrahman/keystone/llm/StreamEvent$ToolCallDelta : io/github/shakeabdulrahman/keystone/llm/StreamEvent {
+	public fun <init> (ILjava/lang/String;)V
+	public final fun component1 ()I
+	public final fun component2 ()Ljava/lang/String;
+	public final fun copy (ILjava/lang/String;)Lio/github/shakeabdulrahman/keystone/llm/StreamEvent$ToolCallDelta;
+	public static synthetic fun copy$default (Lio/github/shakeabdulrahman/keystone/llm/StreamEvent$ToolCallDelta;ILjava/lang/String;ILjava/lang/Object;)Lio/github/shakeabdulrahman/keystone/llm/StreamEvent$ToolCallDelta;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getArgumentsDelta ()Ljava/lang/String;
+	public final fun getIndex ()I
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class io/github/shakeabdulrahman/keystone/llm/StreamEvent$ToolCallStarted : io/github/shakeabdulrahman/keystone/llm/StreamEvent {
+	public fun <init> (ILjava/lang/String;Ljava/lang/String;)V
+	public final fun component1 ()I
+	public final fun component2 ()Ljava/lang/String;
+	public final fun component3 ()Ljava/lang/String;
+	public final fun copy (ILjava/lang/String;Ljava/lang/String;)Lio/github/shakeabdulrahman/keystone/llm/StreamEvent$ToolCallStarted;
+	public static synthetic fun copy$default (Lio/github/shakeabdulrahman/keystone/llm/StreamEvent$ToolCallStarted;ILjava/lang/String;Ljava/lang/String;ILjava/lang/Object;)Lio/github/shakeabdulrahman/keystone/llm/StreamEvent$ToolCallStarted;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getId ()Ljava/lang/String;
+	public final fun getIndex ()I
+	public final fun getName ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class io/github/shakeabdulrahman/keystone/llm/StreamRestartPolicy : java/lang/Enum {
+	public static final field EmitRestarted Lio/github/shakeabdulrahman/keystone/llm/StreamRestartPolicy;
+	public static final field Never Lio/github/shakeabdulrahman/keystone/llm/StreamRestartPolicy;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public static fun valueOf (Ljava/lang/String;)Lio/github/shakeabdulrahman/keystone/llm/StreamRestartPolicy;
+	public static fun values ()[Lio/github/shakeabdulrahman/keystone/llm/StreamRestartPolicy;
+}
+
+public final class io/github/shakeabdulrahman/keystone/llm/StructuredEnforcement : java/lang/Enum {
+	public static final field PromptOnly Lio/github/shakeabdulrahman/keystone/llm/StructuredEnforcement;
+	public static final field ProviderJsonMode Lio/github/shakeabdulrahman/keystone/llm/StructuredEnforcement;
+	public static final field ProviderSchema Lio/github/shakeabdulrahman/keystone/llm/StructuredEnforcement;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public static fun valueOf (Ljava/lang/String;)Lio/github/shakeabdulrahman/keystone/llm/StructuredEnforcement;
+	public static fun values ()[Lio/github/shakeabdulrahman/keystone/llm/StructuredEnforcement;
+}
+
+public final class io/github/shakeabdulrahman/keystone/llm/StructuredOutputException : io/github/shakeabdulrahman/keystone/llm/LlmException {
+	public fun <init> (Lio/github/shakeabdulrahman/keystone/llm/StructuredOutputException$Reason;Ljava/lang/String;Ljava/lang/String;Lio/github/shakeabdulrahman/keystone/llm/ChatResponse;Ljava/lang/Throwable;)V
+	public synthetic fun <init> (Lio/github/shakeabdulrahman/keystone/llm/StructuredOutputException$Reason;Ljava/lang/String;Ljava/lang/String;Lio/github/shakeabdulrahman/keystone/llm/ChatResponse;Ljava/lang/Throwable;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun getRawText ()Ljava/lang/String;
+	public final fun getReason ()Lio/github/shakeabdulrahman/keystone/llm/StructuredOutputException$Reason;
+	public final fun getResponse ()Lio/github/shakeabdulrahman/keystone/llm/ChatResponse;
+}
+
+public abstract interface class io/github/shakeabdulrahman/keystone/llm/StructuredOutputException$Reason {
+}
+
+public final class io/github/shakeabdulrahman/keystone/llm/StructuredOutputException$Reason$DecodingFailed : io/github/shakeabdulrahman/keystone/llm/StructuredOutputException$Reason {
+	public fun <init> (Ljava/lang/String;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun copy (Ljava/lang/String;)Lio/github/shakeabdulrahman/keystone/llm/StructuredOutputException$Reason$DecodingFailed;
+	public static synthetic fun copy$default (Lio/github/shakeabdulrahman/keystone/llm/StructuredOutputException$Reason$DecodingFailed;Ljava/lang/String;ILjava/lang/Object;)Lio/github/shakeabdulrahman/keystone/llm/StructuredOutputException$Reason$DecodingFailed;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getDetail ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class io/github/shakeabdulrahman/keystone/llm/StructuredOutputException$Reason$MalformedJson : io/github/shakeabdulrahman/keystone/llm/StructuredOutputException$Reason {
+	public fun <init> (Ljava/lang/String;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun copy (Ljava/lang/String;)Lio/github/shakeabdulrahman/keystone/llm/StructuredOutputException$Reason$MalformedJson;
+	public static synthetic fun copy$default (Lio/github/shakeabdulrahman/keystone/llm/StructuredOutputException$Reason$MalformedJson;Ljava/lang/String;ILjava/lang/Object;)Lio/github/shakeabdulrahman/keystone/llm/StructuredOutputException$Reason$MalformedJson;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getDetail ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class io/github/shakeabdulrahman/keystone/llm/StructuredOutputException$Reason$NoContent : io/github/shakeabdulrahman/keystone/llm/StructuredOutputException$Reason {
+	public static final field INSTANCE Lio/github/shakeabdulrahman/keystone/llm/StructuredOutputException$Reason$NoContent;
+	public fun equals (Ljava/lang/Object;)Z
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class io/github/shakeabdulrahman/keystone/llm/StructuredOutputException$Reason$SchemaMismatch : io/github/shakeabdulrahman/keystone/llm/StructuredOutputException$Reason {
+	public fun <init> (Ljava/util/List;)V
+	public final fun component1 ()Ljava/util/List;
+	public final fun copy (Ljava/util/List;)Lio/github/shakeabdulrahman/keystone/llm/StructuredOutputException$Reason$SchemaMismatch;
+	public static synthetic fun copy$default (Lio/github/shakeabdulrahman/keystone/llm/StructuredOutputException$Reason$SchemaMismatch;Ljava/util/List;ILjava/lang/Object;)Lio/github/shakeabdulrahman/keystone/llm/StructuredOutputException$Reason$SchemaMismatch;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getViolations ()Ljava/util/List;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class io/github/shakeabdulrahman/keystone/llm/StructuredOutputException$Reason$Truncated : io/github/shakeabdulrahman/keystone/llm/StructuredOutputException$Reason {
+	public static final field INSTANCE Lio/github/shakeabdulrahman/keystone/llm/StructuredOutputException$Reason$Truncated;
+	public fun equals (Ljava/lang/Object;)Z
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class io/github/shakeabdulrahman/keystone/llm/StructuredOutputKt {
+	public static final fun chatStructured (Lio/github/shakeabdulrahman/keystone/llm/LlmClient;Lio/github/shakeabdulrahman/keystone/llm/ChatRequest;Lkotlinx/serialization/DeserializationStrategy;Lkotlinx/serialization/json/JsonObject;Ljava/lang/String;ZZLkotlinx/serialization/json/Json;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public static synthetic fun chatStructured$default (Lio/github/shakeabdulrahman/keystone/llm/LlmClient;Lio/github/shakeabdulrahman/keystone/llm/ChatRequest;Lkotlinx/serialization/DeserializationStrategy;Lkotlinx/serialization/json/JsonObject;Ljava/lang/String;ZZLkotlinx/serialization/json/Json;Lkotlin/coroutines/Continuation;ILjava/lang/Object;)Ljava/lang/Object;
+	public static final fun getLenientDecoding ()Lkotlinx/serialization/json/Json;
+}
+
+public final class io/github/shakeabdulrahman/keystone/llm/StructuredOutputSupport : java/lang/Enum {
+	public static final field JsonMode Lio/github/shakeabdulrahman/keystone/llm/StructuredOutputSupport;
+	public static final field JsonSchema Lio/github/shakeabdulrahman/keystone/llm/StructuredOutputSupport;
+	public static final field None Lio/github/shakeabdulrahman/keystone/llm/StructuredOutputSupport;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public static fun valueOf (Ljava/lang/String;)Lio/github/shakeabdulrahman/keystone/llm/StructuredOutputSupport;
+	public static fun values ()[Lio/github/shakeabdulrahman/keystone/llm/StructuredOutputSupport;
+}
+
+public final class io/github/shakeabdulrahman/keystone/llm/StructuredResponse {
+	public fun <init> (Ljava/lang/Object;Lio/github/shakeabdulrahman/keystone/llm/ChatResponse;)V
+	public final fun component1 ()Ljava/lang/Object;
+	public final fun component2 ()Lio/github/shakeabdulrahman/keystone/llm/ChatResponse;
+	public final fun copy (Ljava/lang/Object;Lio/github/shakeabdulrahman/keystone/llm/ChatResponse;)Lio/github/shakeabdulrahman/keystone/llm/StructuredResponse;
+	public static synthetic fun copy$default (Lio/github/shakeabdulrahman/keystone/llm/StructuredResponse;Ljava/lang/Object;Lio/github/shakeabdulrahman/keystone/llm/ChatResponse;ILjava/lang/Object;)Lio/github/shakeabdulrahman/keystone/llm/StructuredResponse;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getEnforcement ()Lio/github/shakeabdulrahman/keystone/llm/StructuredEnforcement;
+	public final fun getResponse ()Lio/github/shakeabdulrahman/keystone/llm/ChatResponse;
+	public final fun getValue ()Ljava/lang/Object;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class io/github/shakeabdulrahman/keystone/llm/Support : java/lang/Enum {
+	public static final field Native Lio/github/shakeabdulrahman/keystone/llm/Support;
+	public static final field Unsupported Lio/github/shakeabdulrahman/keystone/llm/Support;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public static fun valueOf (Ljava/lang/String;)Lio/github/shakeabdulrahman/keystone/llm/Support;
+	public static fun values ()[Lio/github/shakeabdulrahman/keystone/llm/Support;
+}
+
+public final class io/github/shakeabdulrahman/keystone/llm/Timeouts {
+	public synthetic fun <init> (Lkotlin/time/Duration;Lkotlin/time/Duration;Lkotlin/time/Duration;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public synthetic fun <init> (Lkotlin/time/Duration;Lkotlin/time/Duration;Lkotlin/time/Duration;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1-FghU774 ()Lkotlin/time/Duration;
+	public final fun component2-FghU774 ()Lkotlin/time/Duration;
+	public final fun component3-FghU774 ()Lkotlin/time/Duration;
+	public final fun copy-NIICwX4 (Lkotlin/time/Duration;Lkotlin/time/Duration;Lkotlin/time/Duration;)Lio/github/shakeabdulrahman/keystone/llm/Timeouts;
+	public static synthetic fun copy-NIICwX4$default (Lio/github/shakeabdulrahman/keystone/llm/Timeouts;Lkotlin/time/Duration;Lkotlin/time/Duration;Lkotlin/time/Duration;ILjava/lang/Object;)Lio/github/shakeabdulrahman/keystone/llm/Timeouts;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getFirstEvent-FghU774 ()Lkotlin/time/Duration;
+	public final fun getIdle-FghU774 ()Lkotlin/time/Duration;
+	public final fun getTotal-FghU774 ()Lkotlin/time/Duration;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public abstract interface class io/github/shakeabdulrahman/keystone/llm/TokenEstimator {
+	public static final field Companion Lio/github/shakeabdulrahman/keystone/llm/TokenEstimator$Companion;
+	public abstract fun estimate (Ljava/lang/String;)J
+}
+
+public final class io/github/shakeabdulrahman/keystone/llm/TokenEstimator$Companion {
+	public final fun charsPerToken (D)Lio/github/shakeabdulrahman/keystone/llm/TokenEstimator;
+	public static synthetic fun charsPerToken$default (Lio/github/shakeabdulrahman/keystone/llm/TokenEstimator$Companion;DILjava/lang/Object;)Lio/github/shakeabdulrahman/keystone/llm/TokenEstimator;
+}
+
+public final class io/github/shakeabdulrahman/keystone/llm/Tool {
+	public fun <init> (Ljava/lang/String;Ljava/lang/String;Lkotlinx/serialization/json/JsonObject;)V
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getDescription ()Ljava/lang/String;
+	public final fun getName ()Ljava/lang/String;
+	public final fun getParameters ()Lkotlinx/serialization/json/JsonObject;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public abstract interface class io/github/shakeabdulrahman/keystone/llm/ToolArgumentError {
+}
+
+public final class io/github/shakeabdulrahman/keystone/llm/ToolArgumentError$MalformedJson : io/github/shakeabdulrahman/keystone/llm/ToolArgumentError {
+	public fun <init> (Ljava/lang/String;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun copy (Ljava/lang/String;)Lio/github/shakeabdulrahman/keystone/llm/ToolArgumentError$MalformedJson;
+	public static synthetic fun copy$default (Lio/github/shakeabdulrahman/keystone/llm/ToolArgumentError$MalformedJson;Ljava/lang/String;ILjava/lang/Object;)Lio/github/shakeabdulrahman/keystone/llm/ToolArgumentError$MalformedJson;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getDetail ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class io/github/shakeabdulrahman/keystone/llm/ToolArgumentError$NotAnObject : io/github/shakeabdulrahman/keystone/llm/ToolArgumentError {
+	public static final field INSTANCE Lio/github/shakeabdulrahman/keystone/llm/ToolArgumentError$NotAnObject;
+	public fun equals (Ljava/lang/Object;)Z
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class io/github/shakeabdulrahman/keystone/llm/ToolArgumentError$SchemaMismatch : io/github/shakeabdulrahman/keystone/llm/ToolArgumentError {
+	public fun <init> (Ljava/util/List;)V
+	public final fun component1 ()Ljava/util/List;
+	public final fun copy (Ljava/util/List;)Lio/github/shakeabdulrahman/keystone/llm/ToolArgumentError$SchemaMismatch;
+	public static synthetic fun copy$default (Lio/github/shakeabdulrahman/keystone/llm/ToolArgumentError$SchemaMismatch;Ljava/util/List;ILjava/lang/Object;)Lio/github/shakeabdulrahman/keystone/llm/ToolArgumentError$SchemaMismatch;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getViolations ()Ljava/util/List;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class io/github/shakeabdulrahman/keystone/llm/ToolArgumentError$UnknownTool : io/github/shakeabdulrahman/keystone/llm/ToolArgumentError {
+	public static final field INSTANCE Lio/github/shakeabdulrahman/keystone/llm/ToolArgumentError$UnknownTool;
+	public fun equals (Ljava/lang/Object;)Z
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public abstract interface class io/github/shakeabdulrahman/keystone/llm/ToolArguments {
+}
+
+public final class io/github/shakeabdulrahman/keystone/llm/ToolArguments$Invalid : io/github/shakeabdulrahman/keystone/llm/ToolArguments {
+	public fun <init> (Lio/github/shakeabdulrahman/keystone/llm/ToolArgumentError;)V
+	public final fun component1 ()Lio/github/shakeabdulrahman/keystone/llm/ToolArgumentError;
+	public final fun copy (Lio/github/shakeabdulrahman/keystone/llm/ToolArgumentError;)Lio/github/shakeabdulrahman/keystone/llm/ToolArguments$Invalid;
+	public static synthetic fun copy$default (Lio/github/shakeabdulrahman/keystone/llm/ToolArguments$Invalid;Lio/github/shakeabdulrahman/keystone/llm/ToolArgumentError;ILjava/lang/Object;)Lio/github/shakeabdulrahman/keystone/llm/ToolArguments$Invalid;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getError ()Lio/github/shakeabdulrahman/keystone/llm/ToolArgumentError;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class io/github/shakeabdulrahman/keystone/llm/ToolArguments$Valid : io/github/shakeabdulrahman/keystone/llm/ToolArguments {
+	public fun <init> (Lkotlinx/serialization/json/JsonObject;)V
+	public final fun component1 ()Lkotlinx/serialization/json/JsonObject;
+	public final fun copy (Lkotlinx/serialization/json/JsonObject;)Lio/github/shakeabdulrahman/keystone/llm/ToolArguments$Valid;
+	public static synthetic fun copy$default (Lio/github/shakeabdulrahman/keystone/llm/ToolArguments$Valid;Lkotlinx/serialization/json/JsonObject;ILjava/lang/Object;)Lio/github/shakeabdulrahman/keystone/llm/ToolArguments$Valid;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getJson ()Lkotlinx/serialization/json/JsonObject;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class io/github/shakeabdulrahman/keystone/llm/ToolCall {
+	public fun <init> (Ljava/lang/String;Ljava/lang/String;Lio/github/shakeabdulrahman/keystone/llm/ToolArguments;Ljava/lang/String;Ljava/util/Map;)V
+	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/String;Lio/github/shakeabdulrahman/keystone/llm/ToolArguments;Ljava/lang/String;Ljava/util/Map;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()Ljava/lang/String;
+	public final fun component3 ()Lio/github/shakeabdulrahman/keystone/llm/ToolArguments;
+	public final fun component4 ()Ljava/lang/String;
+	public final fun component5 ()Ljava/util/Map;
+	public final fun copy (Ljava/lang/String;Ljava/lang/String;Lio/github/shakeabdulrahman/keystone/llm/ToolArguments;Ljava/lang/String;Ljava/util/Map;)Lio/github/shakeabdulrahman/keystone/llm/ToolCall;
+	public static synthetic fun copy$default (Lio/github/shakeabdulrahman/keystone/llm/ToolCall;Ljava/lang/String;Ljava/lang/String;Lio/github/shakeabdulrahman/keystone/llm/ToolArguments;Ljava/lang/String;Ljava/util/Map;ILjava/lang/Object;)Lio/github/shakeabdulrahman/keystone/llm/ToolCall;
+	public final fun decodeArguments (Lkotlinx/serialization/DeserializationStrategy;Lkotlinx/serialization/json/Json;)Ljava/lang/Object;
+	public static synthetic fun decodeArguments$default (Lio/github/shakeabdulrahman/keystone/llm/ToolCall;Lkotlinx/serialization/DeserializationStrategy;Lkotlinx/serialization/json/Json;ILjava/lang/Object;)Ljava/lang/Object;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getArguments ()Lio/github/shakeabdulrahman/keystone/llm/ToolArguments;
+	public final fun getArgumentsOrNull ()Lkotlinx/serialization/json/JsonObject;
+	public final fun getId ()Ljava/lang/String;
+	public final fun getName ()Ljava/lang/String;
+	public final fun getProviderMetadata ()Ljava/util/Map;
+	public final fun getRawArguments ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public abstract interface class io/github/shakeabdulrahman/keystone/llm/ToolChoice {
+}
+
+public final class io/github/shakeabdulrahman/keystone/llm/ToolChoice$Auto : io/github/shakeabdulrahman/keystone/llm/ToolChoice {
+	public static final field INSTANCE Lio/github/shakeabdulrahman/keystone/llm/ToolChoice$Auto;
+	public fun equals (Ljava/lang/Object;)Z
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class io/github/shakeabdulrahman/keystone/llm/ToolChoice$None : io/github/shakeabdulrahman/keystone/llm/ToolChoice {
+	public static final field INSTANCE Lio/github/shakeabdulrahman/keystone/llm/ToolChoice$None;
+	public fun equals (Ljava/lang/Object;)Z
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class io/github/shakeabdulrahman/keystone/llm/ToolChoice$Required : io/github/shakeabdulrahman/keystone/llm/ToolChoice {
+	public static final field INSTANCE Lio/github/shakeabdulrahman/keystone/llm/ToolChoice$Required;
+	public fun equals (Ljava/lang/Object;)Z
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class io/github/shakeabdulrahman/keystone/llm/ToolChoice$Specific : io/github/shakeabdulrahman/keystone/llm/ToolChoice {
+	public fun <init> (Ljava/lang/String;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun copy (Ljava/lang/String;)Lio/github/shakeabdulrahman/keystone/llm/ToolChoice$Specific;
+	public static synthetic fun copy$default (Lio/github/shakeabdulrahman/keystone/llm/ToolChoice$Specific;Ljava/lang/String;ILjava/lang/Object;)Lio/github/shakeabdulrahman/keystone/llm/ToolChoice$Specific;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getToolName ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class io/github/shakeabdulrahman/keystone/llm/Usage {
+	public static final field Companion Lio/github/shakeabdulrahman/keystone/llm/Usage$Companion;
+	public fun <init> ()V
+	public fun <init> (Ljava/lang/Long;Ljava/lang/Long;Ljava/lang/Long;Lio/github/shakeabdulrahman/keystone/llm/UsageSource;)V
+	public synthetic fun <init> (Ljava/lang/Long;Ljava/lang/Long;Ljava/lang/Long;Lio/github/shakeabdulrahman/keystone/llm/UsageSource;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/lang/Long;
+	public final fun component2 ()Ljava/lang/Long;
+	public final fun component3 ()Ljava/lang/Long;
+	public final fun component4 ()Lio/github/shakeabdulrahman/keystone/llm/UsageSource;
+	public final fun copy (Ljava/lang/Long;Ljava/lang/Long;Ljava/lang/Long;Lio/github/shakeabdulrahman/keystone/llm/UsageSource;)Lio/github/shakeabdulrahman/keystone/llm/Usage;
+	public static synthetic fun copy$default (Lio/github/shakeabdulrahman/keystone/llm/Usage;Ljava/lang/Long;Ljava/lang/Long;Ljava/lang/Long;Lio/github/shakeabdulrahman/keystone/llm/UsageSource;ILjava/lang/Object;)Lio/github/shakeabdulrahman/keystone/llm/Usage;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getCachedInputTokens ()Ljava/lang/Long;
+	public final fun getInputTokens ()Ljava/lang/Long;
+	public final fun getOutputTokens ()Ljava/lang/Long;
+	public final fun getSource ()Lio/github/shakeabdulrahman/keystone/llm/UsageSource;
+	public final fun getTotalTokens ()Ljava/lang/Long;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class io/github/shakeabdulrahman/keystone/llm/Usage$Companion {
+	public final fun getUnknown ()Lio/github/shakeabdulrahman/keystone/llm/Usage;
+}
+
+public final class io/github/shakeabdulrahman/keystone/llm/UsageSource : java/lang/Enum {
+	public static final field Estimated Lio/github/shakeabdulrahman/keystone/llm/UsageSource;
+	public static final field Reported Lio/github/shakeabdulrahman/keystone/llm/UsageSource;
+	public static final field Unknown Lio/github/shakeabdulrahman/keystone/llm/UsageSource;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public static fun valueOf (Ljava/lang/String;)Lio/github/shakeabdulrahman/keystone/llm/UsageSource;
+	public static fun values ()[Lio/github/shakeabdulrahman/keystone/llm/UsageSource;
+}
+
+public final class io/github/shakeabdulrahman/keystone/llm/http/HttpRequest {
+	public fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;[BLjava/lang/String;)V
+	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;[BLjava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun getBody ()[B
+	public final fun getContentType ()Ljava/lang/String;
+	public final fun getHeaders ()Ljava/util/Map;
+	public final fun getMethod ()Ljava/lang/String;
+	public final fun getUrl ()Ljava/lang/String;
+	public fun toString ()Ljava/lang/String;
+}
+
+public abstract interface class io/github/shakeabdulrahman/keystone/llm/http/HttpResponse {
+	public abstract fun getStatus ()I
+	public abstract fun header (Ljava/lang/String;)Ljava/lang/String;
+	public abstract fun readChunk (Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+}
+
+public abstract interface class io/github/shakeabdulrahman/keystone/llm/http/HttpTransport : java/lang/AutoCloseable {
+	public abstract fun close ()V
+	public abstract fun execute (Lio/github/shakeabdulrahman/keystone/llm/http/HttpRequest;Lkotlin/jvm/functions/Function2;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+}
+
+public final class io/github/shakeabdulrahman/keystone/llm/http/HttpTransport$DefaultImpls {
+	public static fun close (Lio/github/shakeabdulrahman/keystone/llm/http/HttpTransport;)V
+}
+
+public final class io/github/shakeabdulrahman/keystone/llm/http/HttpTransportKt {
+	public static final fun readText (Lio/github/shakeabdulrahman/keystone/llm/http/HttpResponse;ILkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public static synthetic fun readText$default (Lio/github/shakeabdulrahman/keystone/llm/http/HttpResponse;ILkotlin/coroutines/Continuation;ILjava/lang/Object;)Ljava/lang/Object;
+}
+
+public final class io/github/shakeabdulrahman/keystone/llm/schema/JsonSchemaGenerator {
+	public static final field INSTANCE Lio/github/shakeabdulrahman/keystone/llm/schema/JsonSchemaGenerator;
+	public final fun from (Lkotlinx/serialization/descriptors/SerialDescriptor;)Lkotlinx/serialization/json/JsonObject;
+}
+
+public final class io/github/shakeabdulrahman/keystone/llm/schema/JsonSchemaValidator {
+	public static final field INSTANCE Lio/github/shakeabdulrahman/keystone/llm/schema/JsonSchemaValidator;
+	public final fun validate (Lkotlinx/serialization/json/JsonElement;Lkotlinx/serialization/json/JsonObject;)Ljava/util/List;
+}
+

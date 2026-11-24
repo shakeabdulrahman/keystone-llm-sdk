@@ -1,0 +1,19 @@
+# Gradle / Kotlin
+.gradle/
+.kotlin/
+build/
+local.properties
+
+# IDE / OS
+.idea/
+*.iml
+.DS_Store
+captures/
+xcuserdata/
+
+# Secrets: never commit
+*.jks
+*.keystore
+*.gpg
+*.asc
+.env

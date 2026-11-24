@@ -1,0 +1,35 @@
+public final class io/github/shakeabdulrahman/keystone/llm/openai/OpenAiCompatibleOptions {
+	public fun <init> ()V
+	public fun <init> (Ljava/lang/String;ZLjava/util/Map;Ljava/lang/String;)V
+	public synthetic fun <init> (Ljava/lang/String;ZLjava/util/Map;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()Z
+	public final fun component3 ()Ljava/util/Map;
+	public final fun component4 ()Ljava/lang/String;
+	public final fun copy (Ljava/lang/String;ZLjava/util/Map;Ljava/lang/String;)Lio/github/shakeabdulrahman/keystone/llm/openai/OpenAiCompatibleOptions;
+	public static synthetic fun copy$default (Lio/github/shakeabdulrahman/keystone/llm/openai/OpenAiCompatibleOptions;Ljava/lang/String;ZLjava/util/Map;Ljava/lang/String;ILjava/lang/Object;)Lio/github/shakeabdulrahman/keystone/llm/openai/OpenAiCompatibleOptions;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getExtraHeaders ()Ljava/util/Map;
+	public final fun getIncludeStreamUsage ()Z
+	public final fun getMaxTokensField ()Ljava/lang/String;
+	public final fun getRequestIdHeader ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class io/github/shakeabdulrahman/keystone/llm/openai/OpenAiCompatibleProvider : io/github/shakeabdulrahman/keystone/llm/LlmProvider {
+	public static final field Companion Lio/github/shakeabdulrahman/keystone/llm/openai/OpenAiCompatibleProvider$Companion;
+	public fun <init> (Ljava/lang/String;Ljava/lang/String;Lio/github/shakeabdulrahman/keystone/llm/Auth;Lkotlin/jvm/functions/Function1;Lio/github/shakeabdulrahman/keystone/llm/openai/OpenAiCompatibleOptions;Lio/github/shakeabdulrahman/keystone/llm/http/HttpTransport;)V
+	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/String;Lio/github/shakeabdulrahman/keystone/llm/Auth;Lkotlin/jvm/functions/Function1;Lio/github/shakeabdulrahman/keystone/llm/openai/OpenAiCompatibleOptions;Lio/github/shakeabdulrahman/keystone/llm/http/HttpTransport;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public fun capabilities (Ljava/lang/String;)Lio/github/shakeabdulrahman/keystone/llm/ProviderCapabilities;
+	public fun close ()V
+	public fun getId ()Ljava/lang/String;
+	public fun stream (Lio/github/shakeabdulrahman/keystone/llm/ProviderRequest;)Lkotlinx/coroutines/flow/Flow;
+}
+
+public final class io/github/shakeabdulrahman/keystone/llm/openai/OpenAiCompatibleProvider$Companion {
+	public final fun getGenericCapabilities ()Lio/github/shakeabdulrahman/keystone/llm/ProviderCapabilities;
+	public final fun getOpenAiCapabilities ()Lio/github/shakeabdulrahman/keystone/llm/ProviderCapabilities;
+	public final fun getTextOnlyCapabilities ()Lio/github/shakeabdulrahman/keystone/llm/ProviderCapabilities;
+}
+

@@ -1,0 +1,8 @@
+public final class io/github/shakeabdulrahman/keystone/llm/ktor/KtorHttpTransport : io/github/shakeabdulrahman/keystone/llm/http/HttpTransport {
+	public synthetic fun <init> (JJILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public synthetic fun <init> (JJLkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public fun <init> (Lio/ktor/client/HttpClient;)V
+	public fun close ()V
+	public fun execute (Lio/github/shakeabdulrahman/keystone/llm/http/HttpRequest;Lkotlin/jvm/functions/Function2;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+}
+

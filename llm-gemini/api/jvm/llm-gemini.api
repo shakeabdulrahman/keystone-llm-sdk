@@ -1,0 +1,14 @@
+public final class io/github/shakeabdulrahman/keystone/llm/gemini/GeminiProvider : io/github/shakeabdulrahman/keystone/llm/LlmProvider {
+	public static final field Companion Lio/github/shakeabdulrahman/keystone/llm/gemini/GeminiProvider$Companion;
+	public fun <init> (Lio/github/shakeabdulrahman/keystone/llm/Auth;Ljava/lang/String;Ljava/lang/String;Lkotlin/jvm/functions/Function1;Lio/github/shakeabdulrahman/keystone/llm/http/HttpTransport;)V
+	public synthetic fun <init> (Lio/github/shakeabdulrahman/keystone/llm/Auth;Ljava/lang/String;Ljava/lang/String;Lkotlin/jvm/functions/Function1;Lio/github/shakeabdulrahman/keystone/llm/http/HttpTransport;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public fun capabilities (Ljava/lang/String;)Lio/github/shakeabdulrahman/keystone/llm/ProviderCapabilities;
+	public fun close ()V
+	public fun getId ()Ljava/lang/String;
+	public fun stream (Lio/github/shakeabdulrahman/keystone/llm/ProviderRequest;)Lkotlinx/coroutines/flow/Flow;
+}
+
+public final class io/github/shakeabdulrahman/keystone/llm/gemini/GeminiProvider$Companion {
+	public final fun getDefaultCapabilities ()Lio/github/shakeabdulrahman/keystone/llm/ProviderCapabilities;
+}
+
